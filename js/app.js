@@ -9,7 +9,7 @@ window.RRB = window.RRB || {};
   RRB.getExam = function () { return localStorage.getItem(KEY_EXAM) || "ntpc"; };
   RRB.setExam = function (x) { localStorage.setItem(KEY_EXAM, x); };
 
-  var PAGES = [["index.html", "nav.home"], ["notes.html", "nav.notes"], ["papers.html", "nav.papers"], ["mock.html", "nav.mocks"], ["practice.html", "nav.practice"], ["progress.html", "nav.progress"]];
+  var PAGES = [["index.html", "nav.home"], ["notes.html", "nav.notes"], ["news.html", "nav.news"], ["papers.html", "nav.papers"], ["mock.html", "nav.mocks"], ["practice.html", "nav.practice"], ["progress.html", "nav.progress"]];
 
   function header() {
     var here = location.pathname.split("/").pop() || "index.html";
@@ -47,13 +47,15 @@ window.RRB = window.RRB || {};
   document.addEventListener("DOMContentLoaded", function () { header(); footer(); });
 })();
 
+// Cache-busting version for files loaded on demand. Keep in step with the ?v= on <script>/<link> tags in the HTML pages.
+RRB.VER = "20261031b";
 // Load one paper/practice-set data file on demand. Calls cb(data).
 RRB.loadTest = function (id, cb, err) {
   var meta = (RRB.INDEX || []).filter(function (p) { return p.id === id; })[0];
   if (!meta) { err && err(RRB.t("test.unknown")); return; }
   RRB.load = function (d) { d.meta = meta; cb(d); };
   var s = document.createElement("script");
-  s.src = "data/" + (meta.mock ? "mocks/" : "papers/") + id + ".js";
+  s.src = "data/" + (meta.mock ? "mocks/" : "papers/") + id + ".js?v=" + RRB.VER;
   s.onerror = function () { err && err(RRB.t("test.loadErr")); };
   document.head.appendChild(s);
 };

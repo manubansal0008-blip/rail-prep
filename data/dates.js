@@ -16,17 +16,16 @@ RRB.DATES = {
       { key: "cbt", en: "CBT 1", hi: "CBT 1", status: "tentative", noteEn: "Not announced yet. Expected early 2027.", noteHi: "अभी घोषित नहीं। 2027 की शुरुआत में होने की उम्मीद।",
         src: "CEN 07/2026 says CBT dates will be announced later on the RRB website", srcHi: "CEN 07/2026 के अनुसार CBT की तारीख बाद में RRB वेबसाइट पर आएगी" }
     ]},
-    { exam: "gd", cen: "CEN 09/2025", en: "Group D", hi: "ग्रुप डी", rows: [
-      { key: "apply", en: "Online application", hi: "ऑनलाइन फ़ॉर्म", start: "2026-01-31T00:00:00+05:30", end: "2026-03-09T23:59:00+05:30", status: "official",
-        src: "CEN 09/2025 Corrigendum No. 4 (02.03.2026), revised dates", srcHi: "CEN 09/2025 शुद्धिपत्र (कोरिजेंडम) 4 (02.03.2026)" },
-      { key: "fee", en: "Last date for fee payment", hi: "फ़ीस भरने की आखिरी तारीख", end: "2026-03-11T23:59:00+05:30", status: "official",
-        src: "CEN 09/2025 Corrigendum No. 4 (02.03.2026)", srcHi: "CEN 09/2025 शुद्धिपत्र (कोरिजेंडम) 4 (02.03.2026)" },
-      { key: "edit", en: "Correction window (with fee)", hi: "फ़ॉर्म में सुधार (फ़ीस के साथ)", start: "2026-03-12T00:00:00+05:30", end: "2026-03-21T23:59:00+05:30", status: "official",
-        src: "CEN 09/2025 Corrigendum No. 4 (02.03.2026)", srcHi: "CEN 09/2025 शुद्धिपत्र (कोरिजेंडम) 4 (02.03.2026)" },
-      { key: "cbt", en: "CBT", hi: "CBT", start: "2026-08-03T00:00:00+05:30", end: "2026-08-21T23:59:00+05:30", status: "official",
-        src: "RRB notice on tentative CBT schedule under CEN 09/2025 (03.07.2026)", srcHi: "CEN 09/2025 के CBT के संभावित शेड्यूल पर RRB का नोटिस (03.07.2026)" },
-      { key: "result", en: "CBT result", hi: "CBT रिज़ल्ट", status: "tentative", noteEn: "Not announced yet.", noteHi: "अभी घोषित नहीं।",
-        src: "No official result date yet", srcHi: "रिज़ल्ट की कोई ऑफ़िशियल तारीख अभी नहीं" }
+    // Group D: no new Level-1 CEN after CEN 09/2025 as of 31.10.2026 (RRB notice lists checked: latest CENs are 06/2026, 07/2026 NTPC and 08/2026 Station Master).
+    // When the new CEN comes out, replace these rows with its official dates.
+    { exam: "gd", cen: "New recruitment notification awaited", cenHi: "नई भर्ती का नोटिफ़िकेशन जल्द", en: "Group D", hi: "ग्रुप डी", rows: [
+      { key: "notice", en: "New Group D (Level 1) notification", hi: "ग्रुप डी (लेवल 1) का नया नोटिफ़िकेशन", status: "tentative",
+        noteEn: "Not announced yet. Expected Nov–Dec 2026.", noteHi: "अभी घोषित नहीं। नवंबर–दिसंबर 2026 में आने की उम्मीद।",
+        src: "No new Level-1 CEN on RRB websites as of 31.10.2026; expected timing from news reports", srcHi: "31.10.2026 तक RRB वेबसाइट पर लेवल-1 का कोई नया CEN नहीं; समय की उम्मीद खबरों के आधार पर" },
+      { key: "apply", en: "Online application", hi: "ऑनलाइन फ़ॉर्म", status: "tentative", noteEn: "Not announced yet.", noteHi: "अभी घोषित नहीं।",
+        src: "Will be given in the new CEN", srcHi: "नए CEN में दी जाएगी" },
+      { key: "cbt", en: "CBT", hi: "CBT", status: "tentative", noteEn: "Not announced yet.", noteHi: "अभी घोषित नहीं।",
+        src: "Will be given by RRB later", srcHi: "RRB बाद में बताएगा" }
     ]}
   ]
 };

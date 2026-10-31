@@ -38,7 +38,7 @@
   function load(k, cb) {
     if (cache[k]) return cb(cache[k]);
     RRB.noteLoaded = function (d) { cache[k] = d; cb(d); };
-    var s = document.createElement("script"); s.src = "data/notes/" + k + ".js";
+    var s = document.createElement("script"); s.src = "data/notes/" + k + ".js?v=" + RRB.VER;
     s.onerror = function () { document.getElementById("nb").innerHTML = back() + '<div class="card"><p>' + T("notes.loadErr") + "</p></div>"; };
     document.head.appendChild(s);
   }

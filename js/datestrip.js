@@ -18,7 +18,7 @@
     var root = document.getElementById("dates"); if (!root || !RRB.DATES) return;
     var hi = RRB.lang() === "hi";
     root.innerHTML = RRB.DATES.groups.map(function (g) {
-      return '<div class="card dt-card"><h3>' + RRB.esc(hi ? g.hi : g.en) + ' <span class="muted dt-cen">' + g.cen + "</span></h3><ul class=\"dt-list\">" + g.rows.map(function (r) {
+      return '<div class="card dt-card"><h3>' + RRB.esc(hi ? g.hi : g.en) + ' <span class="muted dt-cen">' + RRB.esc(hi && g.cenHi ? g.cenHi : g.cen) + "</span></h3><ul class=\"dt-list\">" + g.rows.map(function (r) {
         var st = RRB.dateState(r), when, tag;
         if (!r.end) when = RRB.esc(hi ? r.noteHi : r.noteEn);
         else if (r.start) when = d(r.start) + " – " + d(r.end);

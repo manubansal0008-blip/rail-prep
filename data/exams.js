@@ -23,7 +23,7 @@ RRB.EXAMS = {
     tagline: "Class 10 / ITI level · CBT + PET",
     events: [
       { label: "Next notification", at: null, tentative: true, note: "Expected Nov–Dec 2026. No official date yet." },
-      { label: "CEN 09/2025 CBT result", at: null, tentative: true, note: "Expected early November 2026." }
+      { label: "CEN 09/2025 CBT result", at: null, tentative: true, note: "Not announced yet." }
     ],
     facts: [["Questions", "100"], ["Time", "90 min"], ["Negative", "1/3 mark"], ["Sections", "Science 25 · Maths 25 · Reasoning 30 · GA 20"]],
     hi: {
@@ -31,7 +31,7 @@ RRB.EXAMS = {
       tagline: "10वीं / ITI लेवल · CBT + PET",
       events: [
         { label: "अगला नोटिफ़िकेशन", note: "नवंबर–दिसंबर 2026 में आने की उम्मीद। अभी कोई ऑफ़िशियल तारीख नहीं।" },
-        { label: "CEN 09/2025 CBT रिज़ल्ट", note: "नवंबर 2026 की शुरुआत में आने की उम्मीद।" }
+        { label: "CEN 09/2025 CBT रिज़ल्ट", note: "अभी घोषित नहीं।" }
       ],
       facts: [["प्रश्न", "100"], ["समय", "90 मिनट"], ["नेगेटिव मार्किंग", "1/3 अंक"], ["सेक्शन", "विज्ञान 25 · गणित 25 · रीज़निंग 30 · सामान्य ज्ञान 20"]]
     }

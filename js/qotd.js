@@ -45,7 +45,7 @@
       };
     });
   }
-  function script(src, ok, bad) { var s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = bad; document.head.appendChild(s); }
+  function script(src, ok, bad) { var s = document.createElement("script"); s.src = src + "?v=" + RRB.VER; s.onload = ok; s.onerror = bad; document.head.appendChild(s); }
   function start() {
     if (started) return; started = true; render();
     var pick = RRB.qotdPick(today()), fail = function () { started = "err"; render(); };

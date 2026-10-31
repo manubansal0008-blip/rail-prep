@@ -71,6 +71,13 @@ window.RRB = window.RRB || {};
       "prog.clearP": "This deletes all {n} saved test results on this device. It can't be undone. A test you are in the middle of is kept.",
       "prog.cancel": "Cancel", "prog.clearYes": "Yes, clear",
       "card.progress": "Progress", "card.progressP": "Score trend, subject-wise accuracy and weak areas from your tests.", "card.progressN": "{n} tests taken · best {b}. See your trend and weak subjects.",
+      "nav.news": "News", "news.doctitle": "Today's 5 News · Rail Prep", "news.h": "Today's 5 news", "news.h1": "Current affairs: 5 news a day",
+      "news.intro": "Five short news items every day, picked the way RRB asks general awareness questions, with facts to remember and one practice question each. Newest day first.",
+      "news.all": "See all days →", "news.remember": "Remember for the exam", "news.quiz": "Quick question:", "news.src": "Source:", "news.count": "{n} news",
+      "news.loading": "Loading news…", "news.err": "Could not load the news.", "news.none": "No news added yet.",
+      "news.cat.scheme": "Government scheme", "news.cat.sports": "Sports", "news.cat.awards": "Awards", "news.cat.appointments": "Appointments", "news.cat.defence": "Defence",
+      "news.cat.science": "Science / Space", "news.cat.railways": "Railways", "news.cat.states": "States", "news.cat.international": "International",
+      "news.cat.economy": "Economy / Banking", "news.cat.days": "Summits / Days",
       // home: slider, dates, question of the day; mock/paper lists
       "sl.aria": "What's new", "sl.prev": "Previous slide", "sl.next": "Next slide", "sl.pause": "Pause slides", "sl.play": "Play slides", "sl.of": "Slide {i} of {n}", "sl.go": "Go to slide {i}",
       "sl.1tag": "NTPC UG · CEN 07/2026", "sl.1h": "Form last date: {d}", "sl.1p": "Apply online till 11:59 pm. Fee payment till {f}.", "sl.1left": "Days left: {d} days {h} hrs", "sl.1closed": "The online form has closed.", "sl.1btn": "See important dates →",
@@ -123,7 +130,7 @@ window.RRB = window.RRB || {};
       "home.countdown": "कितने दिन बाकी", "home.glance": "परीक्षा एक नज़र में", "home.start": "प्रैक्टिस शुरू करें",
       "cd.days": "दिन", "cd.hrs": "घंटे", "cd.min": "मिनट", "cd.sec": "सेकंड", "cd.passed": "यह तारीख निकल चुकी है।", "cd.none": "अभी तारीख घोषित नहीं हुई है।",
       "tag.tentative": "संभावित", "tag.official": "आधिकारिक", "tag.soon": "जल्द आ रहा है", "home.target": "तारीख: {d}। ",
-      "card.notes": "नोट्स", "card.notesP": "सूत्र, हल किए गए उदाहरण और ट्रिक वाले छोटे नोट्स। {n} टॉपिक तैयार, बाकी जल्द।",
+      "card.notes": "नोट्स", "card.notesP": "सूत्र, हल किए गए उदाहरण और शॉर्टकट ट्रिक वाले छोटे नोट्स। {n} टॉपिक तैयार, बाकी जल्द।",
       "card.papers": "पिछले प्रश्न पत्र", "card.papersP": "{n} असली प्रश्न पत्र · RRB आंसर की के साथ {q} प्रश्न।",
       "card.mocks": "मॉक टेस्ट", "card.mocksP": "{n} टाइम वाले मॉक टेस्ट ({q} प्रश्न), 100 प्रश्नों वाले टफ मॉक के साथ, और सभी पिछले प्रश्न पत्र CBT मोड में।",
       "card.open": "खोलें →", "card.na": "अभी उपलब्ध नहीं",
@@ -173,12 +180,19 @@ window.RRB = window.RRB || {};
       "prog.clearP": "इससे इस डिवाइस पर सेव सभी {n} टेस्ट रिज़ल्ट हट जाएँगे। यह वापस नहीं होगा। जो टेस्ट अभी अधूरा है, वह बना रहेगा।",
       "prog.cancel": "रद्द करें", "prog.clearYes": "हाँ, मिटाएँ",
       "card.progress": "प्रोग्रेस", "card.progressP": "आपके टेस्ट से स्कोर ग्राफ़, विषयवार सटीकता और कमज़ोर विषय।", "card.progressN": "{n} टेस्ट दिए · सबसे अच्छा {b}। अपना ग्राफ़ और कमज़ोर विषय देखें।",
+      "nav.news": "ख़बरें", "news.doctitle": "आज की 5 ख़बरें · Rail Prep", "news.h": "आज की 5 ख़बरें", "news.h1": "करंट अफ़ेयर्स: हर दिन 5 ख़बरें",
+      "news.intro": "हर दिन पाँच छोटी ख़बरें, उसी तरह चुनी गईं जैसे RRB सामान्य ज्ञान के प्रश्न पूछता है। हर ख़बर के साथ याद रखने लायक बातें और एक प्रैक्टिस प्रश्न। सबसे नया दिन सबसे ऊपर।",
+      "news.all": "सभी दिन देखें →", "news.remember": "परीक्षा के लिए याद रखें", "news.quiz": "छोटा सवाल:", "news.src": "स्रोत:", "news.count": "{n} ख़बरें",
+      "news.loading": "ख़बरें लोड हो रही हैं…", "news.err": "ख़बरें लोड नहीं हो सकीं।", "news.none": "अभी कोई ख़बर नहीं जोड़ी गई।",
+      "news.cat.scheme": "सरकारी योजना", "news.cat.sports": "खेल", "news.cat.awards": "पुरस्कार", "news.cat.appointments": "नियुक्ति", "news.cat.defence": "रक्षा",
+      "news.cat.science": "विज्ञान/अंतरिक्ष", "news.cat.railways": "रेलवे", "news.cat.states": "राज्य", "news.cat.international": "अंतरराष्ट्रीय",
+      "news.cat.economy": "अर्थव्यवस्था/बैंकिंग", "news.cat.days": "सम्मेलन/दिवस",
       "sl.aria": "नया क्या है", "sl.prev": "पिछली स्लाइड", "sl.next": "अगली स्लाइड", "sl.pause": "स्लाइड रोकें", "sl.play": "स्लाइड चलाएँ", "sl.of": "स्लाइड {i} / {n}", "sl.go": "स्लाइड {i} पर जाएँ",
       "sl.1tag": "NTPC स्नातक-पूर्व · CEN 07/2026", "sl.1h": "फ़ॉर्म की आखिरी तारीख: {d}", "sl.1p": "रात 11:59 बजे तक ऑनलाइन फ़ॉर्म भरें। फ़ीस {f} तक भरें।", "sl.1left": "कितने दिन बाकी: {d} दिन {h} घंटे", "sl.1closed": "ऑनलाइन फ़ॉर्म बंद हो चुका है।", "sl.1btn": "ज़रूरी तारीखें देखें →",
       "sl.2tag": "नया", "sl.2h": "{n} नए टफ मॉक", "sl.2p": "100 प्रश्न, 90 मिनट, असली परीक्षा से कठिन। एक NTPC स्नातक-पूर्व के लिए, एक ग्रुप डी के लिए।", "sl.2btn": "टफ मॉक दें →",
       "sl.3tag": "टॉपिक प्रैक्टिस", "sl.3h": "टॉपिक-वाइज़ प्रैक्टिस: {q} प्रश्न", "sl.3p": "एक टॉपिक चुनें, हर प्रश्न के बाद तुरंत उत्तर और व्याख्या देखें।", "sl.3btn": "प्रैक्टिस शुरू करें →",
       "sl.4tag": "पिछले प्रश्न पत्र", "sl.4h": "{n} पिछले प्रश्न पत्र, असली 90 मिनट का CBT", "sl.4p": "RRB आंसर की के साथ असली RRB पेपर, परीक्षा जैसे CBT लेआउट में।", "sl.4btn": "पिछले प्रश्न पत्र खोलें →",
-      "sl.5tag": "नोट्स", "sl.5h": "सूत्र और हल किए गए उदाहरणों वाले नोट्स", "sl.5p": "{n} टॉपिक हिंदी और अंग्रेज़ी में तैयार, आसान ट्रिक और आम गलतियों के साथ।", "sl.5btn": "नोट्स पढ़ें →",
+      "sl.5tag": "नोट्स", "sl.5h": "सूत्र और हल किए गए उदाहरणों वाले नोट्स", "sl.5p": "{n} टॉपिक हिंदी और अंग्रेज़ी में तैयार, शॉर्टकट ट्रिक और आम गलतियों के साथ।", "sl.5btn": "नोट्स पढ़ें →",
       "dt.h": "ज़रूरी तारीखें", "dt.open": "अभी चालू", "dt.closed": "बंद", "dt.soonIn": "{n} दिन में", "dt.today": "आज", "dt.tentative": "संभावित", "dt.left": "{n} दिन बाकी",
       "dt.note": "{d} को RRB के नोटिस से जाँची गईं। तारीखें बदल सकती हैं, इसलिए RRB की ऑफ़िशियल वेबसाइट पर ज़रूर देखें।", "dt.src": "स्रोत: {s}", "dt.till": "{t} तक",
       "qd.h": "आज का सवाल", "qd.loading": "आज का सवाल लोड हो रहा है…", "qd.err": "आज का सवाल लोड नहीं हो सका।", "qd.right": "सही!", "qd.wrong": "गलत। सही उत्तर ({k}) है।",
@@ -186,10 +200,10 @@ window.RRB = window.RRB || {};
       "mock.filter": "परीक्षा", "mock.all": "दोनों परीक्षाएँ", "mock.intro2": "हमारे अपने प्रैक्टिस सेट और टफ मॉक, CBT जैसे: पैलेट, टाइमर और 1/3 नेगेटिव मार्किंग के साथ। असली RRB पेपर 'पिछले प्रश्न पत्र' पेज पर हैं।",
       "mock.ownSets": "प्रैक्टिस सेट और टफ मॉक", "mock.none": "इस परीक्षा के लिए अभी कोई टेस्ट नहीं है।", "mock.seePapers": "असली RRB पेपर चाहिए? पिछले प्रश्न पत्र खोलें →",
       "papers.h1": "पिछले प्रश्न पत्र", "papers.intro": "RRB आंसर की के साथ असली RRB प्रश्न पत्र। हर पेपर पूरे 90 मिनट के CBT की तरह चलता है, 1/3 नेगेटिव मार्किंग के साथ।", "papers.seeMocks": "हमारे अपने प्रैक्टिस सेट और टफ मॉक चाहिए? मॉक टेस्ट खोलें →",
-      "notes.h1": "नोट्स", "notes.loading": "लोड हो रहा है…", "notes.intro": "छोटे रिवीजन नोट्स: ज़रूरी बातें, सूत्र, हल किए गए उदाहरण, आसान ट्रिक और आम गलतियाँ। और टॉपिक जोड़े जा रहे हैं।",
+      "notes.h1": "नोट्स", "notes.loading": "लोड हो रहा है…", "notes.intro": "छोटे रिवीजन नोट्स: ज़रूरी बातें, सूत्र, हल किए गए उदाहरण, शॉर्टकट ट्रिक और आम गलतियाँ। और टॉपिक जोड़े जा रहे हैं।",
       "notes.readyH": "पढ़ने के लिए तैयार", "notes.soon": "जल्द आएगा", "notes.read": "पढ़ें →", "notes.qs": "पेपर और मॉक में {n} प्रश्न", "notes.practiseShort": "प्रैक्टिस",
       "notes.back": "← सभी नोट्स", "notes.noteTitle": "{t} · नोट्स · Rail Prep", "notes.concepts": "ज़रूरी बातें", "notes.formulas": "सूत्र और नियम", "notes.examples": "हल किए गए उदाहरण",
-      "notes.ex": "उदाहरण {n}", "notes.ans": "उत्तर:", "notes.tricks": "आसान ट्रिक", "notes.mistakes": "आम गलतियाँ", "notes.practice": "इस टॉपिक की प्रैक्टिस करें →", "notes.print": "प्रिंट करें",
+      "notes.ex": "उदाहरण {n}", "notes.ans": "उत्तर:", "notes.tricks": "शॉर्टकट ट्रिक", "notes.mistakes": "आम गलतियाँ", "notes.practice": "इस टॉपिक की प्रैक्टिस करें →", "notes.print": "प्रिंट करें",
       "notes.loadErr": "यह नोट लोड नहीं हो सका। कृपया पेज रिफ्रेश करें।", "notes.soonNote": "इस टॉपिक का नोट जल्द आएगा। तब तक इसके प्रश्नों की प्रैक्टिस करें।",
       "notes.endP": "पढ़ लिया? अब इस टॉपिक के {n} असली प्रश्न हल करें।",
       "nav.practice": "टॉपिक प्रैक्टिस", "card.practice": "टॉपिक प्रैक्टिस", "card.practiceP": "पिछले पेपरों और मॉक के {q} प्रश्नों में से एक-एक टॉपिक की प्रैक्टिस करें, तुरंत उत्तर और व्याख्या के साथ।",
@@ -223,8 +237,10 @@ window.RRB = window.RRB || {};
     [/\bJul\b/g, "जुलाई"], [/\bAug\b/g, "अगस्त"], [/\bSep\b/g, "सितंबर"], [/\bOct\b/g, "अक्टूबर"], [/\bNov\b/g, "नवंबर"], [/\bDec\b/g, "दिसंबर"]];
 
   RRB.lang = function () { return localStorage.getItem(KEY) === "hi" ? "hi" : "en"; };
-  RRB.t = function (k, v) {
-    var s = S[RRB.lang()][k]; if (s == null) s = S.en[k]; if (s == null) s = k;
+  var FB = new WeakMap(); // element -> its original English text, used when a key is missing
+  // RRB.t(key, vars, fallback): current language, else English, else the given fallback, else the key itself.
+  RRB.t = function (k, v, fb) {
+    var s = S[RRB.lang()][k]; if (s == null) s = S.en[k]; if (s == null) s = fb != null ? fb : k;
     return v ? s.replace(/\{(\w+)\}/g, function (m, n) { return v[n] != null ? v[n] : m; }) : s;
   };
   RRB.tSec = function (s) { return RRB.lang() === "hi" && SEC[s] ? SEC[s] : s; };
@@ -234,14 +250,19 @@ window.RRB = window.RRB || {};
   RRB.dtOpts = function (o) { o = o || {}; o.timeZone = "Asia/Kolkata"; if (RRB.lang() === "hi") o.hour12 = false; return o; };
   RRB.applyI18n = function (root) {
     root = root || document;
-    root.querySelectorAll("[data-i18n]").forEach(function (e) { e.textContent = RRB.t(e.getAttribute("data-i18n")); });
-    root.querySelectorAll("[data-i18n-html]").forEach(function (e) { e.innerHTML = RRB.t(e.getAttribute("data-i18n-html")); });
+    // If a key is missing (e.g. an old cached copy of this file), keep the English text written in the page instead of showing the raw key.
+    root.querySelectorAll("[data-i18n]").forEach(function (e) { var k = e.getAttribute("data-i18n"); if (!FB.has(e)) FB.set(e, e.textContent); e.textContent = RRB.t(k, null, FB.get(e)); });
+    root.querySelectorAll("[data-i18n-html]").forEach(function (e) { var k = e.getAttribute("data-i18n-html"); if (!FB.has(e)) FB.set(e, e.innerHTML); e.innerHTML = RRB.t(k, null, FB.get(e)); });
     root.querySelectorAll("[data-i18n-attr]").forEach(function (e) {
-      e.getAttribute("data-i18n-attr").split(";").forEach(function (p) { var kv = p.split(":"); if (kv[1]) e.setAttribute(kv[0].trim(), RRB.t(kv[1].trim())); });
+      e.getAttribute("data-i18n-attr").split(";").forEach(function (p) {
+        var kv = p.split(":"); if (!kv[1]) return; var a = kv[0].trim(), fk = "data-i18n-fb-" + a;
+        if (!e.hasAttribute(fk)) e.setAttribute(fk, e.getAttribute(a) || "");
+        e.setAttribute(a, RRB.t(kv[1].trim(), null, e.getAttribute(fk) || undefined));
+      });
     });
     if (root === document) {
       document.documentElement.lang = RRB.lang();
-      var dt = document.documentElement.getAttribute("data-title"); if (dt) document.title = RRB.t(dt);
+      var dt = document.documentElement.getAttribute("data-title"); if (dt) { if (!FB.has(document)) FB.set(document, document.title); document.title = RRB.t(dt, null, FB.get(document)); }
       document.querySelectorAll(".lang:not(.cb-lang) button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.l === RRB.lang()); });
     }
   };
