@@ -23,35 +23,14 @@ RRB.noteLoaded({
 },
 {
 "h": "Profit/loss % as a fraction of CP",
-"table": [
-[
-"10% profit",
-"SP = 11/10 of CP"
-],
-[
-"20% profit",
-"SP = 6/5 of CP"
-],
-[
-"25% profit",
-"SP = 5/4 of CP"
-],
-[
-"50% profit",
-"SP = 3/2 of CP"
-],
-[
-"10% loss",
-"SP = 9/10 of CP"
-],
-[
-"20% loss",
-"SP = 4/5 of CP"
-],
-[
-"25% loss",
-"SP = 3/4 of CP"
-]
+"list": [
+"10% profit: SP = 11/10 of CP",
+"20% profit: SP = 6/5 of CP",
+"25% profit: SP = 5/4 of CP",
+"50% profit: SP = 3/2 of CP",
+"10% loss: SP = 9/10 of CP",
+"20% loss: SP = 4/5 of CP",
+"25% loss: SP = 3/4 of CP"
 ]
 }
 ],
@@ -170,35 +149,14 @@ RRB.noteLoaded({
 },
 {
 "h": "लाभ/हानि % को CP की भिन्न में",
-"table": [
-[
-"10% लाभ",
-"SP = CP का 11/10"
-],
-[
-"20% लाभ",
-"SP = CP का 6/5"
-],
-[
-"25% लाभ",
-"SP = CP का 5/4"
-],
-[
-"50% लाभ",
-"SP = CP का 3/2"
-],
-[
-"10% हानि",
-"SP = CP का 9/10"
-],
-[
-"20% हानि",
-"SP = CP का 4/5"
-],
-[
-"25% हानि",
-"SP = CP का 3/4"
-]
+"list": [
+"10% लाभ: SP = CP का 11/10",
+"20% लाभ: SP = CP का 6/5",
+"25% लाभ: SP = CP का 5/4",
+"50% लाभ: SP = CP का 3/2",
+"10% हानि: SP = CP का 9/10",
+"20% हानि: SP = CP का 4/5",
+"25% हानि: SP = CP का 3/4"
 ]
 }
 ],

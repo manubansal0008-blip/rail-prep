@@ -15,23 +15,11 @@ RRB.noteLoaded({
 },
 {
 "h": "Odd days in months and day codes",
-"table": [
-[
-"31-day months (Jan, Mar, May, Jul, Aug, Oct, Dec)",
-"3 odd days"
-],
-[
-"30-day months (Apr, Jun, Sep, Nov)",
-"2 odd days"
-],
-[
-"February",
-"0 odd days (1 in a leap year)"
-],
-[
-"Day codes",
-"0 Sun, 1 Mon, 2 Tue, 3 Wed, 4 Thu, 5 Fri, 6 Sat"
-]
+"list": [
+"31-day months (Jan, Mar, May, Jul, Aug, Oct, Dec): 3 odd days",
+"30-day months (Apr, Jun, Sep, Nov): 2 odd days",
+"February: 0 odd days (1 in a leap year)",
+"Day codes: 0 Sun, 1 Mon, 2 Tue, 3 Wed, 4 Thu, 5 Fri, 6 Sat"
 ]
 },
 {
@@ -126,23 +114,11 @@ RRB.noteLoaded({
 },
 {
 "h": "महीनों के विषम दिन और दिनों के कोड",
-"table": [
-[
-"31 दिन वाले महीने (जन, मार्च, मई, जुलाई, अगस्त, अक्टूबर, दिसंबर)",
-"3 विषम दिन"
-],
-[
-"30 दिन वाले महीने (अप्रैल, जून, सितंबर, नवंबर)",
-"2 विषम दिन"
-],
-[
-"फ़रवरी",
-"0 विषम दिन (लीप साल में 1)"
-],
-[
-"दिनों के कोड",
-"0 रवि, 1 सोम, 2 मंगल, 3 बुध, 4 गुरु, 5 शुक्र, 6 शनि"
-]
+"list": [
+"31 दिन वाले महीने (जन, मार्च, मई, जुलाई, अगस्त, अक्टूबर, दिसंबर): 3 विषम दिन",
+"30 दिन वाले महीने (अप्रैल, जून, सितंबर, नवंबर): 2 विषम दिन",
+"फ़रवरी: 0 विषम दिन (लीप साल में 1)",
+"दिनों के कोड: 0 रवि, 1 सोम, 2 मंगल, 3 बुध, 4 गुरु, 5 शुक्र, 6 शनि"
 ]
 },
 {

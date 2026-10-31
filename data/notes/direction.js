@@ -14,31 +14,13 @@ RRB.noteLoaded({
 },
 {
 "h": "Turns",
-"table": [
-[
-"Facing North, turn right",
-"East"
-],
-[
-"Facing North, turn left",
-"West"
-],
-[
-"Facing East, turn right",
-"South"
-],
-[
-"Facing East, turn left",
-"North"
-],
-[
-"Facing South, turn right",
-"West"
-],
-[
-"Facing West, turn right",
-"North"
-]
+"list": [
+"Facing North, turn right: East",
+"Facing North, turn left: West",
+"Facing East, turn right: South",
+"Facing East, turn left: North",
+"Facing South, turn right: West",
+"Facing West, turn right: North"
 ]
 },
 {
@@ -132,31 +114,13 @@ RRB.noteLoaded({
 },
 {
 "h": "मुड़ना",
-"table": [
-[
-"उत्तर की ओर मुँह, दाएँ मुड़े",
-"पूर्व"
-],
-[
-"उत्तर की ओर मुँह, बाएँ मुड़े",
-"पश्चिम"
-],
-[
-"पूर्व की ओर मुँह, दाएँ मुड़े",
-"दक्षिण"
-],
-[
-"पूर्व की ओर मुँह, बाएँ मुड़े",
-"उत्तर"
-],
-[
-"दक्षिण की ओर मुँह, दाएँ मुड़े",
-"पश्चिम"
-],
-[
-"पश्चिम की ओर मुँह, दाएँ मुड़े",
-"उत्तर"
-]
+"list": [
+"उत्तर की ओर मुँह, दाएँ मुड़े: पूर्व",
+"उत्तर की ओर मुँह, बाएँ मुड़े: पश्चिम",
+"पूर्व की ओर मुँह, दाएँ मुड़े: दक्षिण",
+"पूर्व की ओर मुँह, बाएँ मुड़े: उत्तर",
+"दक्षिण की ओर मुँह, दाएँ मुड़े: पश्चिम",
+"पश्चिम की ओर मुँह, दाएँ मुड़े: उत्तर"
 ]
 },
 {

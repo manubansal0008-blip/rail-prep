@@ -22,23 +22,11 @@ RRB.noteLoaded({
 },
 {
 "h": "Total CI as % of the principal",
-"table": [
-[
-"5% for 2 years",
-"10.25%"
-],
-[
-"10% for 2 years",
-"21%"
-],
-[
-"20% for 2 years",
-"44%"
-],
-[
-"10% for 3 years",
-"33.1%"
-]
+"list": [
+"5% for 2 years: 10.25%",
+"10% for 2 years: 21%",
+"20% for 2 years: 44%",
+"10% for 3 years: 33.1%"
 ]
 }
 ],

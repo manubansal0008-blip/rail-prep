@@ -14,39 +14,15 @@ RRB.noteLoaded({
 },
 {
 "h": "Common relations",
-"table": [
-[
-"Father's or mother's brother",
-"Uncle"
-],
-[
-"Father's or mother's sister",
-"Aunt"
-],
-[
-"Father's father",
-"Grandfather"
-],
-[
-"Brother's or sister's son",
-"Nephew"
-],
-[
-"Brother's or sister's daughter",
-"Niece"
-],
-[
-"Son's wife",
-"Daughter-in-law"
-],
-[
-"Husband's or wife's brother",
-"Brother-in-law"
-],
-[
-"Only son of my grandfather (father's side)",
-"My father"
-]
+"list": [
+"Father's or mother's brother: Uncle",
+"Father's or mother's sister: Aunt",
+"Father's father: Grandfather",
+"Brother's or sister's son: Nephew",
+"Brother's or sister's daughter: Niece",
+"Son's wife: Daughter-in-law",
+"Husband's or wife's brother: Brother-in-law",
+"Only son of my grandfather (father's side): My father"
 ]
 },
 {
@@ -140,39 +116,15 @@ RRB.noteLoaded({
 },
 {
 "h": "आम रिश्ते",
-"table": [
-[
-"पिता / माँ के भाई",
-"चाचा-ताऊ / मामा"
-],
-[
-"पिता / माँ की बहन",
-"बुआ / मौसी"
-],
-[
-"पिता के पिता",
-"दादा"
-],
-[
-"भाई / बहन का बेटा",
-"भतीजा / भांजा"
-],
-[
-"भाई / बहन की बेटी",
-"भतीजी / भांजी"
-],
-[
-"बेटे की पत्नी",
-"बहू"
-],
-[
-"पति / पत्नी का भाई",
-"देवर-जेठ / साला"
-],
-[
-"मेरे दादा का इकलौता बेटा",
-"मेरे पिता"
-]
+"list": [
+"पिता / माँ के भाई: चाचा-ताऊ / मामा",
+"पिता / माँ की बहन: बुआ / मौसी",
+"पिता के पिता: दादा",
+"भाई / बहन का बेटा: भतीजा / भांजा",
+"भाई / बहन की बेटी: भतीजी / भांजी",
+"बेटे की पत्नी: बहू",
+"पति / पत्नी का भाई: देवर-जेठ / साला",
+"मेरे दादा का इकलौता बेटा: मेरे पिता"
 ]
 },
 {

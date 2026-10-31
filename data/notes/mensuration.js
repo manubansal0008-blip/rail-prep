@@ -16,31 +16,13 @@ RRB.noteLoaded({
 },
 {
 "h": "3D shapes",
-"table": [
-[
-"Cube",
-"volume a³, total surface 6a²"
-],
-[
-"Cuboid",
-"volume l × b × h, total surface 2(lb + bh + hl)"
-],
-[
-"Cylinder",
-"volume πr²h, curved surface 2πrh, total surface 2πr(r + h)"
-],
-[
-"Cone",
-"volume ⅓πr²h, curved surface πrl, where l = √(r² + h²)"
-],
-[
-"Sphere",
-"volume (4/3)πr³, surface 4πr²"
-],
-[
-"Hemisphere",
-"volume (2/3)πr³, curved surface 2πr², total surface 3πr²"
-]
+"list": [
+"Cube: volume a³, total surface 6a²",
+"Cuboid: volume l × b × h, total surface 2(lb + bh + hl)",
+"Cylinder: volume πr²h, curved surface 2πrh, total surface 2πr(r + h)",
+"Cone: volume ⅓πr²h, curved surface πrl, where l = √(r² + h²)",
+"Sphere: volume (4/3)πr³, surface 4πr²",
+"Hemisphere: volume (2/3)πr³, curved surface 2πr², total surface 3πr²"
 ]
 },
 {
@@ -148,31 +130,13 @@ RRB.noteLoaded({
 },
 {
 "h": "3D आकृतियाँ",
-"table": [
-[
-"घन",
-"आयतन a³, कुल सतह 6a²"
-],
-[
-"घनाभ",
-"आयतन l × b × h, कुल सतह 2(lb + bh + hl)"
-],
-[
-"बेलन",
-"आयतन πr²h, घुमावदार सतह 2πrh, कुल सतह 2πr(r + h)"
-],
-[
-"शंकु",
-"आयतन ⅓πr²h, घुमावदार सतह πrl, जहाँ l = √(r² + h²)"
-],
-[
-"गोला",
-"आयतन (4/3)πr³, सतह 4πr²"
-],
-[
-"अर्धगोला",
-"आयतन (2/3)πr³, घुमावदार सतह 2πr², कुल सतह 3πr²"
-]
+"list": [
+"घन: आयतन a³, कुल सतह 6a²",
+"घनाभ: आयतन l × b × h, कुल सतह 2(lb + bh + hl)",
+"बेलन: आयतन πr²h, घुमावदार सतह 2πrh, कुल सतह 2πr(r + h)",
+"शंकु: आयतन ⅓πr²h, घुमावदार सतह πrl, जहाँ l = √(r² + h²)",
+"गोला: आयतन (4/3)πr³, सतह 4πr²",
+"अर्धगोला: आयतन (2/3)πr³, घुमावदार सतह 2πr², कुल सतह 3πr²"
 ]
 },
 {
