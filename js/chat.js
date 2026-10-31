@@ -43,7 +43,7 @@ window.RRB = window.RRB || {};
     el.log.innerHTML = "";
     if (!url()) bubble("bot", "<p>" + T("chat.offline") + "</p>", "note");
     else if (!hist.length) bubble("bot", lang === "hi"
-      ? '<p lang="hi">नमस्ते! गणित, रीज़निंग, सामान्य विज्ञान या सामान्य जागरूकता का कोई भी डाउट पूछें।</p>'
+      ? '<p lang="hi">नमस्ते! गणित, रीज़निंग, सामान्य विज्ञान या सामान्य ज्ञान का कोई भी डाउट पूछें।</p>'
       : "<p>Hi! Ask me any doubt from Maths, Reasoning, General Science or General Awareness.</p>", "note");
     hist.forEach(function (h) { bubble(h.role, h.role === "user" ? "<p>" + esc(h.text).replace(/\n/g, "<br>") + "</p>" : md(h.text)); });
     var off = !url();

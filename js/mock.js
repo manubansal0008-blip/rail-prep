@@ -10,7 +10,7 @@
   function render(x) {
     document.querySelectorAll(".switch button").forEach(function (b) {
       b.setAttribute("aria-pressed", b.dataset.exam === x);
-      b.textContent = b.dataset.exam === "gd" ? (RRB.lang() === "hi" ? "ग्रुप डी" : "Group D") : "NTPC UG";
+      b.textContent = RRB.t(b.dataset.exam === "gd" ? "prog.gd" : "prog.ntpc");
     });
     var list = RRB.INDEX.filter(function (p) { return p.exam === x; });
     document.getElementById("mocks").innerHTML = list.filter(function (p) { return p.mock; }).map(card).join("");

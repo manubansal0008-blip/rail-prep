@@ -16,6 +16,13 @@
     }
     if (tick()) timers.push(setInterval(tick, 1000));
   }
+  function progLine() {
+    var at; try { at = JSON.parse(localStorage.getItem(RRB.ATTEMPTS) || "[]"); } catch (e) { at = []; }
+    at = (Array.isArray(at) ? at : []).filter(function (a) { return a && isFinite(a.score) && a.total; });
+    if (!at.length) return t("card.progressP");
+    var b = Math.max.apply(null, at.map(function (a) { return a.score / a.total * 100; }));
+    return t("card.progressN", { n: at.length, b: Math.round(b * 10) / 10 + "%" });
+  }
   function render(x) {
     timers.forEach(clearInterval); timers = [];
     var E0 = RRB.EXAMS[x], H = RRB.lang() === "hi" && E0.hi ? E0.hi : null, E = H || E0;
@@ -46,7 +53,8 @@
     document.getElementById("cards").innerHTML = [
       [null, "📘", t("card.notes"), t("card.notesP", { exam: E.short })],
       ["mock.html#papers", "🗂", t("card.papers"), t("card.papersP", { n: papers.length, q: qn })],
-      ["mock.html", "⏱", t("card.mocks"), t("card.mocksP", { n: mocks.length, q: mocks[0] ? mocks[0].count : 0 })]
+      ["mock.html", "⏱", t("card.mocks"), t("card.mocksP", { n: mocks.length, q: mocks[0] ? mocks[0].count : 0 })],
+      ["progress.html", "📈", t("card.progress"), progLine()]
     ].map(function (c) {
       if (!c[0]) return '<div class="card fade soon" aria-disabled="true"><div class="ico" aria-hidden="true">' + c[1] + "</div><h3>" + c[2] +
         ' <span class="tag warn">' + t("tag.soon") + '</span></h3><p>' + c[3] + '</p><span class="more muted">' + t("card.na") + "</span></div>";

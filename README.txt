@@ -6,7 +6,7 @@ Status: step 3 (home + CBT mock tests + doubt chat). Notes and Progress are stub
 FILES
   index.html, mock.html, test.html, ...   the site
   js/config.js      one setting: CHAT_URL (the doubt-chat endpoint). Empty = chat shows
-                    "Doubt chat works once the site is online".
+                    "The doubt chat will be switched on soon."
   js/chat.js, css/chat.css   doubt chat (floating button on every page, hidden during a running test)
   worker/           Cloudflare Worker that talks to Google Gemini. Not part of the website:
                     _config.yml tells GitHub Pages to skip it (it holds no secrets, so it would be

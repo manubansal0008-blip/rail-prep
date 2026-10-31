@@ -130,13 +130,13 @@
   }
   // Prefill text for the doubt chat: question, options, official answer, the student's answer, explanation (in the current language).
   function doubtText(d, a, i) {
-    var q = d.questions[i], u = a.ans[i], L = "ABCD", H = LANG === "hi";
+    var q = d.questions[i], u = a.ans[i] == null ? -1 : a.ans[i], L = "ABCD", H = LANG === "hi";
     var pick = function (h, e) { return hi(h) ? h : e || ""; };
     var opt = function (k) { return L[k] + ") " + (pick(q.oh && q.oh[k], q.o[k]) || (q.oi && q.oi[k] ? "[figure]" : "")); };
     var qt = pick(q.qh, q.q) || "[question is a figure]", e = pick(q.eh, q.e);
     var lines = H
       ? ["मेरा डाउट: " + RRB.tLabel(a.label) + ", प्रश्न " + (i + 1) + " (" + RRB.tSec(q.s) + ")", qt, "विकल्प: " + q.o.map(function (_, k) { return opt(k); }).join(" | "),
-         (d.meta.mock ? "उत्तर कुंजी: " : "RRB उत्तर: ") + opt(q.a), "मेरा उत्तर: " + (u < 0 ? "छोड़ा" : opt(u))]
+         (d.meta.mock ? "आंसर की: " : "RRB का उत्तर: ") + opt(q.a), "मेरा उत्तर: " + (u < 0 ? "छोड़ा" : opt(u))]
       : ["My doubt: " + a.label + ", Q" + (i + 1) + " (" + q.s + ")", qt, "Options: " + q.o.map(function (_, k) { return opt(k); }).join(" | "),
          (d.meta.mock ? "Answer key: " : "RRB answer: ") + opt(q.a), "My answer: " + (u < 0 ? "skipped" : opt(u))];
     if (e) lines.push((H ? "दी गई व्याख्या: " : "Given explanation: ") + e);
@@ -147,6 +147,10 @@
   }
   function results(a) {
     document.body.classList.remove("testing"); RES = a;
+    // Older saved attempts may miss fields: fill safe defaults so the result and review still open.
+    a.correct = +a.correct || 0; a.wrong = +a.wrong || 0; a.total = +a.total || (a.ans && a.ans.length) || 100; a.sections = a.sections || {}; a.ans = a.ans || [];
+    if (a.skipped == null) a.skipped = a.total - a.correct - a.wrong - (a.notVisited || 0);
+    var tm = function (v) { return isFinite(v) ? fmt(v) : "–"; };
     var att = a.correct + a.wrong, acc = att ? Math.round(a.correct / att * 100) : 0, pct = Math.max(0, a.score / a.total * 100);
     var hasNv = a.notVisited != null;
     var bars = Object.keys(a.sections).map(function (s) {
@@ -162,7 +166,7 @@
       '<div class="facts res-facts' + (hasNv ? " n8" : "") + '"><div><small>' + T("res.correct") + '</small><strong class="okc">' + a.correct + "</strong></div><div><small>" + T("res.wrong") + "</small><strong class=\"bad\">" + a.wrong +
       "</strong></div><div><small>" + T("res.skipped") + "</small><strong>" + a.skipped + "</strong></div>" + (hasNv ? "<div><small>" + T("res.nv") + "</small><strong>" + a.notVisited + "</strong></div>" : "") +
       "<div><small>" + T("res.attempted") + "</small><strong>" + att + " / " + a.total + "</strong></div><div><small>" + T("res.accuracy") + "</small><strong>" + acc + "%</strong></div>" +
-      "<div><small>" + T("res.time") + "</small><strong>" + fmt(a.timeTaken) + " / " + fmt(a.limit) + "</strong></div><div><small>" + T("res.neg") + "</small><strong>−" + (Math.round(a.wrong / 3 * 100) / 100) + "</strong></div></div>" +
+      "<div><small>" + T("res.time") + "</small><strong>" + tm(a.timeTaken) + " / " + tm(a.limit) + "</strong></div><div><small>" + T("res.neg") + "</small><strong>−" + (Math.round(a.wrong / 3 * 100) / 100) + "</strong></div></div>" +
       '<h2 class="sec">' + T("res.sections") + '</h2><div class="card">' + bars + '<div class="bar-legend"><span><i class="c"></i>' + T("res.correct") + '</span><span><i class="w"></i>' + T("res.wrong") + '</span><span><i></i>' + (hasNv ? T("res.skipNv") : T("res.skipped")) + '</span></div></div>' +
       '<div class="rev-head"><h2 class="sec">' + T("res.review") + '</h2><div class="rev-tools">' + langSw() + '<div class="filters" role="group">' + [["all", "f.all"], ["wrong", "f.wrong"], ["skipped", "f.skipped"]].concat(hasNv ? [["notvisited", "f.nv"]] : []).map(function (x) { return '<button data-f="' + x[0] + '" aria-pressed="' + (x[0] === RES_F) + '">' + T(x[1]) + "</button>"; }).join("") + '</div></div></div>' +
       '<div id="review"><p class="muted">' + T("res.loadingQ") + '</p></div>' +
@@ -171,7 +175,7 @@
       D = d; var f = RES_F;
       function list() {
         $("#review").innerHTML = d.questions.map(function (q, i) {
-          var u = a.ans[i], kind = u < 0 ? (a.st && a.st[i] === 0 ? "notvisited" : "skipped") : u === q.a ? "right" : "wrong";
+          var u = a.ans[i] == null ? -1 : a.ans[i], kind = u < 0 ? (a.st && a.st[i] === 0 ? "notvisited" : "skipped") : u === q.a ? "right" : "wrong";
           if (f !== "all" && f !== kind) return "";
           return '<div class="rev card ' + kind + '"><div class="qhead"><span>Q' + (i + 1) + " · " + SEC(q.s) + '</span><span class="tag ' + (kind === "right" ? "ok" : kind === "wrong" ? "bad" : "") + '">' +
             T(kind === "right" ? "res.tagRight" : kind === "wrong" ? "res.tagWrong" : kind === "notvisited" ? "res.tagNv" : "res.tagSkip") + '</span></div>' + txt(q) + figs(q) + "<ol class=\"ropts\">" +
@@ -193,7 +197,7 @@
     app = document.getElementById("app");
     var p = new URLSearchParams(location.search), r = p.get("result"), id = p.get("id");
     if (r) {
-      var a = JSON.parse(localStorage.getItem(RRB.ATTEMPTS) || "[]").filter(function (x) { return String(x.ts) === r; })[0];
+      var a = JSON.parse(localStorage.getItem(RRB.ATTEMPTS) || "[]").filter(function (x) { return x && String(x.ts) === r; })[0];
       if (a) return results(a);
       app.innerHTML = '<p class="muted">' + T("res.notFound") + ' <a href="mock.html">' + T("res.seeAll") + "</a></p>"; return;
     }

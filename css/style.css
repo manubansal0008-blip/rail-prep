@@ -101,3 +101,5 @@ footer strong{color:var(--text)}
 .top-lang button{padding:4px 9px;font-size:var(--fs-xs);min-height:30px}
 body.testing .top-lang{display:none}
 html[lang="hi"] .eyebrow,html[lang="hi"] .cd span{text-transform:none;letter-spacing:0}
+@media (min-width:640px){.grid.cols-4{grid-template-columns:1fr 1fr}}
+@media (min-width:980px){.grid.cols-4{grid-template-columns:repeat(4,1fr)}}
