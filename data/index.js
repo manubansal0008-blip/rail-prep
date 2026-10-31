@@ -213,8 +213,7 @@ RRB.INDEX=[
    "General Intelligence and Reasoning"
   ],
   "full": true,
-  "level": "mixed",
-  "isNew": true
+  "level": "mixed"
  },
  {
   "id": "ntpc-full-3",
@@ -229,8 +228,7 @@ RRB.INDEX=[
    "General Intelligence and Reasoning"
   ],
   "full": true,
-  "level": "mixed",
-  "isNew": true
+  "level": "mixed"
  },
  {
   "id": "gd-full-2",
@@ -246,13 +244,143 @@ RRB.INDEX=[
    "General Awareness and Current Affairs"
   ],
   "full": true,
-  "level": "mixed",
-  "isNew": true
+  "level": "mixed"
  },
  {
   "id": "gd-full-3",
   "exam": "gd",
   "label": "Group D Full Mock 3 (100 Q)",
+  "mock": true,
+  "count": 100,
+  "min": 90,
+  "sections": [
+   "General Science",
+   "Mathematics",
+   "General Intelligence and Reasoning",
+   "General Awareness and Current Affairs"
+  ],
+  "full": true,
+  "level": "mixed"
+ },
+ {
+  "id": "ntpc-full-4",
+  "exam": "ntpc",
+  "label": "NTPC UG Full Mock 4 (100 Q)",
+  "mock": true,
+  "count": 100,
+  "min": 90,
+  "sections": [
+   "General Awareness",
+   "Mathematics",
+   "General Intelligence and Reasoning"
+  ],
+  "full": true,
+  "level": "mixed",
+  "isNew": true
+ },
+ {
+  "id": "ntpc-full-5",
+  "exam": "ntpc",
+  "label": "NTPC UG Full Mock 5 (100 Q)",
+  "mock": true,
+  "count": 100,
+  "min": 90,
+  "sections": [
+   "General Awareness",
+   "Mathematics",
+   "General Intelligence and Reasoning"
+  ],
+  "full": true,
+  "level": "mixed",
+  "isNew": true
+ },
+ {
+  "id": "ntpc-full-6",
+  "exam": "ntpc",
+  "label": "NTPC UG Full Mock 6 (100 Q)",
+  "mock": true,
+  "count": 100,
+  "min": 90,
+  "sections": [
+   "General Awareness",
+   "Mathematics",
+   "General Intelligence and Reasoning"
+  ],
+  "full": true,
+  "level": "mixed",
+  "isNew": true
+ },
+ {
+  "id": "ntpc-full-7",
+  "exam": "ntpc",
+  "label": "NTPC UG Full Mock 7 (100 Q)",
+  "mock": true,
+  "count": 100,
+  "min": 90,
+  "sections": [
+   "General Awareness",
+   "Mathematics",
+   "General Intelligence and Reasoning"
+  ],
+  "full": true,
+  "level": "mixed",
+  "isNew": true
+ },
+ {
+  "id": "gd-full-4",
+  "exam": "gd",
+  "label": "Group D Full Mock 4 (100 Q)",
+  "mock": true,
+  "count": 100,
+  "min": 90,
+  "sections": [
+   "General Science",
+   "Mathematics",
+   "General Intelligence and Reasoning",
+   "General Awareness and Current Affairs"
+  ],
+  "full": true,
+  "level": "mixed",
+  "isNew": true
+ },
+ {
+  "id": "gd-full-5",
+  "exam": "gd",
+  "label": "Group D Full Mock 5 (100 Q)",
+  "mock": true,
+  "count": 100,
+  "min": 90,
+  "sections": [
+   "General Science",
+   "Mathematics",
+   "General Intelligence and Reasoning",
+   "General Awareness and Current Affairs"
+  ],
+  "full": true,
+  "level": "mixed",
+  "isNew": true
+ },
+ {
+  "id": "gd-full-6",
+  "exam": "gd",
+  "label": "Group D Full Mock 6 (100 Q)",
+  "mock": true,
+  "count": 100,
+  "min": 90,
+  "sections": [
+   "General Science",
+   "Mathematics",
+   "General Intelligence and Reasoning",
+   "General Awareness and Current Affairs"
+  ],
+  "full": true,
+  "level": "mixed",
+  "isNew": true
+ },
+ {
+  "id": "gd-full-7",
+  "exam": "gd",
+  "label": "Group D Full Mock 7 (100 Q)",
   "mock": true,
   "count": 100,
   "min": 90,
