@@ -62,7 +62,7 @@
         return "<h3>" + E(c.h) + "</h3>" + (c.list ? "<ul>" + c.list.map(function (x) { return "<li>" + fx(x) + "</li>"; }).join("") + "</ul>" : "") +
           (c.table ? '<div class="nt-table">' + c.table.map(function (r) { return "<div><b>" + E(r[0]) + "</b><span>" + E(r[1]) + "</span></div>"; }).join("") + "</div>" : "");
       }).join("") + "</section>";
-      h += '<section class="card nt-sec"><h2>🧮 ' + T("notes.formulas") + '</h2><dl class="nt-fm">' + n.formulas.map(function (f) {
+      h += '<section class="card nt-sec"><h2>' + (t.s === "ga" ? "📋 " + T("notes.facts") : "🧮 " + T("notes.formulas")) + '</h2><dl class="nt-fm">' + n.formulas.map(function (f) {
         return "<div><dt>" + E(f[0]) + "</dt><dd>" + fx(f[1]) + "</dd></div>";
       }).join("") + "</dl></section>";
       h += '<section class="nt-sec nt-exs"><h2>✍️ ' + T("notes.examples") + "</h2>" + n.examples.map(function (x, i) {

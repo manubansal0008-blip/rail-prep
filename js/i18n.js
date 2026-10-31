@@ -95,7 +95,7 @@ window.RRB = window.RRB || {};
       // notes
       "notes.h1": "Notes", "notes.loading": "Loading…", "notes.intro": "Short revision notes: key concepts, formulas, solved examples, quick tricks and common mistakes. More topics are being added.",
       "notes.readyH": "Ready to read", "notes.soon": "Coming soon", "notes.read": "Read →", "notes.qs": "{n} questions in papers and mocks", "notes.practiseShort": "Practise",
-      "notes.back": "← All notes", "notes.noteTitle": "{t} · Notes · Rail Prep", "notes.concepts": "Key concepts", "notes.formulas": "Formulas and rules", "notes.examples": "Solved examples",
+      "notes.back": "← All notes", "notes.noteTitle": "{t} · Notes · Rail Prep", "notes.concepts": "Key concepts", "notes.formulas": "Formulas and rules", "notes.facts": "Key facts", "notes.examples": "Solved examples",
       "notes.ex": "Example {n}", "notes.ans": "Answer:", "notes.tricks": "Quick tricks", "notes.mistakes": "Common mistakes", "notes.practice": "Practice this topic →", "notes.print": "Print",
       "notes.loadErr": "Could not load this note. Please refresh the page.", "notes.soonNote": "The note for this topic is coming soon. Until then, practise its questions.",
       "notes.endP": "Done reading? Try {n} real questions on this topic.",
@@ -202,7 +202,7 @@ window.RRB = window.RRB || {};
       "papers.h1": "पिछले प्रश्न पत्र", "papers.intro": "RRB आंसर की के साथ असली RRB प्रश्न पत्र। हर पेपर पूरे 90 मिनट के CBT की तरह चलता है, 1/3 नेगेटिव मार्किंग के साथ।", "papers.seeMocks": "हमारे अपने प्रैक्टिस सेट और टफ मॉक चाहिए? मॉक टेस्ट खोलें →",
       "notes.h1": "नोट्स", "notes.loading": "लोड हो रहा है…", "notes.intro": "छोटे रिवीजन नोट्स: ज़रूरी बातें, सूत्र, हल किए गए उदाहरण, शॉर्टकट ट्रिक और आम गलतियाँ। और टॉपिक जोड़े जा रहे हैं।",
       "notes.readyH": "पढ़ने के लिए तैयार", "notes.soon": "जल्द आएगा", "notes.read": "पढ़ें →", "notes.qs": "पेपर और मॉक में {n} प्रश्न", "notes.practiseShort": "प्रैक्टिस",
-      "notes.back": "← सभी नोट्स", "notes.noteTitle": "{t} · नोट्स · Rail Prep", "notes.concepts": "ज़रूरी बातें", "notes.formulas": "सूत्र और नियम", "notes.examples": "हल किए गए उदाहरण",
+      "notes.back": "← सभी नोट्स", "notes.noteTitle": "{t} · नोट्स · Rail Prep", "notes.concepts": "ज़रूरी बातें", "notes.formulas": "सूत्र और नियम", "notes.facts": "मुख्य तथ्य", "notes.examples": "हल किए गए उदाहरण",
       "notes.ex": "उदाहरण {n}", "notes.ans": "उत्तर:", "notes.tricks": "शॉर्टकट ट्रिक", "notes.mistakes": "आम गलतियाँ", "notes.practice": "इस टॉपिक की प्रैक्टिस करें →", "notes.print": "प्रिंट करें",
       "notes.loadErr": "यह नोट लोड नहीं हो सका। कृपया पेज रिफ्रेश करें।", "notes.soonNote": "इस टॉपिक का नोट जल्द आएगा। तब तक इसके प्रश्नों की प्रैक्टिस करें।",
       "notes.endP": "पढ़ लिया? अब इस टॉपिक के {n} असली प्रश्न हल करें।",
