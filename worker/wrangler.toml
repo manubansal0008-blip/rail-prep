@@ -1,0 +1,20 @@
+# Cloudflare Worker for the Rail Prep doubt chat. Deploy from this folder: npx wrangler deploy
+name = "rail-prep-chat"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+# Your GitHub Pages origin (no trailing slash). Comma-separate several, e.g. a custom domain too.
+ALLOWED_ORIGIN = "https://YOUR-USERNAME.github.io"
+GEMINI_MODEL = "gemini-3.8-flash"
+
+# Basic per-IP rate limit: about 10 questions per minute per IP (approximate, per Cloudflare location).
+[[ratelimits]]
+name = "RATE_LIMITER"
+namespace_id = "1001"
+
+  [ratelimits.simple]
+  limit = 10
+  period = 60
+
+# The API key is a secret, never stored here: npx wrangler secret put GEMINI_API_KEY

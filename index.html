@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rail Prep · NTPC UG and Group D practice</title>
+<meta name="description" content="Unofficial practice resource for RRB NTPC UG and Group D: countdowns, past papers and mock tests.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23d9480f%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chat.css">
+<script src="js/app.js"></script>
+<script src="js/config.js"></script>
+<script src="js/chat.js"></script>
+<script src="data/exams.js"></script>
+<script src="data/index.js"></script>
+<script src="js/home.js"></script>
+</head>
+<body>
+<main class="wrap">
+  <section class="banner">
+    <span class="eyebrow">Unofficial practice hub</span>
+    <h1 id="examName">RRB exam prep</h1>
+    <p id="examTag"></p>
+    <div class="switch" role="group" aria-label="Choose exam">
+      <button data-exam="ntpc" aria-pressed="true">NTPC UG</button>
+      <button data-exam="gd" aria-pressed="false">Group D</button>
+    </div>
+    <svg class="track" viewBox="0 0 520 120" aria-hidden="true" fill="none" stroke="#fff" stroke-width="4">
+      <path d="M0 100 H520 M0 80 H520"/>
+      <g stroke-width="3"><path d="M20 76v28M60 76v28M100 76v28M140 76v28M180 76v28M220 76v28M260 76v28M300 76v28M340 76v28M380 76v28M420 76v28M460 76v28M500 76v28"/></g>
+      <rect x="230" y="22" width="250" height="48" rx="18"/><path d="M480 46h30"/>
+      <rect x="250" y="32" width="34" height="18" rx="4"/><rect x="300" y="32" width="34" height="18" rx="4"/><rect x="350" y="32" width="34" height="18" rx="4"/><rect x="400" y="32" width="34" height="18" rx="4"/>
+    </svg>
+  </section>
+
+  <h2 class="sec">Countdown</h2>
+  <div class="grid cols-2" id="countdowns"></div>
+
+  <h2 class="sec">Exam at a glance</h2>
+  <div class="facts" id="facts"></div>
+
+  <h2 class="sec">Start practising</h2>
+  <div class="grid cols-3" id="cards"></div>
+</main>
+</body>
+</html>
