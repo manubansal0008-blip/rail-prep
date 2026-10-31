@@ -25,6 +25,42 @@
         pct: Math.round(a.score / total * 1000) / 10, acc: c + w ? Math.round(c / (c + w) * 100) : null, time: isFinite(a.timeTaken) ? +a.timeTaken : null };
     }).sort(function (x, y) { return x.ts - y.ts; });
   }
+  // Topic drills from the practice page (RRB.DRILLS). Each item: [paperId, qIndex, topic, answer (-1 = skipped), correct (1/0)].
+  function drills() {
+    var raw; try { raw = JSON.parse(localStorage.getItem(RRB.DRILLS) || "[]"); } catch (e) { raw = []; }
+    return (Array.isArray(raw) ? raw : []).filter(function (d) { return d && Array.isArray(d.items); });
+  }
+  function topicSec() {
+    var TP = RRB.TOPICS, all = drills(); if (!TP) return "";
+    var TOP = {}; TP.topics.forEach(function (t) { TOP[t.k] = t; });
+    var hi = RRB.lang() === "hi", nm = function (o) { return o ? (hi && o.hi ? o.hi : o.en) : ""; };
+    var S = {}, nd = 0, nq = 0;
+    all.forEach(function (d) {
+      var used = 0;
+      d.items.forEach(function (it) {
+        if (!Array.isArray(it)) return;
+        var m = meta(it[0]), t = it[2] || (TP.map[it[0]] || [])[it[1]]; if (!TOP[t]) return;
+        var ex = m ? m.exam : ""; if (F.exam !== "all" && ex !== F.exam) return;
+        var o = S[t] = S[t] || { n: 0, c: 0, w: 0 }; o.n++; used++; nq++;
+        if (it[4]) o.c++; else if (it[3] >= 0) o.w++;
+      });
+      if (used) nd++;
+    });
+    var keys = Object.keys(S);
+    var h = '<h2 class="sec">' + T("prog.topics") + "</h2>";
+    if (!keys.length) return h + '<div class="card tp-empty"><p class="muted">' + T("prog.topicNone") + '</p><a class="btn" href="practice.html">' + T("prog.topicCta") + "</a></div>";
+    keys.sort(function (a, b) {
+      var A = S[a], B = S[b], x = A.c + A.w ? A.c / (A.c + A.w) : 2, y = B.c + B.w ? B.c / (B.c + B.w) : 2;
+      return x - y || B.n - A.n;
+    });
+    return h + '<div class="card tp-card"><p class="pg-note" style="margin:0 0 12px">' + T("prog.topicsP", { d: nd, q: nq }) + "</p>" + keys.map(function (k) {
+      var o = S[k], u = o.n - o.c - o.w, a = o.c + o.w ? Math.round(o.c / (o.c + o.w) * 100) : null, t = TOP[k];
+      return '<div class="sbar"><div class="sbar-h"><span>' + E(nm(t)) + "<small>" + E(nm(TP.sections[t.s])) + "</small></span><strong>" + (a == null ? "–" : a + "%") + " <small>" + T("prog.accShort") + "</small>" +
+        '<a href="practice.html?topic=' + k + (F.exam !== "all" ? "&exam=" + F.exam : "") + '">' + T("prog.practise") + "</a></strong></div>" +
+        '<div class="bar" role="img" aria-label="' + E(T("prog.barLine", { c: o.c, w: o.w, k: u })) + '"><i class="c" style="width:' + o.c / o.n * 100 + '%"></i><i class="w" style="width:' + o.w / o.n * 100 + '%"></i></div>' +
+        '<small class="muted">' + T("prog.barLine", { c: o.c, w: o.w, k: u }) + "</small></div>";
+    }).join("") + "</div>";
+  }
   function fmtDur(sec) {
     var h = Math.floor(sec / 3600), m = Math.round(sec / 60) % 60;
     if (h >= 1 && Math.round(sec / 60) % 60 === 0 && sec % 3600 >= 3570) { h++; m = 0; }
@@ -64,14 +100,16 @@
     var all = load(), body = document.getElementById("pbody");
     if (!all.length) {
       body.innerHTML = '<div class="card pg-empty fade"><div class="ico" aria-hidden="true">📈</div><h3>' + T("prog.emptyH") + "</h3><p>" + T("prog.emptyP") +
-        '</p><a class="btn" href="mock.html">' + T("prog.emptyCta") + '</a> <a class="btn ghost-btn" href="mock.html#papers">' + T("prog.emptyCta2") + "</a></div>";
+        '</p><a class="btn" href="mock.html">' + T("prog.emptyCta") + '</a> <a class="btn ghost-btn" href="mock.html#papers">' + T("prog.emptyCta2") + "</a></div>" +
+        (drills().length ? topicSec() + clearBtn() : "");
+      if (drills().length) bind();
       return;
     }
     var list = all.filter(function (x) { return (F.exam === "all" || x.exam === F.exam) && (F.type === "all" || (F.type === "mock") === x.mock); });
     var h = '<div class="pg-filters"><div class="fl"><small>' + T("prog.f.exam") + "</small>" + btns("exam", [["all", "prog.all"], ["ntpc", "prog.ntpc"], ["gd", "prog.gd"]]) + "</div>" +
       '<div class="fl"><small>' + T("prog.f.type") + "</small>" + btns("type", [["all", "prog.all"], ["paper", "prog.paper"], ["mock", "prog.mock"]]) + "</div></div>";
     if (!list.length) {
-      body.innerHTML = h + '<div class="card pg-empty"><p>' + T("prog.noMatch") + "</p></div>" + clearBtn(); bind(); return;
+      body.innerHTML = h + '<div class="card pg-empty"><p>' + T("prog.noMatch") + "</p></div>" + topicSec() + clearBtn(); bind(); return;
     }
     var n = list.length, best = list.reduce(function (b, x) { return x.pct > b.pct ? x : b; }, list[0]);
     var avg = list.reduce(function (s, x) { return s + x.pct; }, 0) / n;
@@ -123,6 +161,8 @@
         (mk ? " " + T("prog.or") + ' <a href="test.html?id=' + mk.id + '">' + E(RRB.tLabel(mk.label)) + " →</a>" : "") + "</p></div>";
     }
 
+    h += topicSec();
+
     // Recent attempts (newest first)
     var rec = list.slice().reverse(), shown = showAll ? rec : rec.slice(0, 8);
     h += '<h2 class="sec">' + T("prog.recent") + '</h2><div class="card att-card"><table class="att"><thead><tr><th>' + T("prog.date") + "</th><th>" + T("prog.test") +
@@ -145,18 +185,18 @@
   function confirmClear() {
     var m = document.getElementById("modal"), n = load().length, last = document.activeElement;
     m.hidden = false;
-    m.innerHTML = '<div class="dialog fade" role="dialog" aria-modal="true" aria-labelledby="ct"><h2 id="ct">' + T("prog.clearH") + '</h2><p class="muted">' + T("prog.clearP", { n: n }) +
+    m.innerHTML = '<div class="dialog fade" role="dialog" aria-modal="true" aria-labelledby="ct"><h2 id="ct">' + T("prog.clearH") + '</h2><p class="muted">' + T("prog.clearP", { n: n }) + (drills().length ? T("prog.clearP2", { d: drills().length }) : "") +
       '</p><div class="dlg-act"><button class="b ghost" id="clNo">' + T("prog.cancel") + '</button><button class="b danger-fill" id="clYes">' + T("prog.clearYes") + "</button></div></div>";
     var close = function () { m.hidden = true; m.innerHTML = ""; document.removeEventListener("keydown", esc); last && last.focus && last.focus(); };
     var esc = function (e) { if (e.key === "Escape") close(); };
     document.addEventListener("keydown", esc);
     m.onclick = function (e) { if (e.target === m) close(); };
     document.getElementById("clNo").onclick = close;
-    document.getElementById("clYes").onclick = function () { localStorage.removeItem(RRB.ATTEMPTS); close(); F = { exam: "all", type: "all" }; render(); };
+    document.getElementById("clYes").onclick = function () { localStorage.removeItem(RRB.ATTEMPTS); localStorage.removeItem(RRB.DRILLS); close(); F = { exam: "all", type: "all" }; render(); };
     document.getElementById("clNo").focus();
   }
   document.addEventListener("DOMContentLoaded", render);
   document.addEventListener("rrb:lang", function () { var m = document.getElementById("modal"); render(); if (m && !m.hidden) confirmClear(); });
-  window.addEventListener("storage", function (e) { if (e.key === RRB.ATTEMPTS) render(); });
+  window.addEventListener("storage", function (e) { if (e.key === RRB.ATTEMPTS || e.key === RRB.DRILLS) render(); });
   window.addEventListener("resize", function () { var el = document.getElementById("chart"); if (el && Math.abs(el.clientWidth - chartW) > 20) render(); });
 })();

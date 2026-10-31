@@ -29,6 +29,7 @@
     var idx = RRB.INDEX.filter(function (p) { return p.exam === x; });
     var papers = idx.filter(function (p) { return !p.mock; }), mocks = idx.filter(function (p) { return p.mock; });
     var qn = papers.reduce(function (a, p) { return a + p.count; }, 0);
+    var mq = mocks.reduce(function (a, p) { return a + p.count; }, 0);
     document.querySelectorAll(".switch button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.exam === x); var X = RRB.EXAMS[b.dataset.exam]; b.textContent = RRB.lang() === "hi" && X.hi ? X.hi.short : X.short; });
     document.getElementById("examName").textContent = E.name;
     document.getElementById("examTag").textContent = E.cen + " · " + E.tagline;
@@ -51,10 +52,11 @@
     }).join("");
 
     document.getElementById("cards").innerHTML = [
-      [null, "📘", t("card.notes"), t("card.notesP", { exam: E.short })],
       ["mock.html#papers", "🗂", t("card.papers"), t("card.papersP", { n: papers.length, q: qn })],
-      ["mock.html", "⏱", t("card.mocks"), t("card.mocksP", { n: mocks.length, q: mocks[0] ? mocks[0].count : 0 })],
-      ["progress.html", "📈", t("card.progress"), progLine()]
+      ["mock.html", "⏱", t("card.mocks"), t("card.mocksP", { n: mocks.length, q: mq })],
+      ["practice.html", "🎯", t("card.practice"), t("card.practiceP", { q: qn + mq })],
+      ["progress.html", "📈", t("card.progress"), progLine()],
+      [null, "📘", t("card.notes"), t("card.notesP", { exam: E.short })]
     ].map(function (c) {
       if (!c[0]) return '<div class="card fade soon" aria-disabled="true"><div class="ico" aria-hidden="true">' + c[1] + "</div><h3>" + c[2] +
         ' <span class="tag warn">' + t("tag.soon") + '</span></h3><p>' + c[3] + '</p><span class="more muted">' + t("card.na") + "</span></div>";

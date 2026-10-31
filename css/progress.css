@@ -55,3 +55,8 @@
 .b.danger-fill{background:#e03131;border-color:#e03131;color:#fff}
 .pg-note{font-size:var(--fs-xs);color:var(--muted);margin:6px 0 0}
 .weak{margin-top:14px}
+/* Progress page: topic practice */
+.tp-card .sbar-h span small{color:var(--muted);font-size:var(--fs-xs);margin-left:6px}
+.tp-card .sbar-h a{color:var(--accent);font-weight:600;font-size:var(--fs-xs);margin-left:8px;white-space:nowrap}
+.tp-empty{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.tp-empty p{margin:0}

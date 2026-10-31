@@ -2,7 +2,7 @@
   var t = function (k, v) { return RRB.t(k, v); };
   function card(p) {
     return '<a class="card test-card" href="test.html?id=' + p.id + '"><div class="tc-top"><h3>' + RRB.esc(RRB.tLabel(p.label)) + "</h3>" +
-      (p.mock ? '<span class="tag ok">' + t("mock.tagPractice") + "</span>" : '<span class="tag">' + t("mock.tagPaper") + "</span>") + "</div>" +
+      (p.tough ? '<span class="tag tough" title="' + t("mock.toughT") + '">🔥 ' + t("mock.tagTough") + "</span>" : p.mock ? '<span class="tag ok">' + t("mock.tagPractice") + "</span>" : '<span class="tag">' + t("mock.tagPaper") + "</span>") + "</div>" +
       '<div class="tc-meta"><span>📝 ' + t("mock.qs", { n: p.count }) + "</span><span>⏱ " + t("mock.min", { n: p.min }) + "</span>" +
       (p.dropped ? '<span title="' + t("mock.omittedT") + '">' + t("mock.omitted", { n: p.dropped }) + "</span>" : "") + "</div>" +
       "<p>" + p.sections.map(function (s) { return RRB.esc(RRB.tSec(s)); }).join(" · ") + '</p><span class="more">' + t("mock.start") + "</span></a>";

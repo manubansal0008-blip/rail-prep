@@ -9,7 +9,7 @@ window.RRB = window.RRB || {};
   RRB.getExam = function () { return localStorage.getItem(KEY_EXAM) || "ntpc"; };
   RRB.setExam = function (x) { localStorage.setItem(KEY_EXAM, x); };
 
-  var PAGES = [["index.html", "nav.home"], ["notes.html", "nav.notes"], ["mock.html#papers", "nav.papers"], ["mock.html", "nav.mocks"], ["progress.html", "nav.progress"]];
+  var PAGES = [["index.html", "nav.home"], ["notes.html", "nav.notes"], ["mock.html#papers", "nav.papers"], ["mock.html", "nav.mocks"], ["practice.html", "nav.practice"], ["progress.html", "nav.progress"]];
 
   function header() {
     var here = location.pathname.split("/").pop() || "index.html";
@@ -58,4 +58,8 @@ RRB.loadTest = function (id, cb, err) {
   document.head.appendChild(s);
 };
 RRB.esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
-RRB.ATTEMPTS = "rrb.attempts"; RRB.ACTIVE = "rrb.active";
+RRB.ATTEMPTS = "rrb.attempts"; RRB.ACTIVE = "rrb.active"; RRB.DRILLS = "rrb.drills";
+// Question figures (shared by the test and topic-practice pages). Image paths in the data are already data/img/<paper>/...
+RRB.imgW = 'onload="this.style.width=Math.min(this.naturalWidth,Math.max(this.naturalWidth/2,680))+\'px\'"';
+RRB.figs = function (q) { var a = q.img ? [].concat(q.img) : []; return a.map(function (src) { return '<img class="qimg" loading="lazy" ' + RRB.imgW + ' src="' + src + '" alt="' + RRB.t("test.fig") + '">'; }).join(""); };
+RRB.optImg = function (q, k) { return q.oi && q.oi[k] ? '<img class="oimg" loading="lazy" ' + RRB.imgW + ' src="' + q.oi[k] + '" alt="' + RRB.t("test.optFig", { k: k + 1 }) + '">' : ""; };

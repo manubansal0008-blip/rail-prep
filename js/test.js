@@ -9,8 +9,8 @@
   function fmt(sec) { sec = Math.max(0, Math.round(sec)); var h = Math.floor(sec / 3600), m = Math.floor(sec / 60) % 60, s = sec % 60;
     return (h ? h + ":" : "") + String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0"); }
   function counts(list) { var c = [0, 0, 0, 0, 0]; list.forEach(function (i) { c[S.st[i]]++; }); return c; }
-  function figs(q) { var a = q.img ? [].concat(q.img) : []; return a.map(function (src) { return '<img class="qimg" loading="lazy" onload="this.style.width=Math.min(this.naturalWidth,Math.max(this.naturalWidth/2,680))+\'px\'" src="' + src + '" alt="' + T("test.fig") + '">'; }).join(""); }
-  function optHtml(q, k) { return (q.oi && q.oi[k] ? '<img class="oimg" loading="lazy" onload="this.style.width=Math.min(this.naturalWidth,Math.max(this.naturalWidth/2,680))+\'px\'" src="' + q.oi[k] + '" alt="' + T("test.optFig", { k: k + 1 }) + '">' : "") + (hi(q.oh && q.oh[k]) ? '<span lang="hi">' + E(q.oh[k]) + "</span>" : E(q.o[k])); }
+  function figs(q) { return RRB.figs(q); }
+  function optHtml(q, k) { return RRB.optImg(q, k) + (hi(q.oh && q.oh[k]) ? '<span lang="hi">' + E(q.oh[k]) + "</span>" : E(q.o[k])); }
   var LANG = RRB.lang(), RES = null, RES_F = "all";
   function hi(v) { return LANG === "hi" && v != null && v !== ""; }
   function txt(q) { return hi(q.qh) ? '<p class="qtext" lang="hi">' + E(q.qh) + "</p>" : q.q ? '<p class="qtext">' + E(q.q) + "</p>" : ""; }

@@ -199,5 +199,34 @@ RRB.INDEX=[
    "Reasoning",
    "General Awareness"
   ]
+ },
+ {
+  "id": "tough-ntpc-1",
+  "exam": "ntpc",
+  "label": "NTPC UG tough mock 1 (100 Q)",
+  "mock": true,
+  "count": 100,
+  "min": 90,
+  "sections": [
+   "General Awareness",
+   "Mathematics",
+   "General Intelligence and Reasoning"
+  ],
+  "tough": true
+ },
+ {
+  "id": "tough-gd-1",
+  "exam": "gd",
+  "label": "Group D tough mock 1 (100 Q)",
+  "mock": true,
+  "count": 100,
+  "min": 90,
+  "sections": [
+   "General Science",
+   "Mathematics",
+   "General Intelligence and Reasoning",
+   "General Awareness and Current Affairs"
+  ],
+  "tough": true
  }
 ];

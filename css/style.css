@@ -67,6 +67,7 @@ a.card:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--acc
 .card .more{display:inline-block;margin-top:12px;color:var(--accent);font-weight:600;font-size:var(--fs-sm)}
 .tag{display:inline-block;font-size:var(--fs-xs);padding:2px 8px;border-radius:999px;background:var(--surface-2);color:var(--muted);margin-left:6px;vertical-align:middle}
 .tag.warn{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
+.tag.tough{background:color-mix(in srgb,#e03131 15%,transparent);color:#e03131;white-space:nowrap}
 .tag.ok{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
 /* countdown */
 .cd-label{font-weight:600}
@@ -103,3 +104,5 @@ body.testing .top-lang{display:none}
 html[lang="hi"] .eyebrow,html[lang="hi"] .cd span{text-transform:none;letter-spacing:0}
 @media (min-width:640px){.grid.cols-4{grid-template-columns:1fr 1fr}}
 @media (min-width:980px){.grid.cols-4{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:980px){.grid.cards5{grid-template-columns:repeat(6,1fr)}.grid.cards5>*{grid-column:span 2}.grid.cards5>:nth-child(4),.grid.cards5>:nth-child(5){grid-column:span 3}}
+@media (min-width:640px) and (max-width:979px){.grid.cards5>:nth-child(5){grid-column:1/-1}}

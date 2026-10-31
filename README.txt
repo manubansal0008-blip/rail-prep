@@ -1,12 +1,15 @@
 Rail Prep: unofficial static practice site for RRB NTPC UG and Group D.
 Open index.html directly, or serve: python3 -m http.server 8000
 No build step, no external CDNs or fonts. The site itself is static (GitHub Pages).
-Status: step 3 (home + CBT mock tests + doubt chat). Notes and Progress are stubs.
+Status: home, CBT mock tests, Progress, topic practice, English/Hindi, doubt chat. Notes is a stub.
 
 FILES
   index.html, mock.html, test.html, ...   the site
   js/config.js      one setting: CHAT_URL (the doubt-chat endpoint). Empty = chat shows
                     "The doubt chat will be switched on soon."
+  practice.html, js/practice.js, css/practice.css   topic-wise practice drills
+  data/mocks/tough-*.js   100-question tough mocks (questions carry their own topic in field t)
+  data/topics.js    topic tag for every past-paper / practice-set question (map[paperId][qIndex])
   js/chat.js, css/chat.css   doubt chat (floating button on every page, hidden during a running test)
   worker/           Cloudflare Worker that talks to Google Gemini. Not part of the website:
                     _config.yml tells GitHub Pages to skip it (it holds no secrets, so it would be
