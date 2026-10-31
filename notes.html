@@ -7,16 +7,19 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23d9480f%22/%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/chat.css">
+<link rel="stylesheet" href="css/notes.css">
 <script src="js/i18n.js"></script>
 <script src="js/app.js"></script>
 <script src="js/config.js"></script>
 <script src="js/chat.js"></script>
+<script src="data/index.js"></script>
+<script src="data/topics.js"></script>
+<script src="data/notes/index.js"></script>
+<script src="js/notes.js"></script>
 </head>
 <body>
-<main class="wrap stub fade">
-  <h1 data-i18n="nav.notes">Notes</h1>
-  <p data-i18n="stub.soon">Coming soon. This section is being built.</p>
-  <a class="btn" href="index.html" data-i18n="stub.back">Back to Home</a>
+<main class="wrap fade" id="notes">
+  <div id="nb"><p class="muted" data-i18n="notes.loading">Loading…</p></div>
 </main>
 </body>
 </html>

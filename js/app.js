@@ -9,7 +9,7 @@ window.RRB = window.RRB || {};
   RRB.getExam = function () { return localStorage.getItem(KEY_EXAM) || "ntpc"; };
   RRB.setExam = function (x) { localStorage.setItem(KEY_EXAM, x); };
 
-  var PAGES = [["index.html", "nav.home"], ["notes.html", "nav.notes"], ["mock.html#papers", "nav.papers"], ["mock.html", "nav.mocks"], ["practice.html", "nav.practice"], ["progress.html", "nav.progress"]];
+  var PAGES = [["index.html", "nav.home"], ["notes.html", "nav.notes"], ["papers.html", "nav.papers"], ["mock.html", "nav.mocks"], ["practice.html", "nav.practice"], ["progress.html", "nav.progress"]];
 
   function header() {
     var here = location.pathname.split("/").pop() || "index.html";

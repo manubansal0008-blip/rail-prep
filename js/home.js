@@ -52,11 +52,11 @@
     }).join("");
 
     document.getElementById("cards").innerHTML = [
-      ["mock.html#papers", "🗂", t("card.papers"), t("card.papersP", { n: papers.length, q: qn })],
+      ["papers.html", "🗂", t("card.papers"), t("card.papersP", { n: papers.length, q: qn })],
       ["mock.html", "⏱", t("card.mocks"), t("card.mocksP", { n: mocks.length, q: mq })],
       ["practice.html", "🎯", t("card.practice"), t("card.practiceP", { q: qn + mq })],
       ["progress.html", "📈", t("card.progress"), progLine()],
-      [null, "📘", t("card.notes"), t("card.notesP", { exam: E.short })]
+      (RRB.NOTES_READY || []).length ? ["notes.html", "📘", t("card.notes"), t("card.notesP", { n: RRB.NOTES_READY.length })] : [null, "📘", t("card.notes"), t("card.notesP", { n: 0 })]
     ].map(function (c) {
       if (!c[0]) return '<div class="card fade soon" aria-disabled="true"><div class="ico" aria-hidden="true">' + c[1] + "</div><h3>" + c[2] +
         ' <span class="tag warn">' + t("tag.soon") + '</span></h3><p>' + c[3] + '</p><span class="more muted">' + t("card.na") + "</span></div>";

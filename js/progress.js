@@ -100,7 +100,7 @@
     var all = load(), body = document.getElementById("pbody");
     if (!all.length) {
       body.innerHTML = '<div class="card pg-empty fade"><div class="ico" aria-hidden="true">📈</div><h3>' + T("prog.emptyH") + "</h3><p>" + T("prog.emptyP") +
-        '</p><a class="btn" href="mock.html">' + T("prog.emptyCta") + '</a> <a class="btn ghost-btn" href="mock.html#papers">' + T("prog.emptyCta2") + "</a></div>" +
+        '</p><a class="btn" href="mock.html">' + T("prog.emptyCta") + '</a> <a class="btn ghost-btn" href="papers.html">' + T("prog.emptyCta2") + "</a></div>" +
         (drills().length ? topicSec() + clearBtn() : "");
       if (drills().length) bind();
       return;

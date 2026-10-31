@@ -139,3 +139,10 @@ body.testing #themeBtn{margin-left:auto}
 /* full / short action labels (short ones keep Hindi buttons on one line on phones) */
 .actions .ls{display:none}
 @media (max-width:899px){.actions .lf{display:none}.actions .ls{display:inline}}
+/* exam filter on mock/papers lists */
+.list-filter{flex-wrap:wrap;align-items:center}
+.list-filter .fl-label{font-size:var(--fs-sm);color:var(--muted);margin-right:2px}
+.exam-group .cnt{font-weight:400;font-size:.85em}
+.cross{margin:22px 0 6px}
+.cross a{color:var(--accent);font-weight:600;text-decoration:none}
+.cross a:hover{text-decoration:underline}

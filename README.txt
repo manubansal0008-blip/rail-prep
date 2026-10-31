@@ -1,7 +1,7 @@
 Rail Prep: unofficial static practice site for RRB NTPC UG and Group D.
 Open index.html directly, or serve: python3 -m http.server 8000
 No build step, no external CDNs or fonts. The site itself is static (GitHub Pages).
-Status: home, CBT mock tests, Progress, topic practice, English/Hindi, doubt chat. Notes is a stub.
+Status: home (slider, important dates, question of the day), mock tests (our own sets), past papers, Progress, topic practice, notes (3 topics so far), English/Hindi, doubt chat.
 
 FILES
   index.html, mock.html, test.html, ...   the site
@@ -9,6 +9,11 @@ FILES
                     "The doubt chat will be switched on soon."
   practice.html, js/practice.js, css/practice.css   topic-wise practice drills
   data/mocks/tough-*.js   100-question tough mocks (questions carry their own topic in field t)
+  notes.html, js/notes.js, css/notes.css   revision notes (list + one note per topic, print-friendly)
+  data/notes/       index.js lists topics that have a note; <topicId>.js holds one note in English + Hindi
+  data/dates.js     important dates on the home page (official/tentative, source per row; past rows close by themselves)
+  js/slider.js, js/datestrip.js, js/qotd.js, css/home.css   home slider, dates strip, question of the day (localStorage rrb.qotd)
+  mock.html / papers.html   both use js/mock.js: mock.html = our practice sets + tough mocks, papers.html = the 12 real past papers
   data/topics.js    topic tag for every past-paper / practice-set question (map[paperId][qIndex])
   js/chat.js, css/chat.css   doubt chat (floating button on every page, hidden during a running test)
   worker/           Cloudflare Worker that talks to Google Gemini. Not part of the website:

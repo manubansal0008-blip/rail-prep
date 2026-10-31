@@ -16,19 +16,17 @@
 <script src="js/mock.js"></script>
 </head>
 <body>
-<main class="wrap fade">
+<main class="wrap fade" data-kind="mock">
   <div class="list-head">
     <h1 data-i18n="mock.h1">Mock tests</h1>
-    <div class="switch light" role="group" aria-label="Choose exam" data-i18n-attr="aria-label:home.examsAria">
-      <button data-exam="ntpc">NTPC UG</button><button data-exam="gd">Group D</button>
+    <div class="filters list-filter" id="examFilter" role="group" aria-label="Choose exam" data-i18n-attr="aria-label:home.examsAria">
+      <span class="fl-label" data-i18n="mock.filter">Exam</span><button type="button" data-v="all">Both exams</button><button type="button" data-v="ntpc">NTPC UG</button><button type="button" data-v="gd">Group D</button>
     </div>
   </div>
-  <p class="muted" data-i18n="mock.intro">CBT-style tests with a question palette, timer and 1/3 negative marking. Your progress is kept if you refresh mid-test.</p>
+  <p class="muted" data-i18n="mock.intro2">Our own practice sets and tough mocks, in CBT style with a palette, timer and 1/3 negative marking. Real RRB papers are on the Past Papers page.</p>
   <div id="resume"></div>
-  <h2 class="sec" data-i18n="mock.practice">Practice sets and tough mocks</h2>
-  <div class="grid cols-2" id="mocks"></div>
-  <h2 class="sec" id="papers" data-i18n="mock.papers">Past papers (real questions, RRB answer keys)</h2>
-  <div class="grid cols-2" id="paperList"></div>
+  <div id="lists"></div>
+  <p class="cross"><a href="papers.html" data-i18n="mock.seePapers">Looking for real RRB papers? Open past papers →</a></p>
 </main>
 </body>
 </html>

@@ -8,13 +8,21 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%228%22 fill=%22%23d9480f%22/%3E%3C/svg%3E">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/chat.css">
+<link rel="stylesheet" href="css/cbt.css">
+<link rel="stylesheet" href="css/practice.css">
+<link rel="stylesheet" href="css/home.css">
 <script src="js/i18n.js"></script>
 <script src="js/app.js"></script>
 <script src="js/config.js"></script>
 <script src="js/chat.js"></script>
 <script src="data/exams.js"></script>
 <script src="data/index.js"></script>
+<script src="data/notes/index.js"></script>
+<script src="data/dates.js"></script>
 <script src="js/home.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/datestrip.js"></script>
+<script src="js/qotd.js"></script>
 </head>
 <body>
 <main class="wrap">
@@ -33,6 +41,14 @@
       <rect x="250" y="32" width="34" height="18" rx="4"/><rect x="300" y="32" width="34" height="18" rx="4"/><rect x="350" y="32" width="34" height="18" rx="4"/><rect x="400" y="32" width="34" height="18" rx="4"/>
     </svg>
   </section>
+
+  <section class="slider" id="slider" aria-roledescription="carousel" aria-label="What's new"></section>
+
+  <h2 class="sec" id="datesH" data-i18n="dt.h">Important dates</h2>
+  <div class="grid cols-2 dt-grid" id="dates" aria-labelledby="datesH"></div>
+
+  <h2 class="sec" data-i18n="qd.h">Question of the day</h2>
+  <div id="qotd" class="qotd"></div>
 
   <h2 class="sec" data-i18n="home.countdown">Countdown</h2>
   <div class="grid cols-2" id="countdowns"></div>
