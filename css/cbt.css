@@ -127,7 +127,7 @@ body.testing #themeBtn{margin-left:auto}
 .lang button{border:0;background:var(--surface);color:var(--muted);padding:5px 10px;font:inherit;font-size:var(--fs-sm);cursor:pointer;min-height:32px}
 .lang button[aria-pressed="true"]{background:var(--accent);color:#fff}
 .rev-tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-[lang="hi"]{font-family:"Nirmala UI","Noto Sans Devanagari","Mangal","Kohinoor Devanagari",system-ui,sans-serif;line-height:1.7}
+:not(html)[lang="hi"]{font-family:"Nirmala UI","Noto Sans Devanagari","Mangal","Kohinoor Devanagari",system-ui,sans-serif;line-height:1.7}
 .sum-wrap{overflow-x:auto;margin:12px 0}
 .sum-wrap .sum{margin:0}
 .sum th{font-size:var(--fs-xs);font-weight:600;color:var(--muted);line-height:1.25;vertical-align:bottom}
@@ -136,3 +136,6 @@ body.testing #themeBtn{margin-left:auto}
 .sum th i.s4::after{width:5px;height:5px;right:-2px;bottom:-2px;border-width:1px}
 .sum th .ab{display:none}
 @media (max-width:480px){.sum th,.sum td{padding:6px 2px}.sum{font-size:var(--fs-xs)}.sum th{font-size:.68rem}.sum th .full{display:none}.sum th .ab{display:inline}.dialog{padding:16px}}
+/* full / short action labels (short ones keep Hindi buttons on one line on phones) */
+.actions .ls{display:none}
+@media (max-width:899px){.actions .lf{display:none}.actions .ls{display:inline}}

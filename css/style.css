@@ -94,3 +94,10 @@ footer strong{color:var(--text)}
 .qimg{display:block;max-width:100%;height:auto;margin:8px 0}
 .card.soon{opacity:.72;cursor:default}
 .card.soon .more{color:var(--muted);font-weight:500}
+/* language toggle (header + test bar) */
+.lang{display:flex;border:1px solid var(--border);border-radius:999px;overflow:hidden;flex:none}
+.lang button{border:0;background:var(--surface);color:var(--muted);padding:5px 10px;font:inherit;font-size:var(--fs-sm);cursor:pointer;min-height:32px}
+.lang button[aria-pressed="true"]{background:var(--accent);color:#fff}
+.top-lang button{padding:4px 9px;font-size:var(--fs-xs);min-height:30px}
+body.testing .top-lang{display:none}
+html[lang="hi"] .eyebrow,html[lang="hi"] .cd span{text-transform:none;letter-spacing:0}

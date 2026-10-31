@@ -9,21 +9,24 @@ window.RRB = window.RRB || {};
   RRB.getExam = function () { return localStorage.getItem(KEY_EXAM) || "ntpc"; };
   RRB.setExam = function (x) { localStorage.setItem(KEY_EXAM, x); };
 
-  var PAGES = [["index.html", "Home"], ["notes.html", "Notes"], ["mock.html#papers", "Past Papers"], ["mock.html", "Mock Tests"], ["progress.html", "Progress"]];
+  var PAGES = [["index.html", "nav.home"], ["notes.html", "nav.notes"], ["mock.html#papers", "nav.papers"], ["mock.html", "nav.mocks"], ["progress.html", "nav.progress"]];
 
   function header() {
     var here = location.pathname.split("/").pop() || "index.html";
     var links = PAGES.map(function (p) {
-      return '<a href="' + p[0] + '"' + (p[0] === here ? ' aria-current="page"' : "") + ">" + p[1] + "</a>";
+      return '<a href="' + p[0] + '"' + (p[0] === here ? ' aria-current="page"' : "") + ' data-i18n="' + p[1] + '">' + RRB.t(p[1]) + "</a>";
     }).join("");
     var h = document.createElement("header");
     h.className = "top";
     h.innerHTML = '<div class="wrap">' +
-      '<a class="brand" href="index.html"><span class="brand-mark">RP</span><span>Rail Prep</span></a>' +
-      '<button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">☰</button>' +
+      '<a class="brand" href="index.html"><span class="brand-mark">RP</span><span data-i18n="site.title">' + RRB.t("site.title") + '</span></a>' +
+      '<button class="icon-btn menu-btn" id="menuBtn" data-i18n-attr="aria-label:aria.menu" aria-label="' + RRB.t("aria.menu") + '" aria-expanded="false">☰</button>' +
       '<nav class="nav" id="nav">' + links + "</nav>" +
-      '<button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode"></button></div>';
+      '<div class="lang top-lang" role="group" data-i18n-attr="aria-label:aria.lang" aria-label="' + RRB.t("aria.lang") + '"><button type="button" data-l="en" aria-pressed="' + (RRB.lang() === "en") + '">EN</button>' +
+      '<button type="button" data-l="hi" lang="hi" aria-pressed="' + (RRB.lang() === "hi") + '">हिंदी</button></div>' +
+      '<button class="icon-btn" id="themeBtn" data-i18n-attr="aria-label:aria.theme" aria-label="' + RRB.t("aria.theme") + '"></button></div>';
     document.body.prepend(h);
+    h.querySelectorAll(".top-lang button").forEach(function (b) { b.onclick = function () { RRB.setLang(b.dataset.l); }; });
     var tb = h.querySelector("#themeBtn");
     function paint() { tb.textContent = document.documentElement.getAttribute("data-theme") === "dark" ? "☀" : "☾"; }
     paint();
@@ -37,10 +40,7 @@ window.RRB = window.RRB || {};
 
   function footer() {
     var f = document.createElement("footer");
-    f.innerHTML = '<div class="wrap"><p><strong>Disclaimer:</strong> Rail Prep is an unofficial, independent practice resource. ' +
-      "It is not affiliated with the Railway Recruitment Boards or Indian Railways. Dates shown here, especially those marked tentative or expected, " +
-      "must be confirmed on the official RRB websites before you rely on them.</p>" +
-      "<p>Past-paper questions are reproduced as published, with RRB-marked answers. Practice sets are original questions.</p></div>";
+    f.innerHTML = '<div class="wrap"><p data-i18n-html="foot.disc">' + RRB.t("foot.disc") + '</p><p data-i18n="foot.src">' + RRB.esc(RRB.t("foot.src")) + "</p></div>";
     document.body.append(f);
   }
 
@@ -50,11 +50,11 @@ window.RRB = window.RRB || {};
 // Load one paper/practice-set data file on demand. Calls cb(data).
 RRB.loadTest = function (id, cb, err) {
   var meta = (RRB.INDEX || []).filter(function (p) { return p.id === id; })[0];
-  if (!meta) { err && err("Unknown test"); return; }
+  if (!meta) { err && err(RRB.t("test.unknown")); return; }
   RRB.load = function (d) { d.meta = meta; cb(d); };
   var s = document.createElement("script");
   s.src = "data/" + (meta.mock ? "mocks/" : "papers/") + id + ".js";
-  s.onerror = function () { err && err("Could not load test data"); };
+  s.onerror = function () { err && err(RRB.t("test.loadErr")); };
   document.head.appendChild(s);
 };
 RRB.esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };

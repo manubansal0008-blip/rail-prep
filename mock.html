@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-title="mock.doctitle">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/chat.css">
 <link rel="stylesheet" href="css/cbt.css">
+<script src="js/i18n.js"></script>
 <script src="js/app.js"></script>
 <script src="js/config.js"></script>
 <script src="js/chat.js"></script>
@@ -17,16 +18,16 @@
 <body>
 <main class="wrap fade">
   <div class="list-head">
-    <h1>Mock tests</h1>
-    <div class="switch light" role="group" aria-label="Choose exam">
+    <h1 data-i18n="mock.h1">Mock tests</h1>
+    <div class="switch light" role="group" aria-label="Choose exam" data-i18n-attr="aria-label:home.examsAria">
       <button data-exam="ntpc">NTPC UG</button><button data-exam="gd">Group D</button>
     </div>
   </div>
-  <p class="muted">CBT-style tests with a question palette, timer and 1/3 negative marking. Your progress is kept if you refresh mid-test.</p>
+  <p class="muted" data-i18n="mock.intro">CBT-style tests with a question palette, timer and 1/3 negative marking. Your progress is kept if you refresh mid-test.</p>
   <div id="resume"></div>
-  <h2 class="sec">Practice set</h2>
+  <h2 class="sec" data-i18n="mock.practice">Practice set</h2>
   <div class="grid cols-2" id="mocks"></div>
-  <h2 class="sec" id="papers">Past papers (real questions, RRB answer keys)</h2>
+  <h2 class="sec" id="papers" data-i18n="mock.papers">Past papers (real questions, RRB answer keys)</h2>
   <div class="grid cols-2" id="paperList"></div>
 </main>
 </body>

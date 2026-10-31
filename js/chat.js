@@ -7,6 +7,7 @@ window.RRB = window.RRB || {};
   try { hist = JSON.parse(localStorage.getItem(KEY) || "[]").slice(-MAX_TURNS); } catch (e) { hist = []; }
   lang = localStorage.getItem(KEY_LANG) || (localStorage.getItem("rrb.lang") === "hi" ? "hi" : "en");
   function url() { return String(RRB.CHAT_URL || "").trim(); }
+  var T = function (k, v) { return RRB.t ? RRB.t(k, v) : k; };
   function esc(t) { return String(t).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
 
   // Safe markdown: escape everything first, then add bold/italic/code, lists and line breaks.
@@ -40,14 +41,14 @@ window.RRB = window.RRB || {};
   }
   function render() {
     el.log.innerHTML = "";
-    if (!url()) bubble("bot", "<p>Doubt chat works once the site is online.</p>", "note");
+    if (!url()) bubble("bot", "<p>" + T("chat.offline") + "</p>", "note");
     else if (!hist.length) bubble("bot", lang === "hi"
       ? '<p lang="hi">नमस्ते! गणित, रीज़निंग, सामान्य विज्ञान या सामान्य जागरूकता का कोई भी डाउट पूछें।</p>'
       : "<p>Hi! Ask me any doubt from Maths, Reasoning, General Science or General Awareness.</p>", "note");
     hist.forEach(function (h) { bubble(h.role, h.role === "user" ? "<p>" + esc(h.text).replace(/\n/g, "<br>") + "</p>" : md(h.text)); });
     var off = !url();
     el.input.disabled = off; el.send.disabled = off || busy;
-    el.input.placeholder = off ? "Available once the site is online" : lang === "hi" ? "अपना डाउट लिखें…" : "Type your doubt…";
+    el.input.placeholder = off ? T("chat.offPh") : lang === "hi" ? "अपना डाउट लिखें…" : "Type your doubt…";
     el.langBtns.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.l === lang); });
     count();
   }
@@ -62,13 +63,13 @@ window.RRB = window.RRB || {};
     var text = el.input.value.trim();
     if (busy || !text) return;
     if (!url()) return;
-    if (text.length > MAX_INPUT) { bubble("bot", "<p>Your message is too long. Please keep it under " + MAX_INPUT + " characters.</p>", "err"); return; }
+    if (text.length > MAX_INPUT) { bubble("bot", "<p>" + T("chat.long", { n: MAX_INPUT }) + "</p>", "err"); return; }
     var past = hist.slice(-MAX_TURNS);
     hist.push({ role: "user", text: text }); save();
     el.input.value = ""; autosize(); count();
     bubble("user", "<p>" + esc(text).replace(/\n/g, "<br>") + "</p>");
     busy = true; el.send.disabled = true;
-    var typing = bubble("bot", '<span class="cb-dots" aria-label="Tutor is typing"><i></i><i></i><i></i></span>', "typing");
+    var typing = bubble("bot", '<span class="cb-dots" aria-label="' + T("chat.typing") + '"><i></i><i></i><i></i></span>', "typing");
     var done = function (reply, err) {
       busy = false; typing.remove(); el.send.disabled = false;
       if (reply) { hist.push({ role: "model", text: reply }); save(); bubble("model", md(reply)); }
@@ -77,8 +78,8 @@ window.RRB = window.RRB || {};
     var ctl = "AbortController" in window ? new AbortController() : null, timer = setTimeout(function () { ctl && ctl.abort(); }, 45000);
     fetch(url(), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ message: text, history: past, lang: lang }), signal: ctl && ctl.signal })
       .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok, j: j }; }); })
-      .then(function (x) { clearTimeout(timer); if (x.ok && x.j.reply) done(x.j.reply); else done(null, x.j.error || "The tutor could not answer right now. Please try again."); })
-      .catch(function () { clearTimeout(timer); done(null, "Couldn't reach the doubt chat. Check your internet connection and try again."); });
+      .then(function (x) { clearTimeout(timer); if (x.ok && x.j.reply) done(x.j.reply); else done(null, x.j.error || T("chat.fail")); })
+      .catch(function () { clearTimeout(timer); done(null, T("chat.net")); });
   }
   function autosize() { el.input.style.height = "auto"; el.input.style.height = Math.min(el.input.scrollHeight, 180) + "px"; }
 
@@ -86,14 +87,14 @@ window.RRB = window.RRB || {};
     var w = document.createElement("div");
     w.className = "cb";
     w.innerHTML =
-      '<button class="cb-fab" type="button" aria-label="Ask a doubt" aria-expanded="false" aria-controls="cbPanel"><span aria-hidden="true">💬</span><b>Ask a doubt</b></button>' +
-      '<section class="cb-panel" id="cbPanel" role="dialog" aria-label="Doubt chat" hidden>' +
-      '<div class="cb-head"><div><strong>Doubt chat</strong><small>AI tutor · may make mistakes, verify key facts</small></div>' +
-      '<div class="cb-tools"><div class="lang cb-lang" role="group" aria-label="Reply language"><button type="button" data-l="en">EN</button><button type="button" data-l="hi" lang="hi">हिंदी</button></div>' +
-      '<button type="button" class="cb-clear">Clear</button><button type="button" class="cb-x" aria-label="Close chat">✕</button></div></div>' +
+      '<button class="cb-fab" type="button" data-i18n-attr="aria-label:chat.fab" aria-label="' + T("chat.fab") + '" aria-expanded="false" aria-controls="cbPanel"><span aria-hidden="true">💬</span><b data-i18n="chat.fab">' + T("chat.fab") + '</b></button>' +
+      '<section class="cb-panel" id="cbPanel" role="dialog" data-i18n-attr="aria-label:chat.title" aria-label="' + T("chat.title") + '" hidden>' +
+      '<div class="cb-head"><div><strong data-i18n="chat.title">' + T("chat.title") + '</strong><small data-i18n="chat.sub">' + T("chat.sub") + '</small></div>' +
+      '<div class="cb-tools"><div class="lang cb-lang" role="group" data-i18n-attr="aria-label:chat.replyLang" aria-label="' + T("chat.replyLang") + '"><button type="button" data-l="en">EN</button><button type="button" data-l="hi" lang="hi">हिंदी</button></div>' +
+      '<button type="button" class="cb-clear" data-i18n="chat.clear">' + T("chat.clear") + '</button><button type="button" class="cb-x" data-i18n-attr="aria-label:chat.close" aria-label="' + T("chat.close") + '">✕</button></div></div>' +
       '<div class="cb-log" aria-live="polite"></div>' +
-      '<form class="cb-form"><textarea rows="1" aria-label="Your doubt"></textarea><button type="submit" class="cb-send" aria-label="Send">➤</button></form>' +
-      '<div class="cb-foot"><span>Enter to send · Shift+Enter for new line</span><span class="cb-count"></span></div></section>';
+      '<form class="cb-form"><textarea rows="1" data-i18n-attr="aria-label:chat.input" aria-label="' + T("chat.input") + '"></textarea><button type="submit" class="cb-send" data-i18n-attr="aria-label:chat.send" aria-label="' + T("chat.send") + '">➤</button></form>' +
+      '<div class="cb-foot"><span data-i18n="chat.hint">' + T("chat.hint") + '</span><span class="cb-count"></span></div></section>';
     document.body.appendChild(w);
     el = { fab: w.querySelector(".cb-fab"), panel: w.querySelector(".cb-panel"), log: w.querySelector(".cb-log"), input: w.querySelector("textarea"),
       send: w.querySelector(".cb-send"), count: w.querySelector(".cb-count"), langBtns: [].slice.call(w.querySelectorAll(".cb-lang button")) };
@@ -119,4 +120,7 @@ window.RRB = window.RRB || {};
   };
 
   document.addEventListener("DOMContentLoaded", build);
+  // Panel labels follow the site language (data-i18n is re-applied by RRB.setLang); the reply language
+  // follows too unless the student picked one inside the chat.
+  document.addEventListener("rrb:lang", function () { if (!localStorage.getItem(KEY_LANG)) lang = RRB.lang(); if (el.log) render(); });
 })();
