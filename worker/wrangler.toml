@@ -1,20 +1,27 @@
-# Cloudflare Worker for the Rail Prep doubt chat. Deploy from this folder: npx wrangler deploy
+# Cloudflare Worker for the Rail Prep doubt chat (see README.md for the deploy steps).
 name = "rail-prep-chat"
-main = "worker.js"
+main = "src/worker.js"
 compatibility_date = "2026-10-01"
+workers_dev = true
 
 [vars]
-# Your GitHub Pages origin (no trailing slash). Comma-separate several, e.g. a custom domain too.
-ALLOWED_ORIGIN = "https://YOUR-USERNAME.github.io"
-GEMINI_MODEL = "gemini-3.8-flash"
+# Sites allowed to call the chat (CORS). Comma-separate to add a custom domain later, e.g. "https://manubansal0008-blip.github.io,https://railprep.in"
+ALLOWED_ORIGIN = "https://manubansal0008-blip.github.io"
+# Also allow http://localhost:<port> (local testing only). Set to "false" if you want to block it.
+ALLOW_LOCALHOST = "false"
+GEMINI_MODEL = "gemini-2.5-flash"
+# Tried in order when the main model is busy or its free daily quota is used up (each model has its own quota).
+# Comma-separated; remove the line to turn it off.
+GEMINI_FALLBACK_MODEL = "gemini-flash-lite-latest"
+# Abuse limits: per IP per hour, per IP per day, whole site per day (India time).
+RL_HOUR = "20"
+RL_DAY = "60"
+RL_GLOBAL = "1200"
 
-# Basic per-IP rate limit: about 10 questions per minute per IP (approximate, per Cloudflare location).
-[[ratelimits]]
-name = "RATE_LIMITER"
-namespace_id = "1001"
+# Rate-limit counters. Create once with:  npx wrangler kv namespace create RL
+# then paste the printed id below (replace 83b321e7b5f244de8882e125f01003aa). Local `wrangler dev` works with the placeholder.
+[[kv_namespaces]]
+binding = "RL"
+id = "83b321e7b5f244de8882e125f01003aa"
 
-  [ratelimits.simple]
-  limit = 10
-  period = 60
-
-# The API key is a secret, never stored here: npx wrangler secret put GEMINI_API_KEY
+# The Gemini key is a secret and is never written in this file:  npx wrangler secret put GEMINI_API_KEY

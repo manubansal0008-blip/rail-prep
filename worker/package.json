@@ -1,0 +1,15 @@
+{
+  "name": "rail-prep-chat",
+  "version": "1.0.0",
+  "description": "Rail Prep doubt chat (Cloudflare Worker -> Gemini)",
+  "scripts": {
+    "dev": "wrangler dev --local",
+    "test": "node --test test/chat.test.mjs",
+    "deploy": "wrangler deploy"
+  },
+  "type": "module",
+  "devDependencies": {
+    "wrangler": "^4.156.0"
+  },
+  "private": true
+}

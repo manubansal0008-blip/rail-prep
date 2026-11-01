@@ -4,14 +4,15 @@
   box-shadow:0 6px 20px rgba(217,72,15,.35);transition:transform .2s}
 .cb-fab:hover{transform:translateY(-2px)}
 .cb-fab span{font-size:1.15rem;line-height:1}
-body.chat-open .cb-fab{display:none}
+html.chat-open .cb-fab,.cb-nofab .cb-fab{display:none}
 body.testing .cb{display:none!important}
+html:not(.chat-on) .ask-doubt{display:none}
+.cb-fab:focus-visible,.cb-panel button:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 60%,transparent);outline-offset:2px}
 .cb-panel{position:fixed;right:18px;bottom:18px;z-index:41;width:min(400px,calc(100vw - 24px));height:min(600px,calc(100vh - 90px));
   display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:18px;box-shadow:0 12px 40px rgba(20,25,40,.25);overflow:hidden;
   animation:fade .25s ease}
 .cb-panel[hidden]{display:none}
 .cb-head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 12px 10px 16px;border-bottom:1px solid var(--border);background:var(--surface-2)}
-.cb-head small{display:block;color:var(--muted);font-size:var(--fs-xs)}
 .cb-tools{display:flex;align-items:center;gap:6px}
 .cb-tools .cb-lang{margin:0}
 .cb-clear,.cb-x{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:10px;padding:5px 9px;font:inherit;font-size:var(--fs-xs);cursor:pointer}
@@ -24,6 +25,8 @@ body.testing .cb{display:none!important}
 .cb-msg.me{align-self:flex-end;background:var(--accent);color:#fff;border-bottom-right-radius:5px}
 .cb-msg.bot{align-self:flex-start;background:var(--surface-2);border-bottom-left-radius:5px}
 .cb-msg.note{color:var(--muted)}
+.cb-note{margin:0;padding:6px 14px;border-top:1px solid var(--border);color:var(--muted);font-size:var(--fs-xs);line-height:1.4;background:var(--surface-2)}
+.cb-msg li{margin:2px 0}
 .cb-msg.err{background:color-mix(in srgb,#e03131 12%,var(--surface));color:var(--text);border:1px solid color-mix(in srgb,#e03131 35%,transparent)}
 .cb-dots{display:inline-flex;gap:4px;padding:4px 0}
 .cb-dots i{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:cbdot 1.2s infinite ease-in-out}
@@ -39,7 +42,10 @@ body.testing .cb{display:none!important}
 @media (max-width:560px){
   .cb-fab{right:12px;bottom:12px;padding:12px 14px}
   .cb-panel{right:0;bottom:0;width:100vw;height:100dvh;max-height:none;border-radius:0;border:0}
-  .cb-head small{display:none}
+  .cb-head{padding-top:max(10px,env(safe-area-inset-top))}
+  .cb-foot{padding-bottom:max(10px,env(safe-area-inset-bottom))}
+  html.chat-on .sh-toast{bottom:80px}
+  html.chat-open body{overflow:hidden}
 }
 /* "Ask doubt" on the test review */
 .ask-doubt{margin-top:10px;border:1px solid color-mix(in srgb,var(--accent) 45%,var(--border));background:var(--accent-soft);color:var(--accent);
@@ -48,4 +54,5 @@ body.testing .cb{display:none!important}
 .cb-lang{display:flex;border:1px solid var(--border);border-radius:999px;overflow:hidden;flex:none}
 .cb-lang button{border:0;background:var(--surface);color:var(--muted);padding:4px 9px;font:inherit;font-size:var(--fs-xs);cursor:pointer;min-height:28px}
 .cb-lang button[aria-pressed="true"]{background:var(--accent);color:#fff}
-footer{padding-bottom:84px}
+html.chat-on footer,html.chat-on .st-page{padding-bottom:84px}
+@media print{.cb{display:none!important}}

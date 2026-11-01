@@ -119,11 +119,12 @@ window.RRB = window.RRB || {};
       "prog.topicNone": "No topic drills yet. Practise one topic at a time and your topic-wise accuracy shows up here.", "prog.topicCta": "Start topic practice →",
       "prog.practise": "Practise →", "prog.clearP2": " Your {d} topic drills will also be deleted.",
       // chat
-      "chat.fab": "Ask a doubt", "chat.title": "Doubt chat", "chat.sub": "AI tutor · may make mistakes, verify key facts", "chat.replyLang": "Reply language",
+      "chat.fab": "Ask a doubt", "chat.title": "Doubt chat", "chat.replyLang": "Reply language",
       "chat.clear": "Clear", "chat.close": "Close chat", "chat.input": "Your doubt", "chat.send": "Send", "chat.hint": "Enter to send · Shift+Enter for new line",
-      "chat.offline": "The doubt chat will be switched on soon.", "chat.offPh": "Doubt chat coming soon",
-      "chat.long": "Your message is too long. Please keep it under {n} characters.", "chat.typing": "Tutor is typing",
-      "chat.fail": "The tutor could not answer right now. Please try again.", "chat.net": "Couldn't reach the doubt chat. Check your internet connection and try again."
+      "chat.note": "AI answers can be wrong. Check important things in your book or on the official website.",
+      "chat.hello": "Hi! Ask any doubt from Maths, Reasoning, General Science or General Awareness.", "chat.ph": "Type your doubt…",
+      "chat.long": "Your message is too long. Please keep it under {n} characters.", "chat.typing": "Writing the answer",
+      "chat.fail": "Could not get an answer right now. Please try again.", "chat.net": "Couldn't reach the doubt chat. Check your internet connection and try again."
     },
     hi: {
       "site.title": "Rail Prep", "nav.home": "होम", "nav.notes": "नोट्स", "nav.papers": "पिछले प्रश्न पत्र", "nav.mocks": "मॉक टेस्ट", "nav.progress": "प्रोग्रेस",
@@ -228,11 +229,12 @@ window.RRB = window.RRB || {};
       "prog.topics": "टॉपिक प्रैक्टिस", "prog.topicsP": "आपकी टॉपिक प्रैक्टिस से: {d} प्रैक्टिस, {q} प्रश्न। सबसे कमज़ोर टॉपिक पहले।",
       "prog.topicNone": "अभी तक कोई टॉपिक प्रैक्टिस नहीं की। एक-एक टॉपिक की प्रैक्टिस करें, टॉपिक वार सटीकता यहाँ दिखेगी।", "prog.topicCta": "टॉपिक प्रैक्टिस शुरू करें →",
       "prog.practise": "प्रैक्टिस करें →", "prog.clearP2": " आपकी {d} टॉपिक प्रैक्टिस भी हट जाएँगी।",
-      "chat.fab": "डाउट पूछें", "chat.title": "डाउट चैट", "chat.sub": "AI ट्यूटर · गलती कर सकता है, ज़रूरी बातें खुद जाँच लें", "chat.replyLang": "जवाब की भाषा",
+      "chat.fab": "डाउट पूछें", "chat.title": "डाउट चैट", "chat.replyLang": "जवाब की भाषा",
       "chat.clear": "साफ़ करें", "chat.close": "चैट बंद करें", "chat.input": "आपका डाउट", "chat.send": "भेजें", "chat.hint": "भेजने के लिए Enter · नई लाइन के लिए Shift+Enter",
-      "chat.offline": "डाउट चैट जल्द शुरू होगी।", "chat.offPh": "डाउट चैट जल्द शुरू होगी",
-      "chat.long": "आपका संदेश बहुत लंबा है। कृपया {n} अक्षरों से कम रखें।", "chat.typing": "ट्यूटर लिख रहा है",
-      "chat.fail": "ट्यूटर अभी जवाब नहीं दे सका। कृपया दोबारा कोशिश करें।", "chat.net": "डाउट चैट से कनेक्ट नहीं हो सका। अपना इंटरनेट कनेक्शन जाँचें और दोबारा कोशिश करें।"
+      "chat.note": "AI के जवाब गलत भी हो सकते हैं, ज़रूरी बातें किताब/आधिकारिक साइट से जाँचें।",
+      "chat.hello": "नमस्ते! गणित, रीज़निंग, सामान्य विज्ञान या सामान्य ज्ञान का कोई भी डाउट पूछें।", "chat.ph": "अपना डाउट लिखें…",
+      "chat.long": "आपका संदेश बहुत लंबा है। कृपया {n} अक्षरों से कम रखें।", "chat.typing": "जवाब लिखा जा रहा है",
+      "chat.fail": "अभी जवाब नहीं मिल सका। दोबारा कोशिश करें।", "chat.net": "डाउट चैट से जुड़ नहीं सके। इंटरनेट देखें और दोबारा कोशिश करें।"
     }
   };
   // Section names and paper-label words (data stays English; only the display changes).
