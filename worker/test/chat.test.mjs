@@ -76,3 +76,46 @@ test("upstream errors are friendly", async () => {
   assert.equal((await (await handler.fetch(req(body("q", "en")), env())).json()).error, "Could not get an answer right now. Please try again.");
   assert.equal((await handler.fetch(req(body("q")), { RL: kv() })).status, 503);
 });
+
+// ---- Links to Rail Prep pages ----
+import { fixLinks, normalizeLink, ALLOWED_URLS, CATALOG_TEXT } from "../src/chat.js";
+import { BASE, NOTES } from "../src/sitemap-catalog.js";
+test("catalog: notes, practice and main pages are allowed; prompt lists them", () => {
+  assert.equal(NOTES.length, 60);
+  for (const u of ["", "mock.html", "practice.html", "papers.html", "notes.html", "news.html", "news/index.html", "notes/percentage.html",
+    "notes/syllogism.html", "practice.html?topic=percentage"]) assert.ok(ALLOWED_URLS.has(BASE + u), u);
+  assert.ok(!ALLOWED_URLS.has(BASE + "news/2026-11-01.html")); // daily pages: link news.html instead (no daily re-run)
+  assert.match(CATALOG_TEXT, /notes\/percentage\.html \| Maths note: Percentage \/ प्रतिशत/);
+  assert.match(buildGeminiBody([], "hi").systemInstruction.parts[0].text, /PAGE LIST[\s\S]*notes\/syllogism\.html/);
+  assert.match(SYSTEM_PROMPT, /Never invent/);
+});
+test("normalizeLink: relative, http, trailing slash; rejects others", () => {
+  assert.equal(normalizeLink("notes/percentage.html"), BASE + "notes/percentage.html");
+  assert.equal(normalizeLink("./mock.html"), BASE + "mock.html");
+  assert.equal(normalizeLink("/rail-prep/news.html"), BASE + "news.html");
+  assert.equal(normalizeLink("http://manubansal0008-blip.github.io/rail-prep/papers.html"), BASE + "papers.html");
+  assert.equal(normalizeLink("https://manubansal0008-blip.github.io/rail-prep"), BASE);
+  assert.equal(normalizeLink("<" + BASE + "notes.html>"), BASE + "notes.html");
+  for (const bad of [BASE + "notes/zzz.html", BASE + "notes/percentage.html#x", BASE + "practice.html?topic=zzz", "https://evil.com/",
+    "javascript:alert(1)", "//evil.com/notes.html", "https://manubansal0008-blip.github.io.evil.com/rail-prep/", BASE + "notes/../x.html", ""])
+    assert.equal(normalizeLink(bad), "", bad);
+});
+test("fixLinks: keeps catalog links, keeps only the text of others", () => {
+  const good = `[प्रतिशत के नोट्स](${BASE}notes/percentage.html)`;
+  assert.equal(fixLinks("और पढ़ें: " + good), "और पढ़ें: " + good);
+  assert.equal(fixLinks("और पढ़ें: [सिलोजिज़्म](notes/syllogism.html)"), `और पढ़ें: [सिलोजिज़्म](${BASE}notes/syllogism.html)`);
+  assert.equal(fixLinks("देखें [यहाँ](https://evil.com/x) और [नकली](" + BASE + "notes/fake.html)"), "देखें यहाँ और नकली");
+  assert.equal(fixLinks("[click](javascript:alert(1))"), "click");
+  assert.equal(fixLinks('[t](' + BASE + 'mock.html "title")'), `[t](${BASE}mock.html)`);
+  assert.equal(fixLinks("आज की ख़बरें: " + BASE + "news.html."), "आज की ख़बरें: " + BASE + "news.html.");
+  assert.equal(fixLinks("नकली: " + BASE + "fake.html ठीक"), "नकली: ठीक");
+  assert.equal(fixLinks("https://other.site/a stays"), "https://other.site/a stays");
+  assert.equal(fixLinks("1. a\n   - nested  item"), "1. a\n   - nested item"); // list indent kept
+  assert.equal(fixLinks("**5** उत्तर"), "**5** उत्तर");
+});
+test("handler applies fixLinks to the model reply", async () => {
+  globalThis.fetch = async () => new Response(JSON.stringify({ candidates: [{ content: { parts: [{ text:
+    `**5**\n\nऔर पढ़ें: [नोट्स](${BASE}notes/percentage.html) · [बाहर](https://evil.com)` }] } }] }), { status: 200 });
+  const r = await handler.fetch(req(body("25 का 20%?")), env());
+  assert.equal((await r.json()).reply, `**5**\n\nऔर पढ़ें: [नोट्स](${BASE}notes/percentage.html) · बाहर`);
+});

@@ -1,4 +1,4 @@
-# rail-prep-chat — Rail Prep doubt chat backend (folder `worker/`)
+# rail-prep-chat — Rail Prep doubt chat backend
 
 A Cloudflare Worker that takes a student's doubt from the Rail Prep site and asks Google Gemini (`gemini-2.5-flash`).
 The Gemini key is stored only as a Worker secret. It never goes into the website code.
@@ -11,6 +11,21 @@ The Gemini key is stored only as a Worker secret. It never goes into the website
 - Limits, counted in the KV namespace `RL` on India time: 20 messages per IP per hour, 60 per IP per day, and 1,200 per day for the whole site.
   You can change these with `RL_HOUR`, `RL_DAY` and `RL_GLOBAL` in `wrangler.toml`. If KV is missing or fails, the chat keeps working without limits and logs a warning.
 
+## Links to Rail Prep pages in answers
+
+The model gets a compact page list (`src/sitemap-catalog.js`: 60 notes with their practice topic, plus mock, practice, papers, notes, news pages)
+and is asked to end a study answer with 1–2 links like `और पढ़ें: [प्रतिशत के नोट्स](https://manubansal0008-blip.github.io/rail-prep/notes/percentage.html)`.
+Before replying, the Worker checks every link (`fixLinks` in `src/chat.js`): a markdown link whose URL is not in the list keeps only its text,
+and invented `manubansal0008-blip.github.io` URLs are removed. Current affairs link to `news.html`, so daily news needs no change here.
+The site (`js/chat.js`) turns only `https://manubansal0008-blip.github.io/rail-prep/...` links into clickable links; any other URL stays plain text.
+
+When notes are added or renamed, rebuild the list and redeploy:
+
+```bash
+npm run catalog            # = node scripts/build-catalog.mjs ..   (reads ../data/topics.js and ../data/notes/)
+npm test && npx wrangler deploy
+```
+
 ## Gemini free-tier quota (important)
 
 Google's free tier is counted per Google Cloud project and per model, and it resets at midnight Pacific time (about 1:30 PM India time).
@@ -22,7 +37,7 @@ Check your project's real limits at https://aistudio.google.com/rate-limit.
 ## Deploy (one time, about 5 minutes)
 
 ```bash
-cd worker                                    # this folder (also kept on the box as /workspace/chat-worker)
+cd chat-worker
 npm install                                  # installs wrangler locally
 npx wrangler login                           # opens the browser: log in to Cloudflare (free account)
 npx wrangler kv namespace create RL          # prints:  id = "xxxxxxxx..."

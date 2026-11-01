@@ -56,3 +56,7 @@ html:not(.chat-on) .ask-doubt{display:none}
 .cb-lang button[aria-pressed="true"]{background:var(--accent);color:#fff}
 html.chat-on footer,html.chat-on .st-page{padding-bottom:84px}
 @media print{.cb{display:none!important}}
+/* Links to Rail Prep pages inside chat replies */
+.cb-msg a.cb-link{color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.cb-msg a.cb-link:hover{text-decoration-thickness:2px}
+.cb-msg a.cb-link:focus-visible{outline:2px solid color-mix(in srgb,var(--accent) 60%,transparent);outline-offset:2px;border-radius:3px}

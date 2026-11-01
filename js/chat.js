@@ -22,11 +22,23 @@ RRB.CHAT_URL = "https://rail-prep-chat.manubansal0008.workers.dev/chat";
   function esc(t) { return String(t).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
 
   // Safe markdown on already-escaped text.
-  function inline(t) {
+  // Links: [text](url) becomes a real link only for Rail Prep pages (SITE_RE: fixed host + path, a strict character set, so
+  // escaped quotes/&amp; can never reach the href). Any other link is shown as plain "text (url)".
+  var SITE_RE = /\[([^\]\n]{1,200})\]\((https:\/\/manubansal0008-blip\.github\.io\/rail-prep\/[A-Za-z0-9_\-.\/?=]*)\)/g;
+  function fmt(t) {
     return t.replace(/`([^`\n]+)`/g, "<code>$1</code>")
       .replace(/\*\*([^*\n]+)\*\*/g, "<strong>$1</strong>")
       .replace(/__([^_\n]+)__/g, "<strong>$1</strong>")
       .replace(/(^|[^*\w])\*([^*\n]+)\*(?!\*)/g, "$1<em>$2</em>");
+  }
+  function inline(t) {
+    var links = [], nt = /(^|\/)test\.html$/.test(location.pathname); // on the test review, open pages in a new tab (keeps the result)
+    t = t.replace(/[\u0001\u0002]/g, "").replace(SITE_RE, function (m, label, href) {
+      if (/(^|\/)\.\.(\/|$)/.test(href)) return label + " (" + href + ")";
+      links.push('<a class="cb-link" href="' + href + '"' + (nt ? ' target="_blank" rel="noopener"' : "") + ">" + fmt(label) + "</a>");
+      return "\u0001" + (links.length - 1) + "\u0002";
+    }).replace(/\[([^\]\n]{1,200})\]\(([^()\s]{1,300})\)/g, "$1 ($2)");
+    return fmt(t).replace(/\u0001(\d+)\u0002/g, function (m, i) { return links[+i] || ""; });
   }
   // Models sometimes write LaTeX ($48 \div 36$); turn the common bits into plain symbols.
   function deTex(t) {
