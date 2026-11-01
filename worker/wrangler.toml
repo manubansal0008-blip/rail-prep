@@ -17,6 +17,8 @@ GEMINI_FALLBACK_MODEL = "gemini-flash-lite-latest"
 RL_HOUR = "20"
 RL_DAY = "60"
 RL_GLOBAL = "1200"
+# Visitor counter: max visits one IP can add per India-time day.
+VISIT_IP_DAY = "20"
 
 # Rate-limit counters. Create once with:  npx wrangler kv namespace create RL
 # then paste the printed id below (replace 83b321e7b5f244de8882e125f01003aa). Local `wrangler dev` works with the placeholder.
@@ -25,3 +27,12 @@ binding = "RL"
 id = "83b321e7b5f244de8882e125f01003aa"
 
 # The Gemini key is a secret and is never written in this file:  npx wrangler secret put GEMINI_API_KEY
+
+# Visitor counter (/visit): one SQLite-backed Durable Object holds the counts (exact, free plan).
+[[durable_objects.bindings]]
+name = "VISITS"
+class_name = "VisitCounter"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["VisitCounter"]

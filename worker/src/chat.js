@@ -7,8 +7,11 @@
 // Limits (KV namespace binding RL; numbers can be changed in wrangler.toml [vars]):
 //   per IP: RL_HOUR per hour, RL_DAY per day; whole site: RL_GLOBAL per day. Days follow India time.
 //   If the RL binding is missing or KV fails, the chat still works (fails open) and logs a warning.
+//
+// GET/POST /visit  -> visitor counter { total, today, date } (see visits.js; same CORS rules).
 
 import { BASE, PAGES, NOTES } from "./sitemap-catalog.js";
+import { handleVisit } from "./visits.js";
 
 const MAX_TURNS = 8;      // past messages sent to the model (user + model turns), latest last
 const MAX_USER = 800;     // characters per student message
@@ -116,7 +119,7 @@ function allowedOrigin(origin, env) {
   return String(env.ALLOW_LOCALHOST || "true") === "true" && /^http:\/\/(localhost|127\.0\.0\.1)(:\d{1,5})?$/.test(origin);
 }
 function corsHeaders(origin) {
-  return { "Access-Control-Allow-Origin": origin, "Access-Control-Allow-Methods": "POST, OPTIONS",
+  return { "Access-Control-Allow-Origin": origin, "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type", "Access-Control-Max-Age": "86400", "Vary": "Origin" };
 }
 const json = (obj, status, headers = {}) => new Response(JSON.stringify(obj), {
@@ -180,6 +183,7 @@ export const handler = {
     if (!allowedOrigin(origin, env)) return json({ error: say("origin", "en"), code: "origin" }, 403);
     const cors = corsHeaders(origin);
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+    if (url.pathname === "/visit") { const v = await handleVisit(request, env); return json(v.body, v.status, cors); }
     if (url.pathname !== "/chat") return json({ error: say("notfound", "en"), code: "notfound" }, 404, cors);
     if (request.method !== "POST") return json({ error: say("method", "en"), code: "method" }, 405, cors);
 

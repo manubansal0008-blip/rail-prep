@@ -26,6 +26,16 @@ npm run catalog            # = node scripts/build-catalog.mjs ..   (reads ../dat
 npm test && npx wrangler deploy
 ```
 
+## Visitor counter (`/visit`, since 1 Nov 2026)
+
+- `GET /visit` -> `{ "total": 123, "today": 7, "date": "2026-11-01" }`, `POST /visit` counts one visit and returns the same plus `"counted": true|false`.
+- Counts live in one Durable Object (`VisitCounter`, SQLite-backed, works on the free plan), so numbers are exact. Code: `src/visits.js`.
+- The site footer (`js/app.js`) POSTs once per browser per India-time day (localStorage `rrb.visitDay`), otherwise GETs.
+  So "today" is roughly today's visitors and "total" is the sum of daily visitors since the counter started (1 Nov 2026).
+- One IP can add at most `VISIT_IP_DAY` (default 20) visits a day. IPs are stored only as a hash and are deleted after the day.
+- Same CORS rule as the chat (only the github.io site). If the counter fails, the site just hides the numbers.
+- Quick check: `curl -s -H "Origin: https://manubansal0008-blip.github.io" https://rail-prep-chat.manubansal0008.workers.dev/visit`
+
 ## Gemini free-tier quota (important)
 
 Google's free tier is counted per Google Cloud project and per model, and it resets at midnight Pacific time (about 1:30 PM India time).

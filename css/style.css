@@ -134,3 +134,19 @@ html[lang="hi"] .st-both>.st-hi{order:-1}
 .sh-toast.show{opacity:1;transform:translate(-50%,0)}
 body.testing .sh-wrap{display:none}
 @media print{.share-bar,.sh-toast{display:none}}
+
+/* footer: visitors, last updated, copyright (v=20261101q) */
+.site-meta{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--text);font-weight:600}
+.site-meta[hidden],.site-meta span[hidden]{display:none}
+.site-copy{margin-top:10px;font-weight:600;color:var(--text)}
+/* Watermark on notes and question areas: a faint repeating diagonal "Rail Prep" over the content. pointer-events:none, so
+   selecting/copying text and clicking work as normal; one small SVG tile (no extra request); also printed. */
+#nb,#qpane,#review,#pr,html[data-nav="notes.html"] main.st-page{position:relative;isolation:isolate}
+#nb::after,#qpane::after,#review::after,#pr::after,html[data-nav="notes.html"] main.st-page::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='320' viewBox='0 0 560 320'%3E%3Ctext x='280' y='160' text-anchor='middle' transform='rotate(-24 280 160)' font-family='Arial,sans-serif' font-size='15' font-weight='700' fill='%23808080' fill-opacity='0.11'%3ERail Prep %C2%B7 manubansal0008-blip.github.io/rail-prep%3C/text%3E%3C/svg%3E") repeat 0 0/560px 320px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+/* Printed / saved-as-PDF pages carry a Rail Prep credit at the top and bottom */
+@media print{
+  body::before,body::after{content:"Rail Prep · manubansal0008-blip.github.io/rail-prep · © 2026 Rail Prep";display:block;text-align:center;font-size:9pt;color:#555;padding:4px 0}
+  body::before{border-bottom:1px solid #ccc;margin-bottom:8px}
+  body::after{border-top:1px solid #ccc;margin-top:12px}
+}

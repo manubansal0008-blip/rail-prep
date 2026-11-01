@@ -42,15 +42,66 @@ window.RRB = window.RRB || {};
 
   function footer() {
     var f = document.createElement("footer");
-    f.innerHTML = '<div class="wrap"><p data-i18n-html="foot.disc">' + RRB.t("foot.disc") + '</p><p data-i18n="foot.src">' + RRB.esc(RRB.t("foot.src")) + "</p></div>";
+    f.innerHTML = '<div class="wrap"><p class="site-meta" id="siteMeta" hidden><span id="visStat" hidden></span><span id="updStat" hidden></span></p>' +
+      '<p data-i18n-html="foot.disc">' + RRB.t("foot.disc") + '</p><p data-i18n="foot.src">' + RRB.esc(RRB.t("foot.src")) + "</p>" +
+      '<p class="site-copy" data-i18n="foot.copy">' + RRB.esc(RRB.t("foot.copy")) + "</p></div>";
     document.body.append(f);
+    siteMeta();
   }
+
+  // Footer line: visitor count (Cloudflare Worker /visit, same server as the doubt chat) and "last updated" (data/updated.js,
+  // written by the daily news job via build_static.py). Not on test.html. If either fails it simply stays hidden.
+  RRB.VISIT_URL = "https://rail-prep-chat.manubansal0008.workers.dev/visit";
+  var KEY_VISIT = "rrb.visitDay", VIS = null;
+  var MON_HI = ["जनवरी", "फ़रवरी", "मार्च", "अप्रैल", "मई", "जून", "जुलाई", "अगस्त", "सितंबर", "अक्टूबर", "नवंबर", "दिसंबर"];
+  var MON_EN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  function istParts(ms) { var d = new Date(ms + 5.5 * 3600 * 1000); return { y: d.getUTCFullYear(), m: d.getUTCMonth(), d: d.getUTCDate(), h: d.getUTCHours(), mi: d.getUTCMinutes() }; }
+  // "1 नवंबर 2026, सुबह 6:32 (IST)" / "1 Nov 2026, 6:32 AM (IST)"
+  RRB.fmtStamp = function (iso) {
+    var ms = Date.parse(iso); if (isNaN(ms)) return "";
+    var p = istParts(ms), h12 = p.h % 12 || 12, mm = (p.mi < 10 ? "0" : "") + p.mi;
+    if (RRB.lang() === "hi") {
+      var part = p.h < 4 ? "रात" : p.h < 12 ? "सुबह" : p.h < 16 ? "दोपहर" : p.h < 20 ? "शाम" : "रात";
+      return p.d + " " + MON_HI[p.m] + " " + p.y + ", " + part + " " + h12 + ":" + mm + " " + RRB.t("foot.ist");
+    }
+    return p.d + " " + MON_EN[p.m] + " " + p.y + ", " + h12 + ":" + mm + " " + (p.h < 12 ? "AM" : "PM") + " " + RRB.t("foot.ist");
+  };
+  function paintMeta() {
+    var v = document.getElementById("visStat"), u = document.getElementById("updStat"), box = document.getElementById("siteMeta");
+    if (!box) return;
+    var f = function (n) { return Number(n).toLocaleString(RRB.locale()); };
+    if (VIS && VIS.total >= 1) { v.textContent = RRB.t("foot.vis", { t: f(VIS.total), d: f(VIS.today) }); v.hidden = false; }
+    var s = RRB.UPDATED && RRB.fmtStamp(RRB.UPDATED);
+    if (s) { u.textContent = RRB.t("foot.upd", { d: s }); u.hidden = false; }
+    box.hidden = v.hidden && u.hidden;
+  }
+  function siteMeta() {
+    if ((location.pathname.split("/").pop() || "") === "test.html") return;
+    var R = document.documentElement.getAttribute("data-root") || "";
+    if (!RRB.UPDATED) {
+      var s = document.createElement("script");
+      s.src = R + "data/updated.js?t=" + Math.floor(Date.now() / 600000); // GitHub Pages caches ~10 min anyway
+      s.onload = paintMeta; document.head.appendChild(s);
+    }
+    if (!window.fetch || !RRB.VISIT_URL) return;
+    var today = new Date(Date.now() + 5.5 * 3600 * 1000).toISOString().slice(0, 10), counted = false;
+    try { counted = localStorage.getItem(KEY_VISIT) === today; } catch (e) {}
+    var ctl = window.AbortController ? new AbortController() : null; if (ctl) setTimeout(function () { ctl.abort(); }, 8000);
+    fetch(RRB.VISIT_URL, { method: counted ? "GET" : "POST", signal: ctl && ctl.signal, credentials: "omit" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) {
+        if (!d || typeof d.total !== "number") return;
+        if (!counted) try { localStorage.setItem(KEY_VISIT, today); } catch (e) {}
+        VIS = d; paintMeta();
+      }).catch(function () {});
+  }
+  document.addEventListener("rrb:lang", paintMeta);
 
   document.addEventListener("DOMContentLoaded", function () { header(); footer(); });
 })();
 
 // Cache-busting version for files loaded on demand. Keep in step with the ?v= on <script>/<link> tags in the HTML pages.
-RRB.VER = "20261101p";
+RRB.VER = "20261101q";
 // Load one paper/practice-set data file on demand. Calls cb(data).
 RRB.loadTest = function (id, cb, err) {
   var meta = (RRB.INDEX || []).filter(function (p) { return p.id === id; })[0];
