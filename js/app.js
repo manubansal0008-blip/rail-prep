@@ -50,7 +50,7 @@ window.RRB = window.RRB || {};
 })();
 
 // Cache-busting version for files loaded on demand. Keep in step with the ?v= on <script>/<link> tags in the HTML pages.
-RRB.VER = "20261101l";
+RRB.VER = "20261101m";
 // Load one paper/practice-set data file on demand. Calls cb(data).
 RRB.loadTest = function (id, cb, err) {
   var meta = (RRB.INDEX || []).filter(function (p) { return p.id === id; })[0];
@@ -76,3 +76,77 @@ RRB.ATTEMPTS = "rrb.attempts"; RRB.ACTIVE = "rrb.active"; RRB.DRILLS = "rrb.dril
 RRB.imgW = 'onload="this.style.width=Math.min(this.naturalWidth,Math.max(this.naturalWidth/2,680))+\'px\'"';
 RRB.figs = function (q) { var a = q.img ? [].concat(q.img) : []; return a.map(function (src) { return '<img class="qimg" loading="lazy" ' + RRB.imgW + ' src="' + src + '" alt="' + RRB.t("test.fig") + '">'; }).join(""); };
 RRB.optImg = function (q, k) { return q.oi && q.oi[k] ? '<img class="oimg" loading="lazy" ' + RRB.imgW + ' src="' + q.oi[k] + '" alt="' + RRB.t("test.optFig", { k: k + 1 }) + '">' : ""; };
+// Share bar: WhatsApp, Telegram, copy link and (on phones with a share sheet) the native share button. No external scripts.
+// A page bar is added below <main> on every page except test.html (static pages built by build_static.py already have
+// <div class="share-bar" data-share="page"> in the HTML; it is filled in again here). The URL shared is the page's canonical URL
+// (no ?v= or other query) plus the #part (notes.html#topic, news.html#day). RRB.shareHTML({text, url}) makes a small bar
+// for one item (home "Question of the day" and today's news); clicks on all bars are handled by one listener below.
+RRB.BASE = "https://manubansal0008-blip.github.io/rail-prep/";
+(function () {
+  var I = {
+    wa: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.3-1.7-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.1 1.6 2.5 4 3.5 1.5.6 2.1.7 2.8.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2z"/></svg>',
+    tg: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false"><path fill="currentColor" d="M21.6 3.2 2.9 10.4c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.4l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8l3.1-14.8c.3-1.3-.5-1.9-1.3-1.5zM9.4 13.1l8.6-5.4c.4-.3.8-.1.5.2l-7.2 6.5-.3 3.2-1.6-4.5z"/></svg>',
+    link: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.1 0l3-3a5 5 0 0 0-7.1-7.1l-1.2 1.2"/><path d="M14 11a5 5 0 0 0-7.1 0l-3 3a5 5 0 0 0 7.1 7.1l1.2-1.2"/></svg>',
+    share: '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>'
+  };
+  var T = function (k) { return RRB.t(k); }, E = function (s) { return RRB.esc(s); };
+  function canNative() { return !!navigator.share && matchMedia("(pointer:coarse)").matches; }
+  // Canonical URL of this page (production address, no query string) plus the current #part.
+  RRB.shareUrl = function () {
+    var c = document.querySelector('link[rel="canonical"]'), u = c ? c.href : location.origin + location.pathname;
+    u = u.split("#")[0].split("?")[0];
+    return u + (location.hash && location.hash.length > 1 ? location.hash : "");
+  };
+  function links(text, url) {
+    return { wa: "https://wa.me/?text=" + encodeURIComponent(text + "\n" + url),
+             tg: "https://t.me/share/url?url=" + encodeURIComponent(url) + "&text=" + encodeURIComponent(text) };
+  }
+  // Markup of one bar. mini: icons only (labels stay as aria-label), for cards.
+  RRB.shareHTML = function (o) {
+    var l = links(o.text, o.url), mini = !!o.mini, lbl = function (k) { return mini ? "" : "<span>" + T(k) + "</span>"; };
+    var tt = function (k) { return mini ? ' title="' + E(T(k)) + '"' : ""; };
+    return '<div class="share-bar' + (mini ? " sh-mini" : "") + '" role="group" aria-label="' + E(T("share.aria")) + '" data-share="' + (o.page ? "page" : "item") + '"' +
+      ' data-text="' + E(o.text) + '" data-url="' + E(o.url) + '">' + (mini ? "" : '<span class="sh-lbl">' + T("share.lbl") + "</span>") +
+      '<a class="sh-btn sh-wa" href="' + E(l.wa) + '" target="_blank" rel="noopener" aria-label="' + E(T("share.waAria")) + '"' + tt("share.waAria") + '>' + I.wa + lbl("share.wa") + "</a>" +
+      '<a class="sh-btn sh-tg" href="' + E(l.tg) + '" target="_blank" rel="noopener" aria-label="' + E(T("share.tgAria")) + '"' + tt("share.tgAria") + '>' + I.tg + lbl("share.tg") + "</a>" +
+      '<button type="button" class="sh-btn sh-copy" aria-label="' + E(T("share.copy")) + '"' + tt("share.copy") + '>' + I.link + lbl("share.copy") + "</button>" +
+      (canNative() ? '<button type="button" class="sh-btn sh-native" aria-label="' + E(T("share.native")) + '"' + tt("share.native") + '>' + I.share + lbl("share.native") + "</button>" : "") + "</div>";
+  };
+  function pageBar(el) {
+    var d = document.createElement("div"); d.innerHTML = RRB.shareHTML({ text: document.title, url: RRB.shareUrl(), page: true });
+    var n = d.firstChild; el.replaceWith(n); return n;
+  }
+  function refreshPage() { document.querySelectorAll('.share-bar[data-share="page"]').forEach(pageBar); }
+  function toast(msg) {
+    var t = document.getElementById("shToast");
+    if (!t) { t = document.createElement("div"); t.id = "shToast"; t.className = "sh-toast"; t.setAttribute("role", "status"); t.setAttribute("aria-live", "polite"); document.body.append(t); }
+    t.textContent = msg; t.classList.add("show"); clearTimeout(t._h); t._h = setTimeout(function () { t.classList.remove("show"); }, 2200);
+  }
+  function copy(s) {
+    function old() {
+      var a = document.createElement("textarea"); a.value = s; a.setAttribute("readonly", ""); a.style.position = "fixed"; a.style.opacity = "0";
+      document.body.append(a); a.select(); var ok = false; try { ok = document.execCommand("copy"); } catch (e) {} a.remove();
+      toast(T(ok ? "share.copied" : "share.copyErr"));
+    }
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(s).then(function () { toast(T("share.copied")); }, old); else old();
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest(".sh-btn"); if (!b) return;
+    var bar = b.closest(".share-bar"), page = bar.getAttribute("data-share") === "page";
+    var text = page ? document.title : bar.getAttribute("data-text"), url = page ? RRB.shareUrl() : bar.getAttribute("data-url");
+    if (b.classList.contains("sh-wa") || b.classList.contains("sh-tg")) { var l = links(text, url); b.href = b.classList.contains("sh-wa") ? l.wa : l.tg; return; }
+    e.preventDefault();
+    if (b.classList.contains("sh-copy")) copy(url);
+    else if (b.classList.contains("sh-native") && navigator.share) navigator.share({ title: page ? document.title : "Rail Prep", text: text, url: url }).catch(function () {});
+  });
+  document.addEventListener("DOMContentLoaded", function () {
+    var here = location.pathname.split("/").pop();
+    if (here !== "test.html" && !document.querySelector('.share-bar[data-share="page"]')) {
+      var m = document.querySelector("main"), w = document.createElement("div");
+      if (m) { w.className = "wrap sh-wrap"; w.innerHTML = '<div class="share-bar" data-share="page"></div>'; m.after(w); }
+    }
+    refreshPage();
+  });
+  window.addEventListener("hashchange", refreshPage);
+  document.addEventListener("rrb:lang", refreshPage);
+})();

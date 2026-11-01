@@ -115,3 +115,22 @@ html[lang="hi"] .st-both>.st-hi{order:-1}
 .st-opts{margin:6px 0;padding-left:24px}
 .st-ans summary{cursor:pointer;color:var(--accent);font-weight:600}
 .st-nav{margin:20px 0;font-weight:600}
+/* share bar (js/app.js RRB.shareHTML; static pages get the same markup from build_static.py) */
+.share-bar{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:22px 0 0;font-size:var(--fs-sm)}
+.sh-wrap .share-bar{margin-top:26px}
+.sh-lbl{color:var(--muted);margin-right:2px}
+.sh-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--border);background:var(--surface);color:var(--text);
+  padding:5px 11px;border-radius:999px;font:inherit;font-size:var(--fs-xs);line-height:1.4;text-decoration:none;cursor:pointer;min-height:32px;transition:background .2s,border-color .2s}
+.sh-btn:hover{background:var(--surface-2);border-color:color-mix(in srgb,var(--accent) 40%,var(--border))}
+.sh-btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sh-btn svg{flex:none}
+.sh-wa svg{color:#25a244}.sh-tg svg{color:#229ed9}.sh-copy svg,.sh-native svg{color:var(--accent)}
+.sh-mini{margin:0;gap:4px;display:inline-flex}
+.sh-mini .sh-btn{padding:0;width:32px;justify-content:center}
+.sh-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin-top:12px;padding-top:10px;border-top:1px dashed var(--border);font-size:var(--fs-sm)}
+.nw-share{display:inline-flex;align-self:flex-end;margin-bottom:-4px}
+.sh-toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);background:var(--text);color:var(--bg);padding:9px 16px;border-radius:999px;
+  font-size:var(--fs-sm);box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:60}
+.sh-toast.show{opacity:1;transform:translate(-50%,0)}
+body.testing .sh-wrap{display:none}
+@media print{.share-bar,.sh-toast{display:none}}

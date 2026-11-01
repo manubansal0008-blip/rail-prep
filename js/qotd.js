@@ -24,6 +24,12 @@
   function txt(q) { return has(q.qh) ? '<p class="qtext" lang="hi">' + E(q.qh) + "</p>" : q.q ? '<p class="qtext">' + E(q.q) + "</p>" : ""; }
   function opt(q, k) { return RRB.optImg(q, k) + (has(q.oh && q.oh[k]) ? '<span lang="hi">' + E(q.oh[k]) + "</span>" : E(q.o[k])); }
   function ex(q) { return has(q.eh) ? '<p class="expl" lang="hi"><strong>' + T("test.expl") + "</strong> " + E(q.eh) + "</p>" : q.e ? '<p class="expl"><strong>' + T("test.expl") + "</strong> " + E(q.e) + "</p>" : ""; }
+  // Small share row under the question: the question and its options (not the answer) + link to the home page.
+  function shareRow(q, opts) {
+    if (!RRB.shareHTML) return "";
+    var text = T("share.qdText") + (q ? "\n" + q : "") + (opts && opts.length ? "\n" + opts.map(function (o, j) { return "(" + (j + 1) + ") " + o; }).join("  ") : "") + "\n" + T("share.qdOpen");
+    return '<div class="sh-row"><span class="muted">' + E(T("share.qd")) + "</span>" + RRB.shareHTML({ text: text, url: RRB.BASE, mini: true }) + "</div>";
+  }
   function render() {
     var root = document.getElementById("qotd"); if (!root) return;
     if (!Q) { root.innerHTML = '<p class="muted">' + T(started === "err" ? "qd.err" : "qd.loading") + "</p>"; return; }
@@ -43,7 +49,8 @@
         ((RRB.NOTES_READY || []).indexOf(tp) >= 0 ? ' <a class="btn ghost-btn" href="notes.html#' + tp + '">' + T("qd.note") + "</a>" : "") +
         '<p class="muted qd-again">' + T("qd.again") + "</p></div>";
     }
-    h += "</div>";
+    var qt = has(q.qh) ? q.qh : q.q, qo = q.o.map(function (o, k) { return has(q.oh && q.oh[k]) ? q.oh[k] : o; });
+    h += shareRow(qt, q.oi ? null : qo) + "</div>";
     root.innerHTML = h;
     root.querySelectorAll(".opt:not([disabled])").forEach(function (b) {
       b.onclick = function () {
@@ -66,7 +73,7 @@
         return '<button type="button" class="' + cls + '" data-j="' + j + '"' + (done ? " disabled" : "") + ' aria-label="' + E(T("pr.optLetter", { k: j + 1 })) + '"><span class="ol">' + (j + 1) + "</span><span>" + E(o) + "</span></button>";
       }).join("") + "</div>";
     if (done) h += '<div class="pr-fb ' + (got === m.a ? "fb-ok" : "fb-bad") + '" role="status"><strong>' + (got === m.a ? "✓ " + T("qd.right") : "✗ " + T("qd.wrong", { k: m.a + 1 })) + '</strong><p class="expl"><strong>' + T("test.expl") + "</strong> " + E(mq.e) + "</p></div>";
-    h += '<div class="qd-act"><a class="btn' + (done ? "" : " ghost-btn") + '" href="news.html#' + d.date + "-" + i + '">' + T("qd.newsLink") + '</a><p class="muted qd-again">' + T("qd.againNews") + "</p></div></div>";
+    h += '<div class="qd-act"><a class="btn' + (done ? "" : " ghost-btn") + '" href="news.html#' + d.date + "-" + i + '">' + T("qd.newsLink") + '</a><p class="muted qd-again">' + T("qd.againNews") + "</p></div>" + shareRow(mq.q, mq.o) + "</div>";
     root.innerHTML = h;
     root.querySelectorAll(".opt:not([disabled])").forEach(function (b) {
       b.onclick = function () {

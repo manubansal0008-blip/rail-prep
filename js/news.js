@@ -63,6 +63,14 @@
       if (st.err) { root.innerHTML = '<p class="muted">' + T("news.err") + "</p>"; return; }
       if (!st.d) { root.innerHTML = '<p class="muted">' + T("news.loading") + "</p>"; return; }
       RRB.newsRender(root, st.d, RRB.qotdNewsIndex ? RRB.qotdNewsIndex(st.d) : undefined);
+      shareNews(st.d);
+    }
+    // Share button next to the heading: the day's headlines + link to that day's static page (news/YYYY-MM-DD.html).
+    function shareNews(d) {
+      var el = document.getElementById("newsShare"); if (!el || !RRB.shareHTML) return;
+      var text = T("share.newsText", { d: fmtDay(d.date) }) + "\n" + d.items.map(function (it, i) { return (i + 1) + ". " + L(it).title; }).join("\n") + "\n" + T("share.newsOpen");
+      el.innerHTML = RRB.shareHTML({ text: text, url: RRB.BASE + "news/" + d.date + ".html", mini: true });
+      var b = el.firstChild; if (b) b.setAttribute("aria-label", T("share.news"));
     }
     function go() { RRB.newsLoad(days[0], function (d) { st.d = d; draw(); }, function () { st.err = true; draw(); }); }
     draw();
