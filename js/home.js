@@ -32,7 +32,8 @@
     var mq = mocks.reduce(function (a, p) { return a + p.count; }, 0);
     document.querySelectorAll(".switch button").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.exam === x); var X = RRB.EXAMS[b.dataset.exam]; b.textContent = RRB.lang() === "hi" && X.hi ? X.hi.short : X.short; });
     document.getElementById("examName").textContent = E.name;
-    document.getElementById("examTag").textContent = E.cen + " · " + E.tagline;
+    var tag = document.getElementById("examTag"); tag.textContent = E.cen + " · " + E.tagline;
+    if (E0.url) { var a = document.createElement("a"); a.className = "ex-off"; a.href = E0.url; a.target = "_blank"; a.rel = "noopener"; a.title = t("dt.offT"); a.textContent = t(x === "ntpc" ? "dt.offNotice" : "dt.offNotices") + " ↗"; tag.append(" · ", a); }
 
     var cds = document.getElementById("countdowns");
     cds.innerHTML = "";
@@ -41,10 +42,10 @@
       c.className = "card fade";
       c.innerHTML = '<span class="cd-label">' + hv.label + "</span>" +
         (ev.tentative ? '<span class="tag warn">' + t("tag.tentative") + "</span>" : '<span class="tag ok">' + t("tag.official") + "</span>") +
-        '<div class="slot"></div><p>' + (ev.at ? t("home.target", { d: fmtIST(ev.at) }) : "") + hv.note + "</p>";
+        '<div class="slot"></div>' + (ev.at && !ev.tentative ? "<p>" + t("home.target", { d: fmtIST(ev.at) }) + hv.note + "</p>" : "");
       cds.append(c);
       var slot = c.querySelector(".slot");
-      if (ev.at) countdown(slot, ev.at); else slot.innerHTML = '<div class="cd-none">' + t("cd.none") + "</div>";
+      if (ev.at && !ev.tentative) countdown(slot, ev.at); else slot.innerHTML = '<div class="cd-none">' + hv.note + "</div>"; // no countdown to a date that is not announced
     });
 
     document.getElementById("facts").innerHTML = E.facts.map(function (f) {
@@ -52,9 +53,9 @@
     }).join("");
 
     document.getElementById("cards").innerHTML = [
-      ["papers.html", "🗂", t("card.papers"), t("card.papersP", { n: papers.length, q: qn })],
-      ["mock.html", "⏱", t("card.mocks"), t("card.mocksP", { n: mocks.length, q: mq })],
-      ["practice.html", "🎯", t("card.practice"), t("card.practiceP", { q: qn + mq })],
+      ["papers.html", "🗂", t("card.papers"), t("card.papersP", { x: E.short, n: papers.length, q: qn.toLocaleString(RRB.locale()) })],
+      ["mock.html", "⏱", t("card.mocks"), t("card.mocksP", { x: E.short, n: mocks.length, q: mq.toLocaleString(RRB.locale()) })],
+      ["practice.html", "🎯", t("card.practice"), t("card.practiceP", { s: RRB.qScope() })],
       ["progress.html", "📈", t("card.progress"), progLine()],
       (RRB.NOTES_READY || []).length ? ["notes.html", "📘", t("card.notes"), t("card.notesP", { n: RRB.NOTES_READY.length })] : [null, "📘", t("card.notes"), t("card.notesP", { n: 0 })]
     ].map(function (c) {

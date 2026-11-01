@@ -48,7 +48,7 @@ window.RRB = window.RRB || {};
 })();
 
 // Cache-busting version for files loaded on demand. Keep in step with the ?v= on <script>/<link> tags in the HTML pages.
-RRB.VER = "20261101j";
+RRB.VER = "20261101k";
 // Load one paper/practice-set data file on demand. Calls cb(data).
 RRB.loadTest = function (id, cb, err) {
   var meta = (RRB.INDEX || []).filter(function (p) { return p.id === id; })[0];
@@ -58,6 +58,15 @@ RRB.loadTest = function (id, cb, err) {
   s.src = "data/" + (meta.mock ? "mocks/" : "papers/") + id + ".js?v=" + RRB.VER;
   s.onerror = function () { err && err(RRB.t("test.loadErr")); };
   document.head.appendChild(s);
+};
+// Question counts from data/index.js: per exam and total (past papers + our mocks). Used by the home cards and slider.
+RRB.qCounts = function () {
+  var c = { ntpc: 0, gd: 0 }; (RRB.INDEX || []).forEach(function (p) { if (c[p.exam] != null) c[p.exam] += p.count; });
+  c.all = c.ntpc + c.gd; return c;
+};
+RRB.qScope = function () {
+  var c = RRB.qCounts(), f = function (n) { return n.toLocaleString(RRB.locale()); };
+  return RRB.t("q.scope", { a: f(c.ntpc), b: f(c.gd), t: f(c.all) });
 };
 RRB.esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
 RRB.ATTEMPTS = "rrb.attempts"; RRB.ACTIVE = "rrb.active"; RRB.DRILLS = "rrb.drills";

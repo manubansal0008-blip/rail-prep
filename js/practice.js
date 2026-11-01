@@ -52,7 +52,7 @@
     var tops = TP.topics.filter(function (t) { return t.s === P.sec; }).map(function (t) { return [t.k, pool(P.exam, P.sec, t.k).length]; }).filter(function (x) { return x[1]; });
     var nOpts = NS.filter(function (n) { return n < avail; }).map(function (n) { return [n, n]; }).concat([["all", T("pr.all", { n: avail })]]);
     var eff = effN(avail), n = eff === "all" ? avail : eff;
-    var h = '<div class="list-head"><h1>' + T("pr.h1") + '</h1></div><p class="muted">' + T("pr.intro") + "</p>" +
+    var h = '<div class="list-head"><h1>' + T("pr.h1") + '</h1></div><p class="muted">' + T("pr.intro") + '</p><p class="muted pr-scope">' + RRB.qScope() + "</p>" +
       '<div class="card pr-setup">' +
       '<div class="pr-row"><small>' + T("pr.exam") + "</small>" + btns("exam", [["ntpc", T("prog.ntpc")], ["gd", T("prog.gd")], ["both", T("pr.both")]]) + "</div>" +
       '<div class="pr-row"><small>' + T("pr.section") + "</small>" + btns("sec", ss.map(function (s) { return [s, secName(s)]; })) + "</div>" +
