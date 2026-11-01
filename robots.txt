@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://manubansal0008-blip.github.io/rail-prep/sitemap.xml

@@ -12,14 +12,16 @@ window.RRB = window.RRB || {};
   var PAGES = [["index.html", "nav.home"], ["notes.html", "nav.notes"], ["news.html", "nav.news"], ["papers.html", "nav.papers"], ["mock.html", "nav.mocks"], ["practice.html", "nav.practice"], ["progress.html", "nav.progress"]];
 
   function header() {
-    var here = location.pathname.split("/").pop() || "index.html";
+    // Static pages in a sub-folder (notes/, news/) set data-root="../" and data-nav="<page>.html" on <html>.
+    var R = document.documentElement.getAttribute("data-root") || "";
+    var here = document.documentElement.getAttribute("data-nav") || location.pathname.split("/").pop() || "index.html";
     var links = PAGES.map(function (p) {
-      return '<a href="' + p[0] + '"' + (p[0] === here ? ' aria-current="page"' : "") + ' data-i18n="' + p[1] + '">' + RRB.t(p[1]) + "</a>";
+      return '<a href="' + R + p[0] + '"' + (p[0] === here ? ' aria-current="page"' : "") + ' data-i18n="' + p[1] + '">' + RRB.t(p[1]) + "</a>";
     }).join("");
     var h = document.createElement("header");
     h.className = "top";
     h.innerHTML = '<div class="wrap">' +
-      '<a class="brand" href="index.html"><span class="brand-mark">RP</span><span data-i18n="site.title">' + RRB.t("site.title") + '</span></a>' +
+      '<a class="brand" href="' + R + 'index.html"><span class="brand-mark">RP</span><span data-i18n="site.title">' + RRB.t("site.title") + '</span></a>' +
       '<button class="icon-btn menu-btn" id="menuBtn" data-i18n-attr="aria-label:aria.menu" aria-label="' + RRB.t("aria.menu") + '" aria-expanded="false">☰</button>' +
       '<nav class="nav" id="nav">' + links + "</nav>" +
       '<div class="lang top-lang" role="group" data-i18n-attr="aria-label:aria.lang" aria-label="' + RRB.t("aria.lang") + '"><button type="button" data-l="en" aria-pressed="' + (RRB.lang() === "en") + '">EN</button>' +
@@ -48,7 +50,7 @@ window.RRB = window.RRB || {};
 })();
 
 // Cache-busting version for files loaded on demand. Keep in step with the ?v= on <script>/<link> tags in the HTML pages.
-RRB.VER = "20261101k";
+RRB.VER = "20261101l";
 // Load one paper/practice-set data file on demand. Calls cb(data).
 RRB.loadTest = function (id, cb, err) {
   var meta = (RRB.INDEX || []).filter(function (p) { return p.id === id; })[0];
