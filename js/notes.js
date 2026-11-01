@@ -6,6 +6,8 @@
   var READY = RRB.NOTES_READY || [], SUBJ = [["maths", "subj.maths"], ["reasoning", "subj.reasoning"], ["gs", "subj.science"], ["ga", "subj.ga"]];
   var TOP = {}, CNT = {}, cache = {};
   TP.topics.forEach(function (t) { TOP[t.k] = t; });
+  var EXTRA = RRB.NOTES_EXTRA || []; // syllabus subtopics without their own question tag; p = topic to practise
+  EXTRA.forEach(function (t) { TOP[t.k] = t; });
   Object.keys(TP.map).forEach(function (pid) { TP.map[pid].forEach(function (k) { CNT[k] = (CNT[k] || 0) + 1; }); });
   function hi() { return RRB.lang() === "hi"; }
   function nm(t) { return t ? (hi() && t.hi ? t.hi : t.en) : ""; }
@@ -13,18 +15,19 @@
   function isReady(k) { return READY.indexOf(k) >= 0; }
   // escape, then turn a^b / a^(…) into superscripts
   function fx(s) { return E(s).replace(/\^(\([^)]*\)|[\w]+)/g, function (m, p) { return "<sup>" + p + "</sup>"; }); }
-  function practiceBtn(k, cls) { return '<a class="btn ' + (cls || "") + '" href="practice.html?topic=' + k + '">' + T("notes.practice") + "</a>"; }
+  function qs(k) { var t = TOP[k]; return t && t.p ? T("notes.extraQs", { t: nm(TOP[t.p]), n: CNT[t.p] || 0 }) : T("notes.qs", { n: CNT[k] || 0 }); }
+  function practiceBtn(k, cls) { var t = TOP[k]; if (t && t.p) k = t.p; return '<a class="btn ' + (cls || "") + '" href="practice.html?topic=' + k + '">' + T("notes.practice") + "</a>"; }
 
   function list() {
     document.title = T("notes.doctitle");
     var h = '<div class="list-head"><h1>' + T("notes.h1") + '</h1></div><p class="muted">' + T("notes.intro") + "</p>";
     h += '<h2 class="sec">' + T("notes.readyH") + '</h2><div class="grid cols-3 nt-ready">' + READY.filter(function (k) { return TOP[k]; }).map(function (k) {
       var t = TOP[k];
-      return '<a class="card nt-card" href="#' + k + '"><small>' + T(subjKey(t.s)) + "</small><h3>" + E(nm(t)) + "</h3><p>" + T("notes.qs", { n: CNT[k] || 0 }) +
+      return '<a class="card nt-card" href="#' + k + '"><small>' + T(subjKey(t.s)) + "</small><h3>" + E(nm(t)) + "</h3><p>" + qs(k) +
         '</p><span class="more">' + T("notes.read") + "</span></a>";
     }).join("") + "</div>";
     SUBJ.forEach(function (s) {
-      var ts = TP.topics.filter(function (t) { return t.s === s[0]; }); if (!ts.length) return;
+      var ts = TP.topics.concat(EXTRA).filter(function (t) { return t.s === s[0]; }); if (!ts.length) return;
       h += '<h2 class="sec">' + T(s[1]) + '</h2><div class="card nt-list"><ul>' + ts.map(function (t) {
         return isReady(t.k)
           ? '<li class="ok"><a href="#' + t.k + '"><span>' + E(nm(t)) + '</span><span class="tag ok">' + T("notes.read") + "</span></a></li>"
@@ -47,7 +50,7 @@
   function note(k) {
     var t = TOP[k]; if (!t) { location.hash = ""; return list(); }
     document.title = T("notes.noteTitle", { t: nm(t) });
-    var head = back() + '<div class="nt-head"><div><small>' + T(subjKey(t.s)) + "</small><h1>" + E(nm(t)) + "</h1><p class=\"muted\">" + T("notes.qs", { n: CNT[k] || 0 }) + "</p></div>";
+    var head = back() + '<div class="nt-head"><div><small>' + T(subjKey(t.s)) + "</small><h1>" + E(nm(t)) + "</h1><p class=\"muted\">" + qs(k) + "</p></div>";
     if (!isReady(k)) {
       document.getElementById("nb").innerHTML = head + "</div>" + '<div class="card nt-soon"><span class="tag warn">' + T("notes.soon") + "</span><p>" + T("notes.soonNote") + "</p>" + practiceBtn(k) + "</div>";
       return;
@@ -71,7 +74,7 @@
       }).join("") + "</section>";
       h += '<div class="grid cols-2 nt-two"><section class="card nt-sec nt-tricks"><h2>⚡ ' + T("notes.tricks") + "</h2><ul>" + n.tricks.map(function (x) { return "<li>" + fx(x) + "</li>"; }).join("") +
         '</ul></section><section class="card nt-sec nt-mist"><h2>⚠ ' + T("notes.mistakes") + "</h2><ul>" + n.mistakes.map(function (x) { return "<li>" + fx(x) + "</li>"; }).join("") + "</ul></section></div>";
-      h += '<div class="nt-end card"><p>' + T("notes.endP", { n: CNT[k] || 0 }) + "</p>" + practiceBtn(k) + "</div>";
+      h += '<div class="nt-end card"><p>' + T("notes.endP", { n: CNT[(TOP[k] && TOP[k].p) || k] || 0 }) + "</p>" + practiceBtn(k) + "</div>";
       var nb = document.getElementById("nb"); nb.innerHTML = h;
       if (hi()) nb.querySelectorAll(".nt-sec,.nt-intro,.nt-ex").forEach(function (e) { e.setAttribute("lang", "hi"); });
       document.getElementById("printBtn").onclick = function () { window.print(); };

@@ -2,7 +2,7 @@
 RRB.noteLoaded({
 "id": "scitech",
 "en": {
-"intro": "Science and technology questions ask about ISRO missions, defence missiles, IT and new technology events. This note has the verified 2026 events plus the static facts about ISRO and DRDO that keep coming in exams.",
+"intro": "Science and technology questions ask about ISRO missions, the nuclear programme, defence missiles, IT and new technology events. This note has the verified 2026 events plus the static facts about ISRO and DRDO that keep coming in exams.",
 "concepts": [
 {
 "h": "2026 space and technology events",
@@ -31,6 +31,16 @@ RRB.noteLoaded({
 "Agni – long-range surface-to-surface ballistic missile; Prithvi – short-range surface-to-surface; Akash – surface-to-air; Nag – anti-tank; Astra – air-to-air.",
 "BrahMos – supersonic cruise missile made with Russia (named after the Brahmaputra and Moskva rivers).",
 "Tejas – India's light combat aircraft made by HAL. INS Vikrant – India's first home-built aircraft carrier."
+]
+},
+{
+"h": "Nuclear programme of India",
+"list": [
+"Homi J. Bhabha is the father of India's nuclear programme. The Atomic Energy Commission was set up in 1948 and the Department of Atomic Energy in 1954.",
+"BARC (Bhabha Atomic Research Centre) is at Trombay, Mumbai. Apsara (1956) was the first research reactor in Asia.",
+"Tarapur (Maharashtra, 1969) was India's first nuclear power station; Kudankulam (Tamil Nadu, built with Russia) is the largest.",
+"Nuclear tests at Pokhran (Rajasthan): 18 May 1974 ('Smiling Buddha') and 11 and 13 May 1998 ('Operation Shakti'). 11 May is National Technology Day.",
+"India has a three-stage nuclear power plan that will finally use thorium, which India has in large amounts."
 ]
 },
 {
@@ -101,7 +111,7 @@ RRB.noteLoaded({
 "ISRO's 'firsts': 1969 founded, 1975 Aryabhata, 2014 Mars, 2023 Moon south pole.",
 "Missile types: Agni/Prithvi = surface-to-surface; Akash = sky (surface-to-air); Astra = air-to-air; Nag = anti-tank.",
 "GSLV-F17 = EOS-05 (Earth watch); GSLV-F18 = NVS-03 (navigation) – both in 2026.",
-"Space Day 23 August, Science Day 28 February – do not mix them."
+"Days: Space Day 23 August, Science Day 28 February, Technology Day 11 May (Pokhran 1998)."
 ],
 "mistakes": [
 "Saying Gaganyaan has already flown; the first uncrewed flight was still planned as of October 2026.",
@@ -111,7 +121,7 @@ RRB.noteLoaded({
 ]
 },
 "hi": {
-"intro": "विज्ञान और प्रौद्योगिकी के प्रश्नों में ISRO के मिशन, रक्षा मिसाइलें, IT और नई तकनीक के आयोजन पूछे जाते हैं। इस नोट में 2026 की जाँची हुई घटनाएँ हैं, साथ में ISRO और DRDO की वे स्थायी बातें जो परीक्षा में बार-बार आती हैं।",
+"intro": "विज्ञान और प्रौद्योगिकी के प्रश्नों में ISRO के मिशन, परमाणु कार्यक्रम, रक्षा मिसाइलें, IT और नई तकनीक के आयोजन पूछे जाते हैं। इस नोट में 2026 की जाँची हुई घटनाएँ हैं, साथ में ISRO और DRDO की वे स्थायी बातें जो परीक्षा में बार-बार आती हैं।",
 "concepts": [
 {
 "h": "2026 की अंतरिक्ष और तकनीक की घटनाएँ",
@@ -140,6 +150,16 @@ RRB.noteLoaded({
 "अग्नि – लंबी दूरी की ज़मीन से ज़मीन बैलिस्टिक मिसाइल; पृथ्वी – कम दूरी की ज़मीन से ज़मीन; आकाश – ज़मीन से हवा; नाग – टैंक-रोधी; अस्त्र – हवा से हवा।",
 "ब्रह्मोस – रूस के साथ बनी सुपरसोनिक क्रूज़ मिसाइल (नाम ब्रह्मपुत्र और मोस्कवा नदियों से)।",
 "तेजस – HAL का बनाया भारत का हल्का लड़ाकू विमान। INS विक्रांत – भारत में बना पहला विमानवाहक पोत।"
+]
+},
+{
+"h": "भारत का परमाणु कार्यक्रम",
+"list": [
+"होमी जे. भाभा भारत के परमाणु कार्यक्रम के जनक हैं। परमाणु ऊर्जा आयोग 1948 में और परमाणु ऊर्जा विभाग 1954 में बना।",
+"BARC (भाभा परमाणु अनुसंधान केंद्र) ट्रॉम्बे, मुंबई में है। अप्सरा (1956) एशिया का पहला अनुसंधान रिएक्टर था।",
+"तारापुर (महाराष्ट्र, 1969) भारत का पहला परमाणु बिजलीघर था; कुडनकुलम (तमिलनाडु, रूस के साथ बना) सबसे बड़ा है।",
+"पोखरण (राजस्थान) में परमाणु परीक्षण: 18 मई 1974 ('स्माइलिंग बुद्धा') और 11 व 13 मई 1998 ('ऑपरेशन शक्ति')। 11 मई राष्ट्रीय प्रौद्योगिकी दिवस है।",
+"भारत की तीन चरणों वाली परमाणु बिजली योजना आख़िर में थोरियम का इस्तेमाल करेगी, जो भारत में बहुत ज़्यादा है।"
 ]
 },
 {
@@ -210,7 +230,7 @@ RRB.noteLoaded({
 "ISRO के 'पहले': 1969 स्थापना, 1975 आर्यभट, 2014 मंगल, 2023 चाँद का दक्षिणी ध्रुव।",
 "मिसाइल के प्रकार: अग्नि/पृथ्वी = ज़मीन से ज़मीन; आकाश = ज़मीन से हवा; अस्त्र = हवा से हवा; नाग = टैंक-रोधी।",
 "GSLV-F17 = EOS-05 (धरती पर नज़र); GSLV-F18 = NVS-03 (नेविगेशन) – दोनों 2026 में।",
-"अंतरिक्ष दिवस 23 अगस्त, विज्ञान दिवस 28 फ़रवरी – दोनों में गड़बड़ न करें।"
+"दिवस: अंतरिक्ष दिवस 23 अगस्त, विज्ञान दिवस 28 फ़रवरी, प्रौद्योगिकी दिवस 11 मई (पोखरण 1998)।"
 ],
 "mistakes": [
 "यह कहना कि गगनयान उड़ चुका है; अक्टूबर 2026 तक पहली बिना इंसान वाली उड़ान अभी होनी थी।",
