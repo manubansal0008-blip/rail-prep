@@ -101,7 +101,7 @@ window.RRB = window.RRB || {};
 })();
 
 // Cache-busting version for files loaded on demand. Keep in step with the ?v= on <script>/<link> tags in the HTML pages.
-RRB.VER = "20261102d";
+RRB.VER = "20261102e";
 // Load one paper/practice-set data file on demand. Calls cb(data).
 RRB.loadTest = function (id, cb, err) {
   var meta = (RRB.INDEX || []).filter(function (p) { return p.id === id; })[0];
@@ -200,4 +200,40 @@ RRB.BASE = "https://manubansal0008-blip.github.io/rail-prep/";
   });
   window.addEventListener("hashchange", refreshPage);
   document.addEventListener("rrb:lang", refreshPage);
+})();
+
+// Install as an app (PWA). Service worker = sw.js at the site root (next to index.html); the home page shows an
+// "install" strip (#install) when the browser offers installation (Android/desktop Chrome) or on iPhone Safari (with steps).
+(function () {
+  var me = document.currentScript && document.currentScript.src;
+  if ("serviceWorker" in navigator && me && location.protocol !== "file:") {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register(me.replace(/js\/app\.js.*$/, "sw.js")).catch(function () {});
+      // first visit: the page loaded before the worker existed, so hand it this page's files to keep for offline use
+      navigator.serviceWorker.ready.then(function (reg) {
+        var files = [location.href].concat(performance.getEntriesByType("resource").map(function (e) { return e.name; }))
+          .filter(function (u) { return u.indexOf(location.origin) === 0 && !/\.pdf($|\?)/i.test(u); });
+        if (reg.active) reg.active.postMessage({ keep: files });
+      });
+    });
+  }
+  var KEY = "rrb.installHide", deferred = null, T = function (k) { return RRB.t(k); };
+  var standalone = (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone === true;
+  var ios = /iphone|ipad|ipod/i.test(navigator.userAgent) && !/crios|fxios|edgios/i.test(navigator.userAgent);
+  function hidden() { var t = +localStorage.getItem(KEY) || 0; return Date.now() - t < 14 * 864e5; }
+  function draw() {
+    var el = document.getElementById("install"); if (!el) return;
+    if (standalone || hidden() || !(deferred || ios)) { el.hidden = true; return; }
+    el.hidden = false;
+    el.innerHTML = '<span class="in-ico" aria-hidden="true">📲</span><div class="in-txt"><strong>' + T("app.h") + "</strong><span>" + T(deferred ? "app.p" : "app.ios") + "</span></div>" +
+      (deferred ? '<button type="button" class="btn in-btn" id="inBtn">' + T("app.btn") + "</button>" : "") +
+      '<button type="button" class="icon-btn in-x" id="inX" aria-label="' + T("app.close") + '">✕</button>';
+    var b = document.getElementById("inBtn");
+    if (b) b.onclick = function () { deferred.prompt(); deferred.userChoice.then(function () { deferred = null; draw(); }); };
+    document.getElementById("inX").onclick = function () { localStorage.setItem(KEY, Date.now()); draw(); };
+  }
+  window.addEventListener("beforeinstallprompt", function (e) { e.preventDefault(); deferred = e; draw(); });
+  window.addEventListener("appinstalled", function () { deferred = null; standalone = true; draw(); });
+  document.addEventListener("DOMContentLoaded", draw);
+  document.addEventListener("rrb:lang", draw);
 })();

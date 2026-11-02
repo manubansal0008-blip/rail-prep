@@ -46,3 +46,12 @@ html[lang="hi"] .sl-tag{text-transform:none;letter-spacing:0}
 .qd-act .btn{margin:0 6px 6px 0}
 .qd-again{margin:6px 0 0;font-size:var(--fs-xs)}
 .pr-fb:focus{outline:none}
+/* "Install as app" strip (shown only when the browser can install the site) */
+.install{display:flex;align-items:center;gap:12px;margin:14px 0 0;padding:12px 14px;border-radius:var(--radius);background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 35%,var(--border))}
+.install[hidden]{display:none}
+.in-ico{font-size:1.6rem;line-height:1}
+.in-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;font-size:var(--fs-sm)}
+.in-txt span{color:var(--muted)}
+.in-btn{white-space:nowrap}
+.in-x{flex:none}
+@media (max-width:480px){.install{flex-wrap:wrap}.in-txt{flex-basis:calc(100% - 90px)}.in-btn{margin-left:auto}}

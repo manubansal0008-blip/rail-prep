@@ -1,0 +1,24 @@
+{
+  "name": "Rail Prep – RRB NTPC UG & Group D",
+  "short_name": "Rail Prep",
+  "description": "RRB NTPC UG और ग्रुप डी 2026 की मुफ़्त तैयारी: मॉक टेस्ट, पिछले पेपर, टॉपिक प्रैक्टिस, नोट्स और रोज़ की ख़बरें।",
+  "lang": "hi",
+  "id": "./",
+  "start_url": "./index.html?source=app",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f7fb",
+  "theme_color": "#d9480f",
+  "categories": ["education"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "मॉक टेस्ट", "short_name": "मॉक", "url": "./mock.html", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "टॉपिक प्रैक्टिस", "short_name": "प्रैक्टिस", "url": "./practice.html", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "आज की ख़बरें", "short_name": "ख़बरें", "url": "./news.html", "icons": [{ "src": "icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}
