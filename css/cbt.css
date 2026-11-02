@@ -150,3 +150,12 @@ body.testing #themeBtn{margin-left:auto}
 .tc-tags .tag{margin-left:0}
 .tag.new{background:color-mix(in srgb,#1971c2 16%,transparent);color:#1971c2;font-weight:700}
 [data-theme="dark"] .tag.new{color:#74c0fc}
+
+/* Always-visible Submit in the test top bar + submit/quit confirmation warnings */
+.sub-top{padding:8px 14px;white-space:nowrap}
+.sub-warn{margin:8px 0;padding:10px 12px;border-radius:12px;background:#fff4e6;color:#a33b00;font-weight:600}
+.sub-ok{margin:8px 0;padding:10px 12px;border-radius:12px;background:#ebfbee;color:#2b8a3e;font-weight:600}
+[data-theme="dark"] .sub-warn{background:#3b2410;color:#ffc078}
+[data-theme="dark"] .sub-ok{background:#16301d;color:#8ce99a}
+@media (max-width:560px){.cbt-bar{flex-wrap:wrap;row-gap:8px;padding:10px 0}.cbt-title{flex:1 0 100%}.cbt-title small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sub-top{margin-left:auto}}
+@media (max-width:360px){.cbt-bar{gap:6px}.sub-top{padding:8px 10px}.timer{padding:8px 9px}}

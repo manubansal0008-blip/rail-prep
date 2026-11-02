@@ -101,7 +101,7 @@ window.RRB = window.RRB || {};
 })();
 
 // Cache-busting version for files loaded on demand. Keep in step with the ?v= on <script>/<link> tags in the HTML pages.
-RRB.VER = "20261101q";
+RRB.VER = "20261102a";
 // Load one paper/practice-set data file on demand. Calls cb(data).
 RRB.loadTest = function (id, cb, err) {
   var meta = (RRB.INDEX || []).filter(function (p) { return p.id === id; })[0];

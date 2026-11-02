@@ -21,9 +21,9 @@
     var tough = I.filter(function (p) { return p.tough; }).length, papers = I.filter(function (p) { return !p.mock; });
     var q = I.reduce(function (a, p) { return a + p.count; }, 0), notes = (RRB.NOTES_READY || []).length;
     var s = [];
-    if (ap) s.push(["s1", "📅", t("sl.1tag"), t("sl.1h", { d: fmtD(ap.end) }), t("sl.1p", { f: fee ? fmtD(fee.end) : "" }) + '<span class="sl-live" id="slLeft" aria-live="off"></span>', "#dates", t("sl.1btn")]);
+    if (ap) s.push(["s1", "📅", t("sl.1tag"), t("sl.1h", { d: fmtD(ap.end) }), t("sl.1p", { f: fee ? fmtD(fee.end) : "" }) + '<span class="sl-live" id="slLeft" aria-live="off"></span>', "#datesH", t("sl.1btn")]);
     if (tough) s.push(["s2", "🔥", t("sl.2tag"), t("sl.2h", { n: tough }), t("sl.2p"), "mock.html", t("sl.2btn")]);
-    s.push(["s3", "🎯", t("sl.3tag"), t("sl.3h", { q: q.toLocaleString(RRB.locale()) }), RRB.qScope() + ". " + t("sl.3p"), "practice.html", t("sl.3btn")]);
+    s.push(["s3", "🎯", t("sl.3tag"), t("sl.3h", { q: q.toLocaleString(RRB.locale()) }), t("sl.3p"), "practice.html", t("sl.3btn")]);
     s.push(["s4", "🗂", t("sl.4tag"), t("sl.4h", { n: papers.length }), t("sl.4p"), "papers.html", t("sl.4btn")]);
     if (notes) s.push(["s5", "📘", t("sl.5tag"), t("sl.5h"), t("sl.5p", { n: notes }), "notes.html", t("sl.5btn")]);
     return s;

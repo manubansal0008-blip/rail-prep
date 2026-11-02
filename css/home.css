@@ -2,7 +2,7 @@
 .slider{position:relative;margin:4px 0 8px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden}
 .sl-view{overflow:hidden;touch-action:pan-y}
 .sl-track{display:grid}
-.sl-slide{grid-area:1/1;min-width:0;display:flex;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility 0s linear .25s;gap:18px;align-items:flex-start;padding:22px 22px 10px;box-sizing:border-box}
+.sl-slide{grid-area:1/1;min-width:0;display:flex;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility 0s linear .25s;gap:18px;align-items:center;padding:22px 22px 10px;box-sizing:border-box}
 .sl-ico{flex:none;width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:28px;background:var(--accent-soft)}
 .sl-body{min-width:0}
 .sl-tag{display:inline-block;font-size:var(--fs-xs);font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}

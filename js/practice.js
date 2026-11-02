@@ -143,7 +143,7 @@
     root.querySelectorAll(".pr-opt:not([disabled])").forEach(function (b) { b.onclick = function () { answer(+b.dataset.j); }; });
     var nb = document.getElementById("nextBtn"); if (nb) { nb.onclick = next; if (!top) nb.focus({ preventScroll: true }); }
     var sb = document.getElementById("skipBtn"); if (sb) sb.onclick = function () { answer(null); };
-    document.getElementById("quitBtn").onclick = finish;
+    document.getElementById("quitBtn").onclick = confirmQuit;
     if (top) window.scrollTo(0, 0);
     else if (nb) {
       // keep the feedback and the Next button in view, clear of the floating "Ask a doubt" button
@@ -154,6 +154,23 @@
   function answer(j) { var it = D.items[D.idx]; if (it.done) return; it.ans = j; it.done = true; question(false); }
   function next() { if (D.idx < D.items.length - 1) { D.idx++; question(true); } else finish(); }
 
+  // "End drill" with questions still left: ask first (all answered: finish straight away).
+  function confirmQuit() {
+    var n = D.items.length, left = D.items.filter(function (x) { return !x.done; }).length;
+    if (!left) return finish();
+    var m = document.createElement("div"); m.className = "modal"; m.id = "prModal";
+    m.innerHTML = '<div class="dialog fade" role="dialog" aria-modal="true" aria-labelledby="prMt"><h2 id="prMt">' + T("pr.qTitle") + "</h2>" +
+      '<p class="sub-warn" role="alert">⚠️ ' + T("pr.qLeft", { u: left, n: n }) + "</p>" +
+      '<p class="muted">' + T("pr.qNote") + "</p>" +
+      '<div class="dlg-act"><button type="button" class="b ghost" id="prKeep">' + T("pr.qKeep") + '</button><button type="button" class="b primary" id="prEnd">' + T("pr.qEnd") + "</button></div></div>";
+    document.body.appendChild(m);
+    var close = function () { m.remove(); var q = document.getElementById("quitBtn"); if (q) q.focus({ preventScroll: true }); };
+    m.onclick = function (e) { if (e.target === m) close(); };
+    m.onkeydown = function (e) { e.stopPropagation(); if (e.key === "Escape") { e.preventDefault(); close(); } };
+    document.getElementById("prKeep").onclick = close;
+    document.getElementById("prEnd").onclick = function () { m.remove(); finish(); };
+    document.getElementById("prKeep").focus({ preventScroll: true });
+  }
   function finish() {
     stopTick(); view = "end";
     if (!D.saved) {
@@ -194,7 +211,7 @@
 
   function render() { if (view === "q" && D) question(true); else if (view === "end" && D) end(); else setup(); }
   document.addEventListener("keydown", function (e) {
-    if (view !== "q" || !D || e.ctrlKey || e.metaKey || e.altKey || /INPUT|TEXTAREA/.test((e.target || {}).tagName || "")) return;
+    if (view !== "q" || !D || document.getElementById("prModal") || e.ctrlKey || e.metaKey || e.altKey || /INPUT|TEXTAREA/.test((e.target || {}).tagName || "")) return;
     var it = D.items[D.idx];
     if (!it.done && /^[1-4]$/.test(e.key) && +e.key <= it.q.o.length) { e.preventDefault(); answer(+e.key - 1); }
     else if (it.done && e.key === "Enter" && !(e.target && e.target.id === "nextBtn")) { e.preventDefault(); next(); }

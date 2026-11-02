@@ -32,6 +32,7 @@
       '<div class="cbt">' +
       '<div class="cbt-bar"><div class="cbt-title"><strong data-lbl="1">' + E(RRB.tLabel(d.meta.label)) + '</strong><small>' + T("test.qsMarks", { n: Q.length }) + "</small></div>" +
       langSw() + '<div class="timer" id="timer" aria-live="off">--:--</div>' +
+      '<button class="b primary sub-top" id="subTop" data-i18n="test.submit">' + T("test.submit") + '</button>' +
       '<button class="icon-btn pal-btn" id="palBtn" aria-label="' + T("test.palOpen") + '" data-i18n-attr="aria-label:test.palOpen">▦</button></div>' +
       '<div class="tabs" id="tabs" role="tablist"></div>' +
       '<div class="cbt-body"><section class="qpane" id="qpane"></section>' +
@@ -48,6 +49,7 @@
     $("#clearBtn").onclick = function () { S.sel = -1; S.ans[S.cur] = -1; S.st[S.cur] = 1; save(); draw(); };
     $("#prevBtn").onclick = function () { go(S.cur - 1); };
     $("#palBtn").onclick = function () { togglePal(); };
+    $("#subTop").onclick = confirmSubmit;
     $("#overlay").onclick = function () { togglePal(false); };
     tick(); timerId = setInterval(tick, 1000);
     go(S.cur);
@@ -97,18 +99,23 @@
   var SUM_COLS = [2, 1, 0, 3, 4];
   function sumRow(name, k, n, cls) { return "<tr" + cls + "><td>" + name + "</td>" + SUM_COLS.map(function (j) { return "<td>" + k[j] + "</td>"; }).join("") + "<td>" + n + "</td></tr>"; }
   function confirmSubmit() {
-    var c = counts(Q.map(function (_, i) { return i; })), m = $("#modal");
+    var c = counts(Q.map(function (_, i) { return i; })), m = $("#modal"), un = Q.length - c[2] - c[4];
     togglePal(false);
     m.hidden = false;
     m.innerHTML = '<div class="dialog fade" role="dialog" aria-modal="true" aria-labelledby="mt"><h2 id="mt">' + T("sub.title") + '</h2>' +
+      (un > 0 ? '<p class="sub-warn" role="alert">⚠️ ' + T("sub.unans", { u: un, n: Q.length }) + "</p>" : '<p class="sub-ok">✓ ' + T("sub.allDone", { n: Q.length }) + "</p>") +
       '<p class="muted">' + T("sub.left", { t: fmt((S.endAt - Date.now()) / 1000) }) + "</p>" +
       '<div class="sum-wrap"><table class="sum"><tr><th>' + T("sub.section") + '</th>' + SUM_COLS.map(function (k) { return '<th title="' + stName(k) + '"><i class="st s' + k + '" aria-hidden="true"></i><span class="full">' + stName(k) + '</span><span class="ab" aria-hidden="true">' + T("ab." + k) + "</span></th>"; }).join("") + "<th>" + T("sub.total") + "</th></tr>" +
       secs.map(function (s) { var l = idxOf(s); return sumRow(SEC(s), counts(l), l.length, ""); }).join("") +
       sumRow(T("sub.total"), c, Q.length, ' class="tot"') + "</table></div>" +
       '<p class="muted small">' + T("sub.note", { m: c[4], s: c[2] + c[4], n: Q.length }) + "</p>" +
       '<div class="dlg-act"><button class="b ghost" id="cancelSub">' + T("sub.back") + '</button><button class="b primary" id="doSub">' + T("sub.submit") + '</button></div></div>';
-    $("#cancelSub").onclick = function () { m.hidden = true; };
-    $("#doSub").onclick = function () { finish(false); };
+    var close = function () { m.hidden = true; m.onkeydown = null; var b = $("#subTop"); if (b) b.focus({ preventScroll: true }); };
+    $("#cancelSub").onclick = close;
+    m.onclick = function (e) { if (e.target === m) close(); };
+    m.onkeydown = function (e) { if (e.key === "Escape") { e.preventDefault(); close(); } };
+    $("#doSub").onclick = function () { m.onkeydown = null; finish(false); };
+    $("#cancelSub").focus({ preventScroll: true });
   }
   function finish(auto) {
     clearInterval(timerId);

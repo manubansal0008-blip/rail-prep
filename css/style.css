@@ -14,6 +14,8 @@
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
+/* In-page links (#datesH, notes topics, news items): keep the target below the sticky header */
+[id]{scroll-margin-top:80px}
 body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Noto Sans Devanagari",sans-serif;
   background:var(--bg);color:var(--text);font-size:var(--fs-md);line-height:1.55;transition:background .25s,color .25s}
 a{color:inherit}
