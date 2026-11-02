@@ -53,3 +53,13 @@
 .nw-qd{margin-left:0;margin-top:6px}
 #dayList{margin-top:8px}
 @media (min-width:980px){.nw-page .nw-cal{float:none}}
+/* Home page: facts, quick question and sources fold under "Read more" */
+.nw-more{margin-top:8px}
+.nw-more>summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:var(--fs-sm);list-style:none;padding:4px 0}
+.nw-more>summary::-webkit-details-marker{display:none}
+.nw-more>summary::after{content:" ▾"}
+.nw-more[open]>summary::after{content:" ▴"}
+.nw-more>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.nw-more[open]>.nw-facts{margin-top:6px}
+#news .nw-sum{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden}
+#news .nw-item:has(details[open]) .nw-sum{display:block;-webkit-line-clamp:unset;line-clamp:none}

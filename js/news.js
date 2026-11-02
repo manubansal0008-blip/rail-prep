@@ -22,7 +22,14 @@
   RRB.newsDay = fmtDay;
   RRB.newsAnswers = answers;
   RRB.newsSave = function (id, j) { var a = answers(); a[id] = j; localStorage.setItem(KEY, JSON.stringify(a)); };
-  function item(d, it, i, skip, qd) {
+  // compact (home page): headline + summary; facts, quick question and sources fold into "Read more".
+  function item(d, it, i, skip, qd, compact) {
+    var html = item0(d, it, i, skip, qd), cut = html.indexOf('<div class="nw-facts">');
+    if (!compact || cut < 0) return html;
+    var end = html.lastIndexOf("</article>");
+    return html.slice(0, cut) + '<details class="nw-more" data-id="' + d.date + ":" + i + '"><summary>' + T("news.more") + "</summary>" + html.slice(cut, end) + "</details></article>";
+  }
+  function item0(d, it, i, skip, qd) {
     var x = L(it), m = it.mcq, mq = L(m), id = d.date + ":" + i, got = answers()[id], done = got != null;
     var h0 = '<article class="card nw-item" id="nw-' + d.date + "-" + i + '"><div class="nw-top"><span class="tag nw-cat">' + E(T("news.cat." + it.cat)) + '</span><span class="muted nw-n">' + (i + 1) + "/" + d.items.length + "</span></div>" + (qd ? '<span class="tag warn nw-qd">⭐ ' + T("news.qdBadge") + "</span>" : "") +
       "<h3>" + E(x.title) + '</h3><p class="nw-sum">' + E(x.summary) + "</p>" +
@@ -42,7 +49,10 @@
   // skip: index of an item whose MCQ is shown as the home "Question of the day" (its MCQ is not repeated here).
   // qd: index of the day's "Question of the day" item, marked with a badge (news.html).
   RRB.newsRender = function (el, d, skip, qd) {
-    el.innerHTML = d.items.map(function (it, i) { return item(d, it, i, i === skip, i === qd); }).join("");
+    var compact = el.id === "news", open = {};
+    el.querySelectorAll("details.nw-more[open]").forEach(function (x) { open[x.dataset.id] = 1; });
+    el.innerHTML = d.items.map(function (it, i) { return item(d, it, i, i === skip, i === qd, compact); }).join("");
+    el.querySelectorAll("details.nw-more").forEach(function (x) { if (open[x.dataset.id]) x.open = true; });
     el.querySelectorAll(".opt:not([disabled])").forEach(function (b) {
       b.onclick = function () {
         RRB.newsSave(b.dataset.id, +b.dataset.j);

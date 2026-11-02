@@ -40,7 +40,8 @@ html:not(.chat-on) .ask-doubt{display:none}
 .cb-foot{display:flex;justify-content:space-between;padding:2px 14px 10px;color:var(--muted);font-size:var(--fs-xs)}
 .cb-count.over{color:#e03131;font-weight:700}
 @media (max-width:560px){
-  .cb-fab{right:12px;bottom:12px;padding:12px 14px}
+  .cb-fab{right:12px;bottom:12px;width:50px;height:50px;padding:0;justify-content:center;border-radius:50%}
+  .cb-fab b{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   .cb-panel{right:0;bottom:0;width:100vw;height:100dvh;max-height:none;border-radius:0;border:0}
   .cb-head{padding-top:max(10px,env(safe-area-inset-top))}
   .cb-foot{padding-bottom:max(10px,env(safe-area-inset-bottom))}

@@ -53,7 +53,8 @@
     }).join("");
 
     var book = RRB.BOOKS && RRB.BOOKS[x];
-    document.getElementById("cards").innerHTML = [
+    var cardsEl = document.getElementById("cards");
+    cardsEl.innerHTML = [
       book ? [book.url, "📕", t("card.book"), t("card.bookP", { p: book.pages, mb: book.mb }), t("card.bookBtn")] : null,
       ["papers.html", "🗂", t("card.papers"), t("card.papersP", { x: E.short, n: papers.length, q: qn.toLocaleString(RRB.locale()) })],
       ["mock.html", "⏱", t("card.mocks"), t("card.mocksP", { x: E.short, n: mocks.length, q: mq.toLocaleString(RRB.locale()) })],
@@ -68,6 +69,7 @@
       return '<a class="card fade" href="' + c[0] + '"><div class="ico" aria-hidden="true">' + c[1] + "</div><h3>" + c[2] +
         '</h3><p>' + c[3] + '</p><span class="more">' + t("card.open") + "</span></a>";
     }).join("");
+    cardsEl.classList.toggle("cards6", cardsEl.children.length === 6); cardsEl.classList.toggle("cards5", cardsEl.children.length === 5);
   }
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".switch button").forEach(function (b) {

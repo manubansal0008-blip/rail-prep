@@ -109,6 +109,8 @@ html[lang="hi"] .eyebrow,html[lang="hi"] .cd span{text-transform:none;letter-spa
 @media (min-width:980px){.grid.cols-4{grid-template-columns:repeat(4,1fr)}}
 @media (min-width:980px){.grid.cards5{grid-template-columns:repeat(6,1fr)}.grid.cards5>*{grid-column:span 2}.grid.cards5>:nth-child(4),.grid.cards5>:nth-child(5){grid-column:span 3}}
 @media (min-width:640px) and (max-width:979px){.grid.cards5>:nth-child(5){grid-column:1/-1}}
+@media (min-width:640px){.grid.cards6{grid-template-columns:1fr 1fr}}
+@media (min-width:980px){.grid.cards6{grid-template-columns:repeat(3,1fr)}}
 /* Static SEO pages (notes/*.html, news/*.html): both languages in the HTML, the reader's language first */
 .st-both{display:flex;flex-direction:column;gap:12px}
 html[lang="hi"] .st-both>.st-hi{order:-1}
