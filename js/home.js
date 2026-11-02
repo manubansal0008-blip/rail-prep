@@ -52,13 +52,17 @@
       return "<div><small>" + f[0] + "</small><strong>" + f[1] + "</strong></div>";
     }).join("");
 
+    var book = RRB.BOOKS && RRB.BOOKS[x];
     document.getElementById("cards").innerHTML = [
+      book ? [book.url, "📕", t("card.book"), t("card.bookP", { p: book.pages, mb: book.mb }), t("card.bookBtn")] : null,
       ["papers.html", "🗂", t("card.papers"), t("card.papersP", { x: E.short, n: papers.length, q: qn.toLocaleString(RRB.locale()) })],
       ["mock.html", "⏱", t("card.mocks"), t("card.mocksP", { x: E.short, n: mocks.length, q: mq.toLocaleString(RRB.locale()) })],
       ["practice.html", "🎯", t("card.practice"), t("card.practiceP", { s: RRB.qScope() })],
       ["progress.html", "📈", t("card.progress"), progLine()],
       (RRB.NOTES_READY || []).length ? ["notes.html", "📘", t("card.notes"), t("card.notesP", { n: RRB.NOTES_READY.length })] : [null, "📘", t("card.notes"), t("card.notesP", { n: 0 })]
-    ].map(function (c) {
+    ].filter(Boolean).map(function (c) {
+      if (c[4]) return '<a class="card fade book-card" href="' + c[0] + '" target="_blank" rel="noopener" download><div class="ico" aria-hidden="true">' + c[1] + "</div><h3>" + c[2] +
+        ' <span class="tag ok">' + t("card.free") + '</span></h3><p>' + c[3] + '</p><span class="more">' + c[4] + "</span></a>";
       if (!c[0]) return '<div class="card fade soon" aria-disabled="true"><div class="ico" aria-hidden="true">' + c[1] + "</div><h3>" + c[2] +
         ' <span class="tag warn">' + t("tag.soon") + '</span></h3><p>' + c[3] + '</p><span class="more muted">' + t("card.na") + "</span></div>";
       return '<a class="card fade" href="' + c[0] + '"><div class="ico" aria-hidden="true">' + c[1] + "</div><h3>" + c[2] +

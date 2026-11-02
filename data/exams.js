@@ -37,3 +37,6 @@ RRB.EXAMS = {
     }
   }
 };
+
+// Free book PDFs (copy-protected) shown as the first card on the home page for that exam.
+RRB.BOOKS = { ntpc: { url: "books/Rail-Prep-RRB-NTPC-UG-2026-Hindi.pdf", pages: 177, mb: 33 } };
