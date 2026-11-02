@@ -154,3 +154,34 @@ body.testing .sh-wrap{display:none}
   body::before{border-bottom:1px solid #ccc;margin-bottom:8px}
   body::after{border-top:1px solid #ccc;margin-top:12px}
 }
+
+/* Phones: app-style bottom tab bar (built in js/app.js); the header menu button is not needed then */
+.tabbar,.tb-sheet{display:none}
+@media (max-width:760px){
+  html.has-tabbar .menu-btn,html.has-tabbar .nav{display:none}
+  html.has-tabbar .top-lang{margin-left:auto}
+  html.tb-open .cb-fab{display:none}
+  html.has-tabbar body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+  .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;z-index:36;
+    background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+    border-top:1px solid var(--border);padding:4px 2px calc(4px + env(safe-area-inset-bottom))}
+  .tabbar a,.tabbar button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:52px;padding:4px 2px;
+    border:0;background:none;font:inherit;font-size:.7rem;font-weight:600;color:var(--muted);text-decoration:none;cursor:pointer;border-radius:12px;-webkit-tap-highlight-color:transparent}
+  .tabbar svg{width:24px;height:24px;padding:2px 14px;box-sizing:content-box;border-radius:999px;transition:background .2s}
+  .tabbar [aria-current="page"]{color:var(--accent)}
+  .tabbar [aria-current="page"] svg{background:var(--accent-soft)}
+  .tabbar a:focus-visible,.tabbar button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+  .tb-sheet{display:block;position:fixed;inset:0;z-index:35;background:rgba(0,0,0,.4)}
+  .tb-sheet[hidden]{display:none}
+  .tb-panel{position:absolute;left:0;right:0;bottom:0;background:var(--surface);border-radius:20px 20px 0 0;
+    padding:8px 16px calc(76px + env(safe-area-inset-bottom));box-shadow:0 -8px 30px rgba(0,0,0,.18);animation:tbUp .22s ease}
+  .tb-grab{width:40px;height:4px;border-radius:4px;background:var(--border);margin:2px auto 8px}
+  .tb-panel h2{font-size:1rem;margin:0 4px 6px}
+  .tb-panel a{display:flex;align-items:center;gap:12px;padding:13px 10px;border-radius:12px;color:var(--text);text-decoration:none;font-weight:600}
+  .tb-panel a:hover,.tb-panel a[aria-current="page"]{background:var(--accent-soft);color:var(--accent)}
+  .tb-ico{font-size:1.25rem;width:28px;text-align:center}
+  html.has-tabbar .cb-fab{bottom:calc(76px + env(safe-area-inset-bottom))}
+  html.has-tabbar .sh-toast,html.has-tabbar.chat-on .sh-toast{bottom:calc(84px + env(safe-area-inset-bottom))}
+}
+@keyframes tbUp{from{transform:translateY(30px);opacity:.4}to{transform:none;opacity:1}}
+@media print{.tabbar,.tb-sheet{display:none!important}}

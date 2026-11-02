@@ -38,6 +38,43 @@ window.RRB = window.RRB || {};
     };
     var mb = h.querySelector("#menuBtn"), nav = h.querySelector("#nav");
     mb.onclick = function () { var o = nav.classList.toggle("open"); mb.setAttribute("aria-expanded", o); };
+    tabbar(R, here);
+  }
+
+  // Phones (CSS ≤760px): app-style bottom tab bar. Home · Practice · Tests · News · More (More = sheet with the other pages).
+  var ICO = {
+    home: '<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h5v-6h4v6h5V9.5"/>',
+    practice: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/>',
+    mocks: '<circle cx="12" cy="13.5" r="7.5"/><path d="M12 9.5v4l2.5 2M9.5 2.5h5M12 2.5V6"/>',
+    news: '<rect x="3.5" y="4.5" width="17" height="15" rx="2"/><path d="M7 9h10M7 12.5h10M7 16h6"/>',
+    more: '<circle cx="6" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="18" cy="12" r="1.6" fill="currentColor"/>'
+  };
+  var TABS = [["index.html", "home", "tab.home"], ["practice.html", "practice", "tab.practice"], ["mock.html", "mocks", "tab.mocks"], ["news.html", "news", "tab.news"]];
+  var BOOK = "books/Rail-Prep-RRB-NTPC-UG-2026-Hindi.pdf"; // free NTPC UG book (same file as RRB.BOOKS.ntpc in data/exams.js)
+  var MORE = [["notes.html", "nav.notes", "📘"], ["papers.html", "nav.papers", "🗂"], ["progress.html", "nav.progress", "📈"]];
+  function svg(k) { return '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICO[k] + "</svg>"; }
+  function tabbar(R, here) {
+    if (here === "test.html") return;
+    var inMore = MORE.some(function (m) { return m[0] === here; });
+    var t = document.createElement("nav");
+    t.className = "tabbar"; t.setAttribute("data-i18n-attr", "aria-label:tab.aria"); t.setAttribute("aria-label", RRB.t("tab.aria"));
+    t.innerHTML = TABS.map(function (x) {
+      return '<a href="' + R + x[0] + '"' + (x[0] === here ? ' aria-current="page"' : "") + ">" + svg(x[1]) + '<span data-i18n="' + x[2] + '">' + RRB.t(x[2]) + "</span></a>";
+    }).join("") + '<button type="button" id="tbMore" aria-expanded="false" aria-controls="tbSheet"' + (inMore ? ' aria-current="page"' : "") + ">" + svg("more") +
+      '<span data-i18n="tab.more">' + RRB.t("tab.more") + "</span></button>";
+    var s = document.createElement("div");
+    s.className = "tb-sheet"; s.id = "tbSheet"; s.hidden = true;
+    s.innerHTML = '<div class="tb-panel" role="dialog" aria-modal="true" aria-labelledby="tbH"><div class="tb-grab" aria-hidden="true"></div><h2 id="tbH" data-i18n="tab.more">' + RRB.t("tab.more") + "</h2>" +
+      MORE.map(function (m) { return '<a href="' + R + m[0] + '"' + (m[0] === here ? ' aria-current="page"' : "") + '><span class="tb-ico" aria-hidden="true">' + m[2] + '</span><span data-i18n="' + m[1] + '">' + RRB.t(m[1]) + "</span></a>"; }).join("") +
+      (BOOK ? '<a href="' + R + BOOK + '" target="_blank" rel="noopener" download><span class="tb-ico" aria-hidden="true">📕</span><span data-i18n="card.book">' + RRB.t("card.book") + "</span></a>" : "") +
+      "</div>";
+    document.body.append(s, t);
+    document.documentElement.classList.add("has-tabbar");
+    var mb = t.querySelector("#tbMore");
+    function show(o) { s.hidden = !o; mb.setAttribute("aria-expanded", o); document.documentElement.classList.toggle("tb-open", o); if (o) { var a = s.querySelector("a"); if (a) a.focus({ preventScroll: true }); } }
+    mb.onclick = function () { show(s.hidden); };
+    s.onclick = function (e) { if (e.target === s) show(false); };
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !s.hidden) { show(false); mb.focus(); } });
   }
 
   function footer() {
@@ -101,7 +138,7 @@ window.RRB = window.RRB || {};
 })();
 
 // Cache-busting version for files loaded on demand. Keep in step with the ?v= on <script>/<link> tags in the HTML pages.
-RRB.VER = "20261102e";
+RRB.VER = "20261102f";
 // Load one paper/practice-set data file on demand. Calls cb(data).
 RRB.loadTest = function (id, cb, err) {
   var meta = (RRB.INDEX || []).filter(function (p) { return p.id === id; })[0];
