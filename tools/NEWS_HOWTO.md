@@ -41,3 +41,9 @@ RRB.newsLoaded({
 - MCQ: one clear correct answer, 3 believable wrong options, correct position varies (not always the same index).
 - Hindi: natural, simple Hindi as used in Hindi newspapers — not word-for-word translation. Keep names,
   numbers and dates identical to the English.
+
+## Back-filling older days
+
+`tools/build_news.py` also works for a past date (e.g. `2026-08-14`): it keeps `RRB.NEWS_DAYS` sorted newest first,
+puts the day in the right place in `news/index.html`, and links the neighbouring day pages both ways.
+For a past day use news *of that day* (published on that date or the day before), not today's news.

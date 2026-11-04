@@ -193,11 +193,9 @@ def main():
     # 1. data/news/index.js
     idx_js = read("data/news/index.js")
     days = re.findall(r'"(\d{4}-\d{2}-\d{2})"', idx_js)
-    if d not in days:
-        idx_js = idx_js.replace("RRB.NEWS_DAYS = [\n", f'RRB.NEWS_DAYS = [\n"{d}",\n', 1)
-        write("data/news/index.js", idx_js)
-        days = [d] + days
-    days = sorted(set(days), reverse=True)
+    days = sorted(set(days + [d]), reverse=True)  # always newest first, also when an older day is back-filled
+    idx_js = re.sub(r"RRB\.NEWS_DAYS = \[[^\]]*\];", lambda _: "RRB.NEWS_DAYS = [\n" + "".join(f'"{x}",\n' for x in days) + "];", idx_js, count=1)
+    write("data/news/index.js", idx_js)
     pos = days.index(d)
     nxt = days[pos - 1] if pos > 0 else None
     prev = days[pos + 1] if pos + 1 < len(days) else None
@@ -230,6 +228,10 @@ def main():
         after = [x for x in items if x < d]
         if after:
             ni = ni.replace(f'<li class="ok"><a href="{after[0]}.html">', li + f'<li class="ok"><a href="{after[0]}.html">', 1)
+        elif items:  # older than every listed day: goes at the end of the list
+            a = ni.index('<div class="card nt-list"><ul>')
+            b = ni.index("</ul>", a)
+            ni = ni[:b] + li + ni[b:]
         else:
             ni = ni.replace('<div class="card nt-list"><ul>', '<div class="card nt-list"><ul>' + li, 1)
         write("news/index.html", ni)
