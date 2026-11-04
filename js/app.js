@@ -51,7 +51,7 @@ window.RRB = window.RRB || {};
   };
   var TABS = [["index.html", "home", "tab.home"], ["practice.html", "practice", "tab.practice"], ["mock.html", "mocks", "tab.mocks"], ["news.html", "news", "tab.news"]];
   var BOOK = "books/Rail-Prep-RRB-NTPC-UG-2026-Hindi.pdf"; // free NTPC UG book (same file as RRB.BOOKS.ntpc in data/exams.js)
-  var MORE = [["notes.html", "nav.notes", "📘"], ["papers.html", "nav.papers", "🗂"], ["progress.html", "nav.progress", "📈"]];
+  var MORE = [["monthly.html", "nav.monthly", "🗓"], ["notes.html", "nav.notes", "📘"], ["papers.html", "nav.papers", "🗂"], ["progress.html", "nav.progress", "📈"]];
   function svg(k) { return '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICO[k] + "</svg>"; }
   function tabbar(R, here) {
     if (here === "test.html") return;
@@ -138,7 +138,7 @@ window.RRB = window.RRB || {};
 })();
 
 // Cache-busting version for files loaded on demand. Keep in step with the ?v= on <script>/<link> tags in the HTML pages.
-RRB.VER = "20261102f";
+RRB.VER = "20261104a";
 // Load one paper/practice-set data file on demand. Calls cb(data).
 RRB.loadTest = function (id, cb, err) {
   var meta = (RRB.INDEX || []).filter(function (p) { return p.id === id; })[0];

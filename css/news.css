@@ -63,3 +63,20 @@
 .nw-more[open]>.nw-facts{margin-top:6px}
 #news .nw-sum{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;line-clamp:3;overflow:hidden}
 #news .nw-item:has(details[open]) .nw-sum{display:block;-webkit-line-clamp:unset;line-clamp:none}
+/* Monthly current affairs page */
+.mo-tabs{margin:12px 0 6px}
+.mo-sum{margin:10px 0;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
+.mo-chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 12px}
+.chip{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:999px;padding:6px 12px;font:inherit;font-size:var(--fs-sm);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mo-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.mo-item{padding:12px 14px}
+.mo-item p{margin:6px 0 0}
+.mo-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.mo-quiz{margin-top:22px;scroll-margin-top:80px}
+.mo-q{margin:0 0 12px;padding:14px}
+.mo-q .opts{display:grid;gap:8px;margin-top:8px}
+.mo-q .opt{background:var(--surface);font:inherit;color:var(--text);text-align:left;width:100%}
+.mo-score{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:14px}
+@media (min-width:760px){.mo-q .opts{grid-template-columns:1fr 1fr}}
