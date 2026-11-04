@@ -1,0 +1,70 @@
+RRB.newsLoaded({
+"date": "2026-09-17",
+"items": [
+{
+ "cat": "economy",
+ "en": {"title": "PM Modi inaugurates SEMICON India 2026 at Yashobhoomi, New Delhi",
+  "summary": "Prime Minister Narendra Modi inaugurates the fifth edition of SEMICON India on 17 September 2026 at Yashobhoomi, New Delhi; the three-day event runs till 19 September with the theme 'Silicon to Systems: Building the Ecosystem'. More than 600 companies and representatives from 52 countries are taking part, with country pavilions of Japan, South Korea, Malaysia, the Netherlands, Singapore and Sweden. On 16 September the PM met semiconductor industry CEOs and said India should aspire to be among the early leaders in emerging technologies.",
+  "facts": ["SEMICON India is organised by the India Semiconductor Mission (ISM) under MeitY together with SEMI, the global industry association; the first edition was held in Bengaluru in 2022.", "Yashobhoomi (India International Convention and Expo Centre) is in Dwarka, New Delhi."]},
+ "hi": {"title": "प्रधानमंत्री मोदी ने नई दिल्ली के यशोभूमि में सेमीकॉन इंडिया 2026 का उद्घाटन किया",
+  "summary": "प्रधानमंत्री नरेंद्र मोदी 17 सितंबर 2026 को नई दिल्ली के यशोभूमि में सेमीकॉन इंडिया के पाँचवें संस्करण का उद्घाटन कर रहे हैं; 'सिलिकॉन टू सिस्टम्स: बिल्डिंग द इकोसिस्टम' थीम वाला यह तीन दिन का आयोजन 19 सितंबर तक चलेगा। इसमें 600 से ज़्यादा कंपनियाँ और 52 देशों के प्रतिनिधि हिस्सा ले रहे हैं, और जापान, दक्षिण कोरिया, मलेशिया, नीदरलैंड, सिंगापुर व स्वीडन के कंट्री पवेलियन लगे हैं। 16 सितंबर को प्रधानमंत्री ने सेमीकंडक्टर उद्योग के CEO से मुलाकात की और कहा कि भारत को उभरती तकनीकों में शुरुआती अग्रणी देशों में शामिल होने का लक्ष्य रखना चाहिए।",
+  "facts": ["सेमीकॉन इंडिया का आयोजन MeitY के अधीन इंडिया सेमीकंडक्टर मिशन (ISM) और वैश्विक उद्योग संगठन SEMI मिलकर करते हैं; पहला संस्करण 2022 में बेंगलुरु में हुआ था।", "यशोभूमि (इंडिया इंटरनेशनल कन्वेंशन एंड एक्सपो सेंटर) नई दिल्ली के द्वारका में है।"]},
+ "mcq": {"a": 1,
+  "en": {"q": "What is the theme of SEMICON India 2026, inaugurated on 17 September 2026?", "o": ["Shaping the Semiconductor Future", "Silicon to Systems: Building the Ecosystem", "Catalysing India's Semiconductor Ecosystem", "Building the Semiconductor Ecosystem for Viksit Bharat"], "e": "The fifth SEMICON India (17–19 September 2026, Yashobhoomi, New Delhi) has the theme 'Silicon to Systems: Building the Ecosystem'."},
+  "hi": {"q": "17 सितंबर 2026 को उद्घाटित सेमीकॉन इंडिया 2026 की थीम क्या है?", "o": ["शेपिंग द सेमीकंडक्टर फ्यूचर", "सिलिकॉन टू सिस्टम्स: बिल्डिंग द इकोसिस्टम", "कैटालाइज़िंग इंडियाज़ सेमीकंडक्टर इकोसिस्टम", "बिल्डिंग द सेमीकंडक्टर इकोसिस्टम फॉर विकसित भारत"], "e": "पाँचवें सेमीकॉन इंडिया (17–19 सितंबर 2026, यशोभूमि, नई दिल्ली) की थीम 'सिलिकॉन टू सिस्टम्स: बिल्डिंग द इकोसिस्टम' है।"}},
+ "src": [{"name": "PM India (pmindia.gov.in), Sep 2026", "nameHi": "पीएम इंडिया (pmindia.gov.in), सितंबर 2026", "url": "https://www.pmindia.gov.in/en/news_updates/pm-to-inaugurate-semicon-india-2026/"}, {"name": "India TV News, 16 Sep 2026", "nameHi": "इंडिया टीवी न्यूज़, 16 सितंबर 2026", "url": "https://www.indiatvnews.com/news/india/india-should-aspire-to-be-among-the-early-leaders-in-emerging-technologies-pm-modi-2026-09-16-1054435"}, {"name": "IANS, 18 Aug 2026", "nameHi": "आईएएनएस, 18 अगस्त 2026", "url": "https://ianslive.in/pm-modi-to-inaugurate-fifth-edition-of-semicon-india-on-sept-17--20260818164005"}]
+},
+{
+ "cat": "scheme",
+ "en": {"title": "Swachhata Hi Seva 2026 campaign begins across the country",
+  "summary": "The month-long Swachhata Hi Seva 2026 cleanliness campaign begins across India on 17 September 2026 with the theme 'Swachhata Mein Sahbhag; Swachh Bharat, Viksit Bharat'. Announcing it in New Delhi on 16 September, Jal Shakti Minister C R Patil said it rests on five pillars, including Swachh Paathshala and SafaiMitra Suraksha Evam Samman Shivir. A nationwide shramdaan 'Ek Din, Ek Ghanta, Ek Saath' will be held on 1 October, a day before Swachh Bharat Diwas.",
+  "facts": ["Swachhata Hi Seva has been held every year since 2017; it is run by the Ministry of Jal Shakti and the Ministry of Housing and Urban Affairs.", "The Swachh Bharat Mission was launched on 2 October 2014, Gandhi Jayanti; over 18 crore people took part in Swachhata Hi Seva 2025."]},
+ "hi": {"title": "स्वच्छता ही सेवा 2026 अभियान देशभर में शुरू",
+  "summary": "एक महीने तक चलने वाला स्वच्छता ही सेवा 2026 अभियान 17 सितंबर 2026 से पूरे देश में 'स्वच्छता में सहभाग; स्वच्छ भारत, विकसित भारत' थीम के साथ शुरू हो रहा है। 16 सितंबर को नई दिल्ली में इसकी जानकारी देते हुए जल शक्ति मंत्री सी. आर. पाटिल ने बताया कि यह अभियान पाँच स्तंभों पर आधारित है, जिनमें स्वच्छ पाठशाला और सफ़ाईमित्र सुरक्षा एवं सम्मान शिविर शामिल हैं। स्वच्छ भारत दिवस से एक दिन पहले, 1 अक्टूबर को देशभर में 'एक दिन, एक घंटा, एक साथ' श्रमदान होगा।",
+  "facts": ["स्वच्छता ही सेवा अभियान 2017 से हर साल चलाया जा रहा है; इसे जल शक्ति मंत्रालय और आवासन एवं शहरी कार्य मंत्रालय मिलकर चलाते हैं।", "स्वच्छ भारत मिशन 2 अक्टूबर 2014 (गांधी जयंती) को शुरू हुआ था; स्वच्छता ही सेवा 2025 में 18 करोड़ से ज़्यादा लोगों ने हिस्सा लिया था।"]},
+ "mcq": {"a": 3,
+  "en": {"q": "What is the theme of the Swachhata Hi Seva 2026 campaign that began on 17 September 2026?", "o": ["Swabhav Swachhata, Sanskaar Swachhata", "Garbage Free India", "Ek Ped Maa Ke Naam", "Swachhata Mein Sahbhag; Swachh Bharat, Viksit Bharat"], "e": "The 2026 theme is 'Swachhata Mein Sahbhag; Swachh Bharat, Viksit Bharat'; the campaign runs for about a month."},
+  "hi": {"q": "17 सितंबर 2026 से शुरू हुए स्वच्छता ही सेवा 2026 अभियान की थीम क्या है?", "o": ["स्वभाव स्वच्छता, संस्कार स्वच्छता", "कचरा मुक्त भारत", "एक पेड़ माँ के नाम", "स्वच्छता में सहभाग; स्वच्छ भारत, विकसित भारत"], "e": "2026 की थीम 'स्वच्छता में सहभाग; स्वच्छ भारत, विकसित भारत' है; अभियान करीब एक महीने चलेगा।"}},
+ "src": [{"name": "All India Radio News, 17 Sep 2026", "nameHi": "आकाशवाणी समाचार, 17 सितंबर 2026", "url": "https://newsonair.gov.in/swachhata-hi-seva-campaign-2026-begins-across-country/"}, {"name": "ThePrint (PTI), 16 Sep 2026", "nameHi": "द प्रिंट (पीटीआई), 16 सितंबर 2026", "url": "https://theprint.in/india/swachhata-hi-seva-has-become-peoples-movement-c-r-patil/3044818/"}]
+},
+{
+ "cat": "science",
+ "en": {"title": "India's 51st Doppler Weather Radar inaugurated at Sambalpur, Odisha",
+  "summary": "Union Minister Dr Jitendra Singh virtually inaugurated India's 51st Doppler Weather Radar at Sambalpur, Odisha, on 17 September 2026, to improve weather monitoring in western Odisha and nearby regions. India's Doppler radar network has grown from 14 radars in 2014 to 51 in 2026, and about 40 more are planned under Mission Mausam. Odisha now has three such radars, at Sambalpur, Gopalpur and Paradip.",
+  "facts": ["The India Meteorological Department (IMD) was set up in 1875 and is headquartered in New Delhi; it works under the Ministry of Earth Sciences.", "A Doppler Weather Radar uses the Doppler effect to track rain, storms and wind speed, helping forecast cyclones and heavy rainfall."]},
+ "hi": {"title": "ओडिशा के संबलपुर में देश के 51वें डॉप्लर मौसम रडार का उद्घाटन",
+  "summary": "केंद्रीय मंत्री डॉ. जितेंद्र सिंह ने 17 सितंबर 2026 को ओडिशा के संबलपुर में देश के 51वें डॉप्लर मौसम रडार का वर्चुअल उद्घाटन किया, जिससे पश्चिमी ओडिशा और आसपास के इलाकों में मौसम की निगरानी बेहतर होगी। भारत में डॉप्लर रडार की संख्या 2014 में 14 थी, जो 2026 में बढ़कर 51 हो गई है, और मिशन मौसम के तहत करीब 40 और रडार लगाने की योजना है। अब ओडिशा में संबलपुर, गोपालपुर और पारादीप में तीन ऐसे रडार हैं।",
+  "facts": ["भारत मौसम विज्ञान विभाग (IMD) की स्थापना 1875 में हुई थी और इसका मुख्यालय नई दिल्ली में है; यह पृथ्वी विज्ञान मंत्रालय के अधीन है।", "डॉप्लर मौसम रडार डॉप्लर प्रभाव से बारिश, तूफ़ान और हवा की गति पर नज़र रखता है, जिससे चक्रवात और भारी बारिश का पूर्वानुमान लगाने में मदद मिलती है।"]},
+ "mcq": {"a": 0,
+  "en": {"q": "Where was India's 51st Doppler Weather Radar inaugurated on 17 September 2026?", "o": ["Sambalpur", "Gopalpur", "Paradip", "Balasore"], "e": "Dr Jitendra Singh inaugurated the 51st Doppler Weather Radar at Sambalpur; Gopalpur and Paradip already had radars."},
+  "hi": {"q": "17 सितंबर 2026 को देश के 51वें डॉप्लर मौसम रडार का उद्घाटन कहाँ हुआ?", "o": ["संबलपुर", "गोपालपुर", "पारादीप", "बालासोर"], "e": "डॉ. जितेंद्र सिंह ने संबलपुर में 51वें डॉप्लर मौसम रडार का उद्घाटन किया; गोपालपुर और पारादीप में पहले से रडार हैं।"}},
+ "src": [{"name": "Drishti IAS (State PCS – Odisha), 18 Sep 2026", "nameHi": "दृष्टि आईएएस (स्टेट पीसीएस – ओडिशा), 18 सितंबर 2026", "url": "https://www.drishtiias.com/statepcs/18-09-2026/odisha"}]
+},
+{
+ "cat": "awards",
+ "en": {"title": "Bharatanatyam exponent Vasundhara Doraswamy chosen for Excellence Award 2026",
+  "summary": "Mysuru-based Bharatanatyam dancer, choreographer and researcher Dr Vasundhara Doraswamy has been selected for the Padmabhushan Guru Dr Saroja Vaidyanathan Excellence Award 2026, as reported on 16 September 2026. The award will be presented by the Nataraj Music & Dance Academy (NMDA) at the Vysakhi Nrithyotsav Indian Dance Festival in Visakhapatnam on 26–27 September 2026. She has performed, researched and taught Bharatanatyam for more than five decades.",
+  "facts": ["Vasundhara Doraswamy is known for solo productions such as Panchali, Ganga Lahari and Sama Veda, and has received the Sangeet Natak Akademi Award and the Shantala Award.", "Bharatanatyam is a classical dance form of Tamil Nadu; the Sangeet Natak Akademi, India's national academy for music, dance and drama, was set up in 1952."]},
+ "hi": {"title": "भरतनाट्यम नृत्यांगना वसुंधरा दोरास्वामी को एक्सीलेंस अवॉर्ड 2026",
+  "summary": "16 सितंबर 2026 की ख़बर के अनुसार मैसूरु की भरतनाट्यम नृत्यांगना, कोरियोग्राफ़र और शोधकर्ता डॉ. वसुंधरा दोरास्वामी को पद्मभूषण गुरु डॉ. सरोजा वैद्यनाथन एक्सीलेंस अवॉर्ड 2026 के लिए चुना गया है। नटराज म्यूज़िक एंड डांस अकादमी (NMDA) यह सम्मान 26–27 सितंबर 2026 को विशाखापत्तनम में वैशाखी नृत्योत्सव भारतीय नृत्य महोत्सव में देगी। वे पाँच दशक से ज़्यादा समय से भरतनाट्यम की प्रस्तुति, शोध और शिक्षण कर रही हैं।",
+  "facts": ["वसुंधरा दोरास्वामी 'पांचाली', 'गंगा लहरी' और 'साम वेद' जैसी एकल प्रस्तुतियों के लिए जानी जाती हैं; उन्हें संगीत नाटक अकादमी पुरस्कार और शांतला पुरस्कार मिल चुका है।", "भरतनाट्यम तमिलनाडु का शास्त्रीय नृत्य है; संगीत, नृत्य और नाटक की राष्ट्रीय अकादमी, संगीत नाटक अकादमी की स्थापना 1952 में हुई थी।"]},
+ "mcq": {"a": 2,
+  "en": {"q": "Vasundhara Doraswamy, selected for the Padmabhushan Guru Dr Saroja Vaidyanathan Excellence Award 2026, is an exponent of which dance form?", "o": ["Kathak", "Odissi", "Bharatanatyam", "Kuchipudi"], "e": "Dr Vasundhara Doraswamy of Mysuru is a Bharatanatyam dancer, choreographer and researcher with over five decades of work."},
+  "hi": {"q": "पद्मभूषण गुरु डॉ. सरोजा वैद्यनाथन एक्सीलेंस अवॉर्ड 2026 के लिए चुनी गईं वसुंधरा दोरास्वामी किस नृत्य शैली की कलाकार हैं?", "o": ["कथक", "ओडिसी", "भरतनाट्यम", "कुचिपुड़ी"], "e": "मैसूरु की डॉ. वसुंधरा दोरास्वामी पाँच दशक से ज़्यादा अनुभव वाली भरतनाट्यम नृत्यांगना, कोरियोग्राफ़र और शोधकर्ता हैं।"}},
+ "src": [{"name": "SSBCrack Exams, 16 Sep 2026", "nameHi": "एसएसबीक्रैक एग्ज़ाम्स, 16 सितंबर 2026", "url": "https://ssbcrackexams.com/current-affairs-16-september-2026/"}]
+},
+{
+ "cat": "international",
+ "en": {"title": "US Congress passes Russia–Iran sanctions bill allowing tariffs of up to 100%",
+  "summary": "The US House of Representatives passed the Lindsey O. Graham Sanctioning Russia and Iran Act of 2026 by 262 votes to 159, after earlier approval by the Senate, and the bill has been sent to the President for signature, as reported on 16 September 2026. It provides primary and secondary sanctions on Russian officials, banks, energy interests and the 'shadow fleet', and on Iran's energy and weapons sectors. It also allows the President to impose tariffs of up to 100% on goods from major buyers of Russian oil or gas, which could include India.",
+  "facts": ["A bill passed by both Houses of the US Congress becomes law when the President signs it; the US Congress consists of the Senate and the House of Representatives.", "Secondary sanctions are penalties on third countries or firms that do business with a sanctioned country."]},
+ "hi": {"title": "अमेरिकी कांग्रेस ने 100% तक टैरिफ़ की अनुमति वाला रूस–ईरान प्रतिबंध विधेयक पारित किया",
+  "summary": "16 सितंबर 2026 की ख़बर के अनुसार अमेरिकी प्रतिनिधि सभा ने 'लिंडसे ओ. ग्राहम सैंक्शनिंग रशिया एंड ईरान एक्ट ऑफ़ 2026' को 262 के मुकाबले 159 वोटों से पारित कर दिया; सीनेट इसे पहले ही मंज़ूरी दे चुकी थी, और अब विधेयक राष्ट्रपति के हस्ताक्षर के लिए भेजा गया है। इसमें रूसी अधिकारियों, बैंकों, ऊर्जा कंपनियों और 'शैडो फ़्लीट' तथा ईरान के ऊर्जा व हथियार क्षेत्रों पर प्राथमिक और द्वितीयक प्रतिबंधों का प्रावधान है। इसके तहत राष्ट्रपति रूसी तेल या गैस के बड़े ख़रीदार देशों के सामान पर 100% तक टैरिफ़ लगा सकेंगे, जिसके दायरे में भारत भी आ सकता है।",
+  "facts": ["अमेरिकी कांग्रेस के दोनों सदनों से पारित विधेयक राष्ट्रपति के हस्ताक्षर के बाद कानून बनता है; अमेरिकी कांग्रेस में सीनेट और प्रतिनिधि सभा (House of Representatives) होती हैं।", "द्वितीयक प्रतिबंध (secondary sanctions) उन तीसरे देशों या कंपनियों पर लगने वाले दंड हैं जो प्रतिबंधित देश से कारोबार करते हैं।"]},
+ "mcq": {"a": 1,
+  "en": {"q": "Up to what level of tariffs does the US Russia–Iran sanctions bill passed by Congress in September 2026 allow on major buyers of Russian oil or gas?", "o": ["25%", "100%", "50%", "500%"], "e": "The Lindsey O. Graham Sanctioning Russia and Iran Act of 2026 lets the President impose tariffs of up to 100%; the House passed it 262–159."},
+  "hi": {"q": "सितंबर 2026 में अमेरिकी कांग्रेस से पारित रूस–ईरान प्रतिबंध विधेयक रूसी तेल या गैस के बड़े ख़रीदारों पर कितने प्रतिशत तक टैरिफ़ की अनुमति देता है?", "o": ["25%", "100%", "50%", "500%"], "e": "'लिंडसे ओ. ग्राहम सैंक्शनिंग रशिया एंड ईरान एक्ट ऑफ़ 2026' राष्ट्रपति को 100% तक टैरिफ़ लगाने की अनुमति देता है; प्रतिनिधि सभा ने इसे 262–159 से पारित किया।"}},
+ "src": [{"name": "Toprankers, 16 Sep 2026", "nameHi": "टॉपरैंकर्स, 16 सितंबर 2026", "url": "https://www.toprankers.com/current-affairs-16th-september-2026"}]
+}
+]
+});

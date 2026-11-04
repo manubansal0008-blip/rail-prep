@@ -1,0 +1,70 @@
+RRB.newsLoaded({
+"date": "2026-09-07",
+"items": [
+{
+ "cat": "states",
+ "en": {"title": "Amit Shah chairs 28th Western Zonal Council meeting in Panaji",
+  "summary": "Union Home Minister Amit Shah chaired the 28th meeting of the Western Zonal Council in Panaji, Goa, on 7 September 2026. Goa Chief Minister Pramod Sawant, Gujarat Chief Minister Bhupendra Patel and Maharashtra Chief Minister Devendra Fadnavis attended. The meeting discussed issues between the Centre and member States that need coordination, such as fast-track special courts, the ERSS-112 emergency line, Ayushman Bharat–PM-JAY and railway projects.",
+  "facts": ["The Western Zonal Council has Goa, Gujarat, Maharashtra and the UT of Dadra & Nagar Haveli and Daman & Diu as members.", "Zonal Councils were set up under the States Reorganisation Act, 1956; the Union Home Minister is the chairman of each council."]},
+ "hi": {"title": "अमित शाह ने पणजी में पश्चिमी क्षेत्रीय परिषद की 28वीं बैठक की अध्यक्षता की",
+  "summary": "केंद्रीय गृह मंत्री अमित शाह ने 7 सितंबर 2026 को गोवा के पणजी में पश्चिमी क्षेत्रीय परिषद की 28वीं बैठक की अध्यक्षता की। बैठक में गोवा के मुख्यमंत्री प्रमोद सावंत, गुजरात के मुख्यमंत्री भूपेंद्र पटेल और महाराष्ट्र के मुख्यमंत्री देवेंद्र फडणवीस शामिल हुए। बैठक में केंद्र और सदस्य राज्यों के बीच तालमेल वाले मुद्दों पर चर्चा हुई, जैसे फ़ास्ट-ट्रैक विशेष अदालतें, ERSS-112 आपात सेवा, आयुष्मान भारत–PM-JAY और रेल परियोजनाएँ।",
+  "facts": ["पश्चिमी क्षेत्रीय परिषद में गोवा, गुजरात, महाराष्ट्र और केंद्रशासित प्रदेश दादरा व नगर हवेली और दमन व दीव शामिल हैं।", "क्षेत्रीय परिषदें राज्य पुनर्गठन अधिनियम, 1956 के तहत बनी हैं; हर परिषद के अध्यक्ष केंद्रीय गृह मंत्री होते हैं।"]},
+ "mcq": {"a": 1,
+  "en": {"q": "Zonal Councils, such as the Western Zonal Council that met in Panaji on 7 September 2026, were set up under which law?", "o": ["Government of India Act, 1935", "States Reorganisation Act, 1956", "Inter-State Council Order, 1990", "73rd Constitutional Amendment Act, 1992"], "e": "Zonal Councils are statutory bodies created under the States Reorganisation Act, 1956, and are chaired by the Union Home Minister."},
+  "hi": {"q": "7 सितंबर 2026 को पणजी में हुई पश्चिमी क्षेत्रीय परिषद जैसी क्षेत्रीय परिषदें किस क़ानून के तहत बनी हैं?", "o": ["भारत सरकार अधिनियम, 1935", "राज्य पुनर्गठन अधिनियम, 1956", "अंतर-राज्य परिषद आदेश, 1990", "73वाँ संविधान संशोधन अधिनियम, 1992"], "e": "क्षेत्रीय परिषदें राज्य पुनर्गठन अधिनियम, 1956 के तहत बनी वैधानिक संस्थाएँ हैं और इनके अध्यक्ष केंद्रीय गृह मंत्री होते हैं।"}},
+ "src": [{"name": "All India Radio News, 7 Sep 2026", "nameHi": "ऑल इंडिया रेडियो न्यूज़, 7 सितंबर 2026", "url": "https://newsonair.gov.in/union-home-minister-amit-shah-chairs-28th-meeting-of-western-zonal-council-in-goa/"}, {"name": "Adda247 Current Affairs, 7 Sep 2026", "nameHi": "Adda247 करेंट अफ़ेयर्स, 7 सितंबर 2026", "url": "https://currentaffairs.adda247.com/amit-shah-chairs-28th-western-zonal-council-meeting-in-goa/"}]
+},
+{
+ "cat": "defence",
+ "en": {"title": "India, China hold first Corps Commander-level talks in Arunachal Pradesh",
+  "summary": "India and China held their first-ever Corps Commander-level talks in the eastern sector on 6 September 2026, at the Wacha-Damai Border Personnel Meeting (BPM) point in the Kibithu sector of Anjaw district, Arunachal Pradesh. Until now such talks were held only at Chushul-Moldo in eastern Ladakh. The talks focused on easing local tensions along the Line of Actual Control (LAC) and came after NSA Ajit Doval met Chinese Foreign Minister Wang Yi in Beijing on 25 August.",
+  "facts": ["Kibithu in Anjaw district is one of India's easternmost inhabited places; the capital of Arunachal Pradesh is Itanagar.", "The LAC is the de facto India–China boundary and is about 3,488 km long; it has not been formally demarcated."]},
+ "hi": {"title": "भारत-चीन के बीच अरुणाचल प्रदेश में पहली कोर कमांडर स्तर की वार्ता",
+  "summary": "भारत और चीन ने 6 सितंबर 2026 को पूर्वी सेक्टर में पहली बार कोर कमांडर स्तर की बातचीत की। यह वार्ता अरुणाचल प्रदेश के अंजॉ ज़िले के किबिथू सेक्टर में वाचा-दमाई बॉर्डर पर्सनल मीटिंग (BPM) पॉइंट पर हुई। अब तक ऐसी वार्ताएँ सिर्फ़ पूर्वी लद्दाख के चुशूल-मोल्डो में होती थीं। बातचीत का मुख्य मुद्दा वास्तविक नियंत्रण रेखा (LAC) पर स्थानीय तनाव कम करना था; यह 25 अगस्त को बीजिंग में NSA अजित डोभाल और चीनी विदेश मंत्री वांग यी की मुलाक़ात के बाद हुई।",
+  "facts": ["अंजॉ ज़िले का किबिथू भारत के सबसे पूर्वी बसे इलाक़ों में से एक है; अरुणाचल प्रदेश की राजधानी ईटानगर है।", "LAC भारत-चीन के बीच की वास्तविक (de facto) सीमा है, जिसकी लंबाई लगभग 3,488 किमी है; इसका औपचारिक सीमांकन नहीं हुआ है।"]},
+ "mcq": {"a": 3,
+  "en": {"q": "At which point were the first India–China Corps Commander-level talks in Arunachal Pradesh held on 6 September 2026?", "o": ["Chushul-Moldo", "Nathu La", "Bum La", "Wacha-Damai"], "e": "The talks were held at the Wacha-Damai BPM point in the Kibithu sector (Anjaw district); earlier Corps Commander talks took place at Chushul-Moldo in Ladakh."},
+  "hi": {"q": "6 सितंबर 2026 को अरुणाचल प्रदेश में भारत-चीन की पहली कोर कमांडर स्तर की वार्ता किस स्थान पर हुई?", "o": ["चुशूल-मोल्डो", "नाथू ला", "बुम ला", "वाचा-दमाई"], "e": "यह वार्ता किबिथू सेक्टर (अंजॉ ज़िला) के वाचा-दमाई BPM पॉइंट पर हुई; पहले कोर कमांडर वार्ताएँ लद्दाख के चुशूल-मोल्डो में होती थीं।"}},
+ "src": [{"name": "GKToday, 7 Sep 2026", "nameHi": "GKToday, 7 सितंबर 2026", "url": "https://www.gktoday.in/india-china-hold-first-corps-commander-meeting-in-arunachal-pradesh/"}, {"name": "Republic World, 6 Sep 2026", "nameHi": "रिपब्लिक वर्ल्ड, 6 सितंबर 2026", "url": "https://www.republicworld.com/india/india-china-to-hold-first-corps-commander-level-talks-today-at-wacha-along-lac-in-arunachal-pradesh-2026-09-06-136411"}]
+},
+{
+ "cat": "days",
+ "en": {"title": "Clean Air Day: Lucknow tops 5th Swachh Vayu Sarvekshan",
+  "summary": "The Environment Ministry marked the International Day of Clean Air for Blue Skies as Swachh Vayu Diwas 2026 in New Delhi on 7 September and gave away the 5th Swachh Vayu Sarvekshan Awards. Lucknow ranked first among cities with over 10 lakh population, scoring 198 of 200 points and winning ₹1.5 crore, followed by Indore and Jabalpur. Rourkela topped the 3–10 lakh category and Kalinga Nagar the below-3 lakh category; 108 of 130 NCAP cities showed lower PM10 levels than in 2017-18.",
+  "facts": ["The International Day of Clean Air for Blue Skies (7 September) was declared by the UN General Assembly in 2019 and first observed in 2020.", "The National Clean Air Programme (NCAP) was launched in 2019; the Central Pollution Control Board (CPCB) works under the Environment Ministry."]},
+ "hi": {"title": "स्वच्छ वायु दिवस: 5वें स्वच्छ वायु सर्वेक्षण में लखनऊ अव्वल",
+  "summary": "पर्यावरण मंत्रालय ने 7 सितंबर को नई दिल्ली में 'नीले आसमान के लिए स्वच्छ वायु का अंतरराष्ट्रीय दिवस' को स्वच्छ वायु दिवस 2026 के रूप में मनाया और 5वें स्वच्छ वायु सर्वेक्षण पुरस्कार दिए। 10 लाख से ज़्यादा आबादी वाले शहरों में लखनऊ 200 में से 198 अंक लेकर पहले स्थान पर रहा और उसे ₹1.5 करोड़ का इनाम मिला; इंदौर दूसरे और जबलपुर तीसरे स्थान पर रहे। 3–10 लाख आबादी वाली श्रेणी में राउरकेला और 3 लाख से कम वाली श्रेणी में कलिंगनगर शीर्ष पर रहे; NCAP के 130 में से 108 शहरों में PM10 का स्तर 2017-18 की तुलना में घटा।",
+  "facts": ["नीले आसमान के लिए स्वच्छ वायु का अंतरराष्ट्रीय दिवस (7 सितंबर) संयुक्त राष्ट्र महासभा ने 2019 में घोषित किया और यह पहली बार 2020 में मनाया गया।", "राष्ट्रीय स्वच्छ वायु कार्यक्रम (NCAP) 2019 में शुरू हुआ; केंद्रीय प्रदूषण नियंत्रण बोर्ड (CPCB) पर्यावरण मंत्रालय के अधीन है।"]},
+ "mcq": {"a": 0,
+  "en": {"q": "Which city ranked first among million-plus cities in the 5th Swachh Vayu Sarvekshan (September 2026)?", "o": ["Lucknow", "Indore", "Jabalpur", "Surat"], "e": "Lucknow topped the over-10-lakh category with 198/200 points; Indore was second and Jabalpur third."},
+  "hi": {"q": "5वें स्वच्छ वायु सर्वेक्षण (सितंबर 2026) में 10 लाख से अधिक आबादी वाले शहरों में कौन-सा शहर पहले स्थान पर रहा?", "o": ["लखनऊ", "इंदौर", "जबलपुर", "सूरत"], "e": "10 लाख से ज़्यादा आबादी वाली श्रेणी में लखनऊ 200 में से 198 अंक लेकर पहले स्थान पर रहा; इंदौर दूसरे और जबलपुर तीसरे स्थान पर रहे।"}},
+ "src": [{"name": "GKToday, 7 Sep 2026", "nameHi": "GKToday, 7 सितंबर 2026", "url": "https://www.gktoday.in/5th-swachh-vayu-sarvekshan-awards-conferred/"}, {"name": "Asianet Newsable, 7 Sep 2026", "nameHi": "एशियानेट न्यूज़ेबल, 7 सितंबर 2026", "url": "https://newsable.asianetnews.com/india/swachh-vayu-sarvekshan-2026-lucknow-1st-indore-2nd-delhi-is-30th-articleshow-949tb86"}]
+},
+{
+ "cat": "economy",
+ "en": {"title": "DGFT launches Open API for Certificates of Origin",
+  "summary": "The Directorate General of Foreign Trade (DGFT) on 7 September 2026 issued Trade Notice No. 25/2026-27, launching an Open API facility for Certificates of Origin (CoOs) on the Trade Connect e-Platform. Exporters can now file CoO applications directly from their ERP or accounting software through three APIs – for authentication, CoO filing and certificate verification. It covers preferential CoOs under trade pacts such as India–UAE CEPA, India–Australia ECTA, India–EFTA TEPA and India–UK CETA, as well as non-preferential CoOs.",
+  "facts": ["A Certificate of Origin shows the country where goods were made; it is needed to claim lower duty under a Free Trade Agreement.", "DGFT works under the Ministry of Commerce and Industry and is headquartered in New Delhi."]},
+ "hi": {"title": "DGFT ने उत्पत्ति प्रमाणपत्र के लिए ओपन API सुविधा शुरू की",
+  "summary": "विदेश व्यापार महानिदेशालय (DGFT) ने 7 सितंबर 2026 को ट्रेड नोटिस संख्या 25/2026-27 जारी कर ट्रेड कनेक्ट ई-प्लेटफ़ॉर्म पर उत्पत्ति प्रमाणपत्र (Certificate of Origin – CoO) के लिए ओपन API सुविधा शुरू की। अब निर्यातक अपने ERP या अकाउंटिंग सॉफ़्टवेयर से सीधे CoO के लिए आवेदन कर सकेंगे; इसके लिए तीन API हैं – प्रमाणीकरण, CoO फ़ाइलिंग और प्रमाणपत्र सत्यापन। यह सुविधा भारत–UAE CEPA, भारत–ऑस्ट्रेलिया ECTA, भारत–EFTA TEPA और भारत–UK CETA जैसे व्यापार समझौतों के तहत रियायती CoO के साथ-साथ गैर-रियायती CoO पर भी लागू है।",
+  "facts": ["उत्पत्ति प्रमाणपत्र बताता है कि माल किस देश में बना है; मुक्त व्यापार समझौते के तहत कम शुल्क का लाभ लेने के लिए यह ज़रूरी होता है।", "DGFT वाणिज्य और उद्योग मंत्रालय के अधीन है और इसका मुख्यालय नई दिल्ली में है।"]},
+ "mcq": {"a": 2,
+  "en": {"q": "On which DGFT platform was the Open API facility for Certificates of Origin launched in September 2026?", "o": ["GeM", "ICEGATE", "Trade Connect e-Platform", "Niryat Bandhu"], "e": "The Open API for Certificates of Origin was launched on DGFT's Trade Connect e-Platform through Trade Notice No. 25/2026-27 dated 7 September 2026."},
+  "hi": {"q": "सितंबर 2026 में उत्पत्ति प्रमाणपत्र के लिए ओपन API सुविधा DGFT के किस प्लेटफ़ॉर्म पर शुरू हुई?", "o": ["GeM", "ICEGATE", "ट्रेड कनेक्ट ई-प्लेटफ़ॉर्म", "निर्यात बंधु"], "e": "उत्पत्ति प्रमाणपत्र के लिए ओपन API, 7 सितंबर 2026 के ट्रेड नोटिस संख्या 25/2026-27 के ज़रिए DGFT के ट्रेड कनेक्ट ई-प्लेटफ़ॉर्म पर शुरू हुई।"}},
+ "src": [{"name": "PIB (Ministry of Commerce and Industry), DGFT Trade Notice 25/2026-27, 7 Sep 2026", "nameHi": "PIB (वाणिज्य और उद्योग मंत्रालय), DGFT ट्रेड नोटिस 25/2026-27, 7 सितंबर 2026", "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/sep/doc_9811_20260907_16282001.pdf"}, {"name": "KNN India, 7 Sep 2026", "nameHi": "KNN इंडिया, 7 सितंबर 2026", "url": "https://knnindia.co.in/news/newsdetails/sectors/dgft-launches-open-api-facility-for-certificate-of-origin-on-trade-connect-e-platform"}]
+},
+{
+ "cat": "appointments",
+ "en": {"title": "Bhagwat Prasad Makwana named Chairperson of NCSK",
+  "summary": "The Ministry of Social Justice and Empowerment announced on 6 September 2026 the appointment of Bhagwat Prasad Makwana as Chairperson and Kaishab Bihari as Vice-Chairperson of the National Commission for Safai Karamcharis (NCSK). Manoj Kumar Balmiki, Sushma Gaudiyal and Ravi Ramu Kalose were named members. They will serve until 31 March 2028, the remaining tenure of the present Commission.",
+  "facts": ["The NCSK was set up on 12 August 1994 under the National Commission for Safai Karamcharis Act, 1993; after the Act lapsed in 2004 it continues as a non-statutory body.", "The NCSK monitors the Prohibition of Employment as Manual Scavengers and their Rehabilitation Act, 2013."]},
+ "hi": {"title": "भगवत प्रसाद मकवाना राष्ट्रीय सफ़ाई कर्मचारी आयोग के अध्यक्ष बने",
+  "summary": "सामाजिक न्याय और अधिकारिता मंत्रालय ने 6 सितंबर 2026 को भगवत प्रसाद मकवाना को राष्ट्रीय सफ़ाई कर्मचारी आयोग (NCSK) का अध्यक्ष और कैशब बिहारी को उपाध्यक्ष नियुक्त करने की घोषणा की। मनोज कुमार बाल्मीकि, सुषमा गौड़ियाल और रवि रामू कालोसे को सदस्य बनाया गया है। इनका कार्यकाल मौजूदा आयोग के बचे हुए समय, यानी 31 मार्च 2028 तक रहेगा।",
+  "facts": ["NCSK का गठन 12 अगस्त 1994 को राष्ट्रीय सफ़ाई कर्मचारी आयोग अधिनियम, 1993 के तहत हुआ; 2004 में अधिनियम की अवधि ख़त्म होने के बाद यह ग़ैर-वैधानिक संस्था के रूप में काम कर रहा है।", "NCSK हाथ से मैला उठाने वालों के नियोजन का प्रतिषेध और उनका पुनर्वास अधिनियम, 2013 के पालन की निगरानी करता है।"]},
+ "mcq": {"a": 1,
+  "en": {"q": "Who was appointed Chairperson of the National Commission for Safai Karamcharis in September 2026?", "o": ["Kishore Makwana", "Bhagwat Prasad Makwana", "Kaishab Bihari", "Manoj Kumar Balmiki"], "e": "Bhagwat Prasad Makwana became NCSK Chairperson and Kaishab Bihari Vice-Chairperson, with tenure up to 31 March 2028."},
+  "hi": {"q": "सितंबर 2026 में राष्ट्रीय सफ़ाई कर्मचारी आयोग का अध्यक्ष किसे नियुक्त किया गया?", "o": ["किशोर मकवाना", "भगवत प्रसाद मकवाना", "कैशब बिहारी", "मनोज कुमार बाल्मीकि"], "e": "भगवत प्रसाद मकवाना NCSK के अध्यक्ष और कैशब बिहारी उपाध्यक्ष बने; इनका कार्यकाल 31 मार्च 2028 तक है।"}},
+ "src": [{"name": "Cavalier Current Affairs, 6 Sep 2026", "nameHi": "कैवेलियर करेंट अफ़ेयर्स, 6 सितंबर 2026", "url": "https://www.cavalier.in/cds-ota-current-affairs/2026-09-06/ncsk-appointments-manual-scavenging-law-2026"}, {"name": "TNPSC Thervupettagam (NCSK background)", "nameHi": "TNPSC थेर्वुपेट्टगम (NCSK की पृष्ठभूमि)", "url": "https://www.tnpscthervupettagam.com/currentaffairs-detail/new-appointments-in-ncsk"}]
+}
+]
+});
