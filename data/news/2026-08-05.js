@@ -30,15 +30,15 @@ RRB.newsLoaded({
 {
  "cat": "science",
  "en": {"title": "IIT Patna develops hybrid magneto-rheometer to test smart MR fluids",
-  "summary": "IIT Patna has developed a hybrid magneto-rheometer for testing magnetorheological (MR) fluids, smart fluids whose flow behaviour changes under a magnetic field. Built by a team led by Prof. Chiranjit Sarkar with support from the Department of Science and Technology (DST), the device measures both rheological (flow) and tribological (friction and wear) properties. It can test the fluids under compression and shear at the same time.",
+  "summary": "As per a PIB release of 3 August 2026, IIT Patna has developed a hybrid magneto-rheometer for testing magnetorheological (MR) fluids, smart fluids whose flow behaviour changes under a magnetic field. Built by a team led by Prof. Chiranjit Sarkar with support from the Department of Science and Technology (DST), the device measures both rheological (flow) and tribological (friction and wear) properties. It can test the fluids under compression and shear at the same time.",
   "facts": ["IIT Patna was set up in 2008 and its campus is at Bihta, near Patna, Bihar.", "The Department of Science and Technology (DST) was set up in May 1971 under the Ministry of Science and Technology."]},
  "hi": {"title": "IIT पटना ने स्मार्ट MR द्रवों की जांच के लिए हाइब्रिड मैग्नेटो-रियोमीटर बनाया",
-  "summary": "IIT पटना ने मैग्नेटोरियोलॉजिकल (MR) द्रवों की जांच के लिए हाइब्रिड मैग्नेटो-रियोमीटर विकसित किया है; ये ऐसे स्मार्ट द्रव हैं जिनका बहाव चुंबकीय क्षेत्र में बदल जाता है। प्रो. चिरंजीत सरकार के नेतृत्व में विज्ञान और प्रौद्योगिकी विभाग (DST) की मदद से बना यह उपकरण द्रव के रियोलॉजिकल (बहाव) और ट्राइबोलॉजिकल (घर्षण व घिसाव) दोनों गुण मापता है। यह द्रवों को एक साथ दबाव (कम्प्रेशन) और शियर में जांच सकता है।",
+  "summary": "3 अगस्त 2026 को PIB की जानकारी के अनुसार IIT पटना ने मैग्नेटोरियोलॉजिकल (MR) द्रवों की जांच के लिए हाइब्रिड मैग्नेटो-रियोमीटर विकसित किया है; ये ऐसे स्मार्ट द्रव हैं जिनका बहाव चुंबकीय क्षेत्र में बदल जाता है। प्रो. चिरंजीत सरकार के नेतृत्व में विज्ञान और प्रौद्योगिकी विभाग (DST) की मदद से बना यह उपकरण द्रव के रियोलॉजिकल (बहाव) और ट्राइबोलॉजिकल (घर्षण व घिसाव) दोनों गुण मापता है। यह द्रवों को एक साथ दबाव (कम्प्रेशन) और शियर में जांच सकता है।",
   "facts": ["IIT पटना की स्थापना 2008 में हुई और इसका परिसर बिहार में पटना के पास बिहटा में है।", "विज्ञान और प्रौद्योगिकी विभाग (DST) मई 1971 में विज्ञान और प्रौद्योगिकी मंत्रालय के तहत बना।"]},
  "mcq": {"a": 3,
   "en": {"q": "Which institute has developed a hybrid magneto-rheometer for testing magnetorheological (MR) fluids?", "o": ["IIT Kanpur", "IIT Guwahati", "IIT Ropar", "IIT Patna"], "e": "The device was developed at IIT Patna by a team led by Prof. Chiranjit Sarkar with DST support."},
   "hi": {"q": "मैग्नेटोरियोलॉजिकल (MR) द्रवों की जांच के लिए हाइब्रिड मैग्नेटो-रियोमीटर किस संस्थान ने विकसित किया है?", "o": ["IIT कानपुर", "IIT गुवाहाटी", "IIT रोपड़", "IIT पटना"], "e": "यह उपकरण IIT पटना में प्रो. चिरंजीत सरकार के नेतृत्व वाली टीम ने DST की मदद से बनाया।"}},
- "src": [{"name": "IndiaBIX daily current affairs, 5 Aug 2026", "nameHi": "इंडियाबिक्स दैनिक करेंट अफ़ेयर्स, 5 अगस्त 2026", "url": "https://www.indiabix.com/current-affairs/2026-08-05/"}]
+ "src": [{"name": "PIB, 3 Aug 2026", "nameHi": "PIB, 3 अगस्त 2026", "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2293782"}, {"name": "IndiaBIX daily current affairs, 5 Aug 2026", "nameHi": "इंडियाबिक्स दैनिक करेंट अफ़ेयर्स, 5 अगस्त 2026", "url": "https://www.indiabix.com/current-affairs/2026-08-05/"}]
 },
 {
  "cat": "appointments",

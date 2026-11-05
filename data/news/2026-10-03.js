@@ -62,8 +62,8 @@ RRB.newsLoaded({
   "summary": "2 अक्टूबर 2026 को सामने आए विश्व स्वास्थ्य संगठन (WHO) के ग्लोबल हेल्थ एस्टिमेट्स के अनुसार 2023 में दुनिया की औसत जीवन प्रत्याशा फिर बढ़कर 73.3 साल हो गई, जो 2019 के कोविड-पूर्व स्तर 73.4 साल के क़रीब है। स्वस्थ जीवन प्रत्याशा 62.8 साल रही। 2023 में 74% मौतें गैर-संचारी रोगों से हुईं, और लगभग 95 लाख मौतों के साथ इस्केमिक हृदय रोग मौत का सबसे बड़ा कारण बना रहा।",
   "facts": ["WHO की स्थापना 7 अप्रैल 1948 को हुई थी; इसी दिन विश्व स्वास्थ्य दिवस मनाया जाता है।", "WHO का मुख्यालय जिनेवा (स्विट्ज़रलैंड) में है।"]},
  "mcq": {"a": 1,
-  "en": {"q": "According to WHO's Global Health Estimates released in October 2026, what was global life expectancy in 2023?", "o": ["71.5 years", "73.3 years", "75.1 years", "69.8 years"], "e": "Global life expectancy recovered to 73.3 years in 2023, close to 73.4 years in 2019."},
-  "hi": {"q": "अक्टूबर 2026 में जारी WHO के ग्लोबल हेल्थ एस्टिमेट्स के अनुसार 2023 में दुनिया की औसत जीवन प्रत्याशा कितनी थी?", "o": ["71.5 साल", "73.3 साल", "75.1 साल", "69.8 साल"], "e": "2023 में दुनिया की औसत जीवन प्रत्याशा फिर 73.3 साल हो गई, जो 2019 के 73.4 साल के क़रीब है।"}},
+  "en": {"q": "According to WHO's Global Health Estimates reported on 2 October 2026, global life expectancy has recovered to about how many years?", "o": ["71.5 years", "73.3 years", "75.1 years", "69.8 years"], "e": "Global life expectancy recovered to 73.3 years in 2023, close to 73.4 years in 2019."},
+  "hi": {"q": "2 अक्टूबर 2026 को सामने आए WHO के ग्लोबल हेल्थ एस्टिमेट्स के अनुसार दुनिया की औसत जीवन प्रत्याशा फिर बढ़कर लगभग कितनी हो गई है?", "o": ["71.5 साल", "73.3 साल", "75.1 साल", "69.8 साल"], "e": "2023 में दुनिया की औसत जीवन प्रत्याशा फिर 73.3 साल हो गई, जो 2019 के 73.4 साल के क़रीब है।"}},
  "src": [{"name": "UN News, 2 Oct 2026", "nameHi": "UN न्यूज़, 2 अक्टूबर 2026", "url": "https://news.un.org/en/story/2026/10/1168515"}, {"name": "CP24, 2 Oct 2026", "nameHi": "CP24, 2 अक्टूबर 2026", "url": "https://www.cp24.com/news/world/2026/10/02/life-expectancy-almost-back-to-pre-covid-levels-says-who/"}]
 }
 ]

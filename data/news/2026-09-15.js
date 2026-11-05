@@ -55,16 +55,16 @@ RRB.newsLoaded({
 },
 {
  "cat": "sports",
- "en": {"title": "46th Chess Olympiad begins in Uzbekistan; India defend both titles",
-  "summary": "The 46th Chess Olympiad begins in Uzbekistan on 15 September 2026 and will run until 28 September. India enter as defending champions in both the Open and Women's sections, having won both team gold medals at the 45th Olympiad in Budapest, Hungary, in 2024. The Olympiad is a team event organised by FIDE, the world chess body.",
+ "en": {"title": "46th Chess Olympiad begins in Samarkand, Uzbekistan; India defend both titles",
+  "summary": "The 46th Chess Olympiad opened in Samarkand, Uzbekistan, on 15 September 2026, with 11 rounds from 16 to 27 September. India enter as defending champions in both the Open and Women's sections, having won both team gold medals at the 45th Olympiad in Budapest, Hungary, in 2024. The Olympiad is a team event organised by FIDE, the world chess body.",
   "facts": ["FIDE was founded in Paris in 1924 and is headquartered in Lausanne, Switzerland.", "India hosted the 44th Chess Olympiad at Mamallapuram, near Chennai, Tamil Nadu, in 2022."]},
- "hi": {"title": "उज़्बेकिस्तान में 46वाँ शतरंज ओलंपियाड शुरू; भारत दोनों ख़िताब बचाने उतरा",
-  "summary": "46वाँ शतरंज ओलंपियाड 15 सितंबर 2026 से उज़्बेकिस्तान में शुरू हो रहा है और 28 सितंबर तक चलेगा। भारत ओपन और महिला दोनों वर्गों में गत विजेता के रूप में उतरा है, क्योंकि उसने 2024 में हंगरी के बुडापेस्ट में हुए 45वें ओलंपियाड में दोनों टीम स्वर्ण पदक जीते थे। ओलंपियाड विश्व शतरंज संस्था FIDE द्वारा आयोजित टीम प्रतियोगिता है।",
+ "hi": {"title": "उज़्बेकिस्तान के समरकंद में 46वाँ शतरंज ओलंपियाड शुरू; भारत दोनों ख़िताब बचाने उतरा",
+  "summary": "46वाँ शतरंज ओलंपियाड 15 सितंबर 2026 को उज़्बेकिस्तान के समरकंद में शुरू हुआ; इसके 11 राउंड 16 से 27 सितंबर तक खेले जाएँगे। भारत ओपन और महिला दोनों वर्गों में पिछली बार का विजेता है, क्योंकि उसने 2024 में हंगरी के बुडापेस्ट में हुए 45वें ओलंपियाड में दोनों टीम स्वर्ण जीते थे। ओलंपियाड विश्व शतरंज संस्था FIDE की टीम प्रतियोगिता है।",
   "facts": ["FIDE की स्थापना 1924 में पेरिस में हुई थी और इसका मुख्यालय लुसाने, स्विट्ज़रलैंड में है।", "भारत ने 2022 में तमिलनाडु में चेन्नई के पास मामल्लपुरम में 44वें शतरंज ओलंपियाड की मेज़बानी की थी।"]},
  "mcq": {"a": 2,
-  "en": {"q": "In which city did India win both the Open and Women's gold medals at the 45th Chess Olympiad in 2024?", "o": ["Chennai", "Baku", "Budapest", "Tashkent"], "e": "India won double gold at the 45th Olympiad in Budapest, Hungary (2024) and defend both titles at the 46th Olympiad in Uzbekistan from 15 September 2026."},
-  "hi": {"q": "2024 में 45वें शतरंज ओलंपियाड में भारत ने ओपन और महिला दोनों वर्गों में स्वर्ण किस शहर में जीता?", "o": ["चेन्नई", "बाकू", "बुडापेस्ट", "ताशकंद"], "e": "भारत ने 2024 में हंगरी के बुडापेस्ट में 45वें ओलंपियाड में दोहरा स्वर्ण जीता और 15 सितंबर 2026 से उज़्बेकिस्तान में 46वें ओलंपियाड में दोनों ख़िताब बचाने उतरा है।"}},
- "src": [{"name": "Wikipedia, 2026 in Indian sports", "nameHi": "विकिपीडिया, 2026 में भारतीय खेल", "url": "https://en.wikipedia.org/wiki/2026_in_Indian_sports"}]
+  "en": {"q": "In which city of Uzbekistan did the 46th Chess Olympiad begin on 15 September 2026?", "o": ["Tashkent", "Bukhara", "Samarkand", "Khiva"], "e": "The 46th Chess Olympiad opened in Samarkand on 15 September 2026; India are defending champions in both sections after their double gold in Budapest."},
+  "hi": {"q": "15 सितंबर 2026 को 46वाँ शतरंज ओलंपियाड उज़्बेकिस्तान के किस शहर में शुरू हुआ?", "o": ["ताशकंद", "बुखारा", "समरकंद", "ख़ीवा"], "e": "46वाँ शतरंज ओलंपियाड 15 सितंबर 2026 को समरकंद में शुरू हुआ; बुडापेस्ट में दोहरा स्वर्ण जीतने के बाद भारत दोनों वर्गों में पिछली बार का विजेता है।"}},
+ "src": [{"name": "FIDE, Sep 2026", "nameHi": "FIDE, सितंबर 2026", "url": "https://www.fide.com/team-line-ups-confirmed-for-46th-fide-chess-olympiad/"}]
 }
 ]
 });

@@ -62,8 +62,8 @@ RRB.newsLoaded({
   "summary": "विश्व मौसम विज्ञान संगठन (WMO) के 27 अक्टूबर 2026 को जारी ग्रीनहाउस गैस बुलेटिन (संख्या 22) के अनुसार 2025 में कार्बन डाइऑक्साइड (CO₂) का औसत स्तर रिकॉर्ड 426.8 पार्ट्स पर मिलियन (ppm) पहुँच गया, जो 2024 से 2.8 ppm ज़्यादा है। मीथेन 1948 पार्ट्स पर बिलियन (ppb) और नाइट्रस ऑक्साइड 339.1 ppb पर पहुँची – ये भी रिकॉर्ड हैं।",
   "facts": ["CO₂ अब औद्योगिक युग से पहले (1750) के स्तर का 153% है; मीथेन 267% है।", "WMO संयुक्त राष्ट्र की एजेंसी है, जिसका मुख्यालय जिनेवा (स्विट्ज़रलैंड) में है।"]},
  "mcq": {"a": 1,
-  "en": {"q": "According to the WMO Greenhouse Gas Bulletin released on 27 October 2026, what was the average CO₂ level in 2025?", "o": ["415.7 ppm", "426.8 ppm", "433.2 ppm", "450.0 ppm"], "e": "The WMO said CO₂ reached a record 426.8 ppm in 2025, 2.8 ppm higher than in 2024 and 153% of the pre-industrial level."},
-  "hi": {"q": "27 अक्टूबर 2026 को जारी WMO ग्रीनहाउस गैस बुलेटिन के अनुसार 2025 में CO₂ का औसत स्तर कितना था?", "o": ["415.7 ppm", "426.8 ppm", "433.2 ppm", "450.0 ppm"], "e": "WMO के अनुसार 2025 में CO₂ रिकॉर्ड 426.8 ppm पर पहुँची, जो 2024 से 2.8 ppm ज़्यादा और औद्योगिक युग से पहले के स्तर का 153% है।"}},
+  "en": {"q": "According to the WMO Greenhouse Gas Bulletin released on 27 October 2026, the average CO₂ level in the air reached a record of:", "o": ["415.7 ppm", "426.8 ppm", "433.2 ppm", "450.0 ppm"], "e": "The WMO said CO₂ reached a record 426.8 ppm in 2025, 2.8 ppm higher than in 2024 and 153% of the pre-industrial level."},
+  "hi": {"q": "27 अक्टूबर 2026 को जारी WMO ग्रीनहाउस गैस बुलेटिन के अनुसार हवा में CO₂ का औसत स्तर किस रिकॉर्ड स्तर पर पहुँचा?", "o": ["415.7 ppm", "426.8 ppm", "433.2 ppm", "450.0 ppm"], "e": "WMO के अनुसार 2025 में CO₂ रिकॉर्ड 426.8 ppm पर पहुँची, जो 2024 से 2.8 ppm ज़्यादा और औद्योगिक युग से पहले के स्तर का 153% है।"}},
  "src": [{"name": "WMO press release, 27 Oct 2026", "nameHi": "WMO प्रेस विज्ञप्ति, 27 अक्टूबर 2026", "url": "https://wmo.int/node/39151"}]
 }
 ]

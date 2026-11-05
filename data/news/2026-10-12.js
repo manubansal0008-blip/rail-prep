@@ -43,15 +43,15 @@ RRB.newsLoaded({
 {
  "cat": "science",
  "en": {"title": "₹86 crore government support for Peptris' AI drug research",
-  "summary": "The Technology Development Board (TDB) under the Department of Science and Technology has signed an agreement to give ₹86 crore to Bengaluru-based Peptris Technologies for AI-based drug development. The money, from the Research Development and Innovation (RDI) Fund, supports the ₹172 crore 'VIGOR' project to take four AI-discovered drug candidates towards clinical trials over three years.",
+  "summary": "As announced on 12 October 2026, the Technology Development Board (TDB) under the Department of Science and Technology has signed an agreement to give ₹86 crore to Bengaluru-based Peptris Technologies for AI-based drug development. The money, from the Research Development and Innovation (RDI) Fund, supports the ₹172 crore 'VIGOR' project to take four AI-discovered drug candidates towards clinical trials over three years.",
   "facts": ["The Technology Development Board was set up under the Technology Development Board Act, 1995.", "The Department of Science and Technology (DST) is part of the Ministry of Science and Technology."]},
  "hi": {"title": "पेप्ट्रिस के AI दवा शोध को ₹86 करोड़ की सरकारी मदद",
-  "summary": "विज्ञान और प्रौद्योगिकी विभाग के तहत प्रौद्योगिकी विकास बोर्ड (TDB) ने बेंगलुरु की पेप्ट्रिस टेक्नोलॉजीज़ को AI आधारित दवा विकास के लिए ₹86 करोड़ देने का समझौता किया है। अनुसंधान, विकास और नवाचार (RDI) फ़ंड से मिलने वाली यह राशि ₹172 करोड़ की 'VIGOR' परियोजना के लिए है, जिसमें तीन साल में AI से खोजी गई चार दवाओं को क्लिनिकल ट्रायल की ओर ले जाया जाएगा।",
+  "summary": "12 अक्टूबर 2026 की जानकारी के अनुसार विज्ञान और प्रौद्योगिकी विभाग के तहत प्रौद्योगिकी विकास बोर्ड (TDB) ने बेंगलुरु की पेप्ट्रिस टेक्नोलॉजीज़ को AI आधारित दवा विकास के लिए ₹86 करोड़ देने का समझौता किया है। अनुसंधान, विकास और नवाचार (RDI) फ़ंड से मिलने वाली यह राशि ₹172 करोड़ की 'VIGOR' परियोजना के लिए है, जिसमें तीन साल में AI से खोजी गई चार दवाओं को क्लिनिकल ट्रायल की ओर ले जाया जाएगा।",
   "facts": ["प्रौद्योगिकी विकास बोर्ड का गठन प्रौद्योगिकी विकास बोर्ड अधिनियम, 1995 के तहत हुआ।", "विज्ञान और प्रौद्योगिकी विभाग (DST) विज्ञान और प्रौद्योगिकी मंत्रालय का हिस्सा है।"]},
  "mcq": {"a": 2,
   "en": {"q": "Peptris Technologies, which received ₹86 crore support for AI-based drug development in October 2026, is based in which city?", "o": ["Hyderabad", "Pune", "Bengaluru", "Chennai"], "e": "Peptris is a Bengaluru-based company; TDB (under DST) is supporting its VIGOR project with ₹86 crore."},
   "hi": {"q": "अक्टूबर 2026 में AI आधारित दवा विकास के लिए ₹86 करोड़ की मदद पाने वाली पेप्ट्रिस टेक्नोलॉजीज़ किस शहर की है?", "o": ["हैदराबाद", "पुणे", "बेंगलुरु", "चेन्नई"], "e": "पेप्ट्रिस बेंगलुरु की कंपनी है; TDB (DST के तहत) इसकी VIGOR परियोजना को ₹86 करोड़ दे रहा है।"}},
- "src": [{"name": "UNI, 12 Oct 2026", "nameHi": "UNI, 12 अक्टूबर 2026", "url": "https://www.uniindia.com/national/tech-ai-tdb-drug-development/210941"}]
+ "src": [{"name": "PIB, 12 Oct 2026", "nameHi": "PIB, 12 अक्टूबर 2026", "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2322077"}, {"name": "UNI, 12 Oct 2026", "nameHi": "UNI, 12 अक्टूबर 2026", "url": "https://www.uniindia.com/national/tech-ai-tdb-drug-development/210941"}]
 },
 {
  "cat": "sports",

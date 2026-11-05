@@ -36,8 +36,8 @@ RRB.newsLoaded({
   "summary": "1 अक्टूबर 2026 को जारी आँकड़ों के अनुसार सितंबर 2026 में सकल GST संग्रह 14.7% बढ़कर ₹2,03,000 करोड़ से ज़्यादा रहा, जबकि सितंबर 2025 में यह ₹1,77,000 करोड़ से ज़्यादा था। घरेलू लेन-देन से राजस्व 10% से ज़्यादा बढ़कर लगभग ₹1,38,000 करोड़ और आयात पर GST लगभग 26% बढ़कर ₹65,525 करोड़ रहा।",
   "facts": ["GST 1 जुलाई 2017 को 101वें संविधान संशोधन अधिनियम, 2016 के ज़रिये लागू हुआ।", "GST परिषद की अध्यक्षता केंद्रीय वित्त मंत्री करते हैं।"]},
  "mcq": {"a": 3,
-  "en": {"q": "By what percentage did gross GST collections grow in September 2026 compared to September 2025?", "o": ["9.1%", "10.5%", "12.6%", "14.7%"], "e": "Gross GST in September 2026 rose 14.7% to over ₹2,03,000 crore."},
-  "hi": {"q": "सितंबर 2025 की तुलना में सितंबर 2026 में सकल GST संग्रह कितने प्रतिशत बढ़ा?", "o": ["9.1%", "10.5%", "12.6%", "14.7%"], "e": "सितंबर 2026 में सकल GST 14.7% बढ़कर ₹2,03,000 करोड़ से ज़्यादा रहा।"}},
+  "en": {"q": "Gross GST collections for September 2026, released on 1 October 2026, grew by what percentage over a year earlier?", "o": ["9.1%", "10.5%", "12.6%", "14.7%"], "e": "Gross GST in September 2026 rose 14.7% to over ₹2,03,000 crore."},
+  "hi": {"q": "1 अक्टूबर 2026 को जारी आँकड़ों के अनुसार सितंबर 2026 में सकल GST संग्रह एक साल पहले की तुलना में कितने प्रतिशत बढ़ा?", "o": ["9.1%", "10.5%", "12.6%", "14.7%"], "e": "सितंबर 2026 में सकल GST 14.7% बढ़कर ₹2,03,000 करोड़ से ज़्यादा रहा।"}},
  "src": [{"name": "All India Radio News, 1 Oct 2026", "nameHi": "ऑल इंडिया रेडियो न्यूज़, 1 अक्टूबर 2026", "url": "https://newsonair.gov.in/gst-collections-cross-rs-2-lakh-crore-again-rise-14-7-in-september/"}]
 },
 {
@@ -56,15 +56,15 @@ RRB.newsLoaded({
 {
  "cat": "scheme",
  "en": {"title": "Guidelines for National Coastal Mission 2.0 launched",
-  "summary": "Union Environment Minister Bhupender Yadav launched the guidelines for National Coastal Mission (NCM) 2.0 in New Delhi. The ₹767 crore Central Sector Scheme runs up to 2030-31 and covers nine coastal States and four Union Territories. It focuses on coastal resilience, ecosystem restoration, pollution management, biodiversity conservation, sustainable tourism and spatial planning.",
+  "summary": "Union Environment Minister Bhupender Yadav launched the guidelines for National Coastal Mission (NCM) 2.0 in New Delhi on 30 September 2026. The ₹767 crore Central Sector Scheme runs up to 2030-31 and covers nine coastal States and four Union Territories. It focuses on coastal resilience, ecosystem restoration, pollution management, biodiversity conservation, sustainable tourism and spatial planning.",
   "facts": ["A Central Sector Scheme is fully funded and implemented by the Central Government.", "NCM 2.0 is run by the Ministry of Environment, Forest and Climate Change (MoEFCC)."]},
  "hi": {"title": "राष्ट्रीय तटीय मिशन 2.0 के दिशानिर्देश जारी",
-  "summary": "केंद्रीय पर्यावरण मंत्री भूपेंद्र यादव ने नई दिल्ली में राष्ट्रीय तटीय मिशन (NCM) 2.0 के दिशानिर्देश जारी किए। ₹767 करोड़ की यह केंद्रीय क्षेत्र योजना 2030-31 तक चलेगी और इसमें नौ तटीय राज्य और चार केंद्रशासित प्रदेश शामिल हैं। इसका ज़ोर तटीय मज़बूती, पारिस्थितिकी तंत्र की बहाली, प्रदूषण प्रबंधन, जैव विविधता संरक्षण, टिकाऊ पर्यटन और स्थानिक योजना पर है।",
+  "summary": "केंद्रीय पर्यावरण मंत्री भूपेंद्र यादव ने 30 सितंबर 2026 को नई दिल्ली में राष्ट्रीय तटीय मिशन (NCM) 2.0 के दिशानिर्देश जारी किए। ₹767 करोड़ की यह केंद्रीय क्षेत्र योजना 2030-31 तक चलेगी और इसमें नौ तटीय राज्य और चार केंद्रशासित प्रदेश शामिल हैं। इसका ज़ोर तटीय मज़बूती, पारिस्थितिकी तंत्र की बहाली, प्रदूषण प्रबंधन, जैव विविधता संरक्षण, टिकाऊ पर्यटन और स्थानिक योजना पर है।",
   "facts": ["केंद्रीय क्षेत्र योजना (Central Sector Scheme) का पूरा ख़र्च और क्रियान्वयन केंद्र सरकार करती है।", "NCM 2.0 पर्यावरण, वन और जलवायु परिवर्तन मंत्रालय (MoEFCC) चलाता है।"]},
  "mcq": {"a": 1,
   "en": {"q": "How many coastal States are covered under National Coastal Mission 2.0?", "o": ["Seven", "Nine", "Eleven", "Thirteen"], "e": "NCM 2.0 (₹767 crore, up to 2030-31) covers nine coastal States and four Union Territories."},
   "hi": {"q": "राष्ट्रीय तटीय मिशन 2.0 में कितने तटीय राज्य शामिल हैं?", "o": ["सात", "नौ", "ग्यारह", "तेरह"], "e": "NCM 2.0 (₹767 करोड़, 2030-31 तक) में नौ तटीय राज्य और चार केंद्रशासित प्रदेश शामिल हैं।"}},
- "src": [{"name": "GKToday, 1 Oct 2026", "nameHi": "GKToday, 1 अक्टूबर 2026", "url": "https://www.gktoday.in/ncm-2-0-guidelines-launched-for-coastal-resilience/"}, {"name": "SuperKalam (PIB summary), 1 Oct 2026", "nameHi": "सुपरकलाम (PIB सारांश), 1 अक्टूबर 2026", "url": "https://superkalam.com/current-affairs/01-10-2026/union-environment-minister-shri-bhupender-yadav-launches-guidelines-for-national-coastal-mission-2-0-31b09abc-d263-4f99-a080-1681d9679b5d"}]
+ "src": [{"name": "PIB, 30 Sep 2026", "nameHi": "PIB, 30 सितंबर 2026", "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2317286"}, {"name": "GKToday, 1 Oct 2026", "nameHi": "GKToday, 1 अक्टूबर 2026", "url": "https://www.gktoday.in/ncm-2-0-guidelines-launched-for-coastal-resilience/"}, {"name": "SuperKalam (PIB summary), 1 Oct 2026", "nameHi": "सुपरकलाम (PIB सारांश), 1 अक्टूबर 2026", "url": "https://superkalam.com/current-affairs/01-10-2026/union-environment-minister-shri-bhupender-yadav-launches-guidelines-for-national-coastal-mission-2-0-31b09abc-d263-4f99-a080-1681d9679b5d"}]
 }
 ]
 });

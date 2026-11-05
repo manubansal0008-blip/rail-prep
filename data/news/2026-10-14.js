@@ -48,10 +48,10 @@ RRB.newsLoaded({
  "hi": {"title": "विश्व बैंक: 2028 तक भारत में ग़रीबी दर घटकर 12.1% होगी",
   "summary": "विश्व बैंक की भारत पर अक्टूबर 2026 की पॉवर्टी एंड इक्विटी ब्रीफ़ के अनुसार $4.20 प्रतिदिन की रेखा पर ग़रीबी दर 2026 के 14.2% से घटकर 2028 तक 12.1% हो जाएगी। इसमें बताया गया है कि अत्यधिक ग़रीबी ($3.00 प्रतिदिन) 2011 के 27.1% से घटकर 2023 में 2.6% रह गई।",
   "facts": ["विश्व बैंक की ग़रीबी रेखाएँ हैं: $3.00 प्रतिदिन (अत्यधिक ग़रीबी), $4.20 (निम्न-मध्यम आय) और $8.30 (उच्च-मध्यम आय)।", "विश्व बैंक का मुख्यालय वाशिंगटन डी.सी. में है; इसकी स्थापना 1944 में ब्रेटन वुड्स सम्मेलन में हुई।"]},
- "mcq": {"a": 1,
-  "en": {"q": "According to the World Bank's October 2026 brief, India's extreme poverty rate in 2023 was:", "o": ["12.1%", "2.6%", "14.2%", "27.1%"], "e": "Extreme poverty ($3.00 a day) fell from 27.1% in 2011 to 2.6% in 2023. The $4.20-a-day poverty rate is projected to fall to 12.1% by 2028."},
-  "hi": {"q": "विश्व बैंक की अक्टूबर 2026 की रिपोर्ट के अनुसार 2023 में भारत में अत्यधिक ग़रीबी दर कितनी थी?", "o": ["12.1%", "2.6%", "14.2%", "27.1%"], "e": "अत्यधिक ग़रीबी ($3.00 प्रतिदिन) 2011 के 27.1% से घटकर 2023 में 2.6% रह गई। $4.20 प्रतिदिन वाली ग़रीबी दर 2028 तक 12.1% होने का अनुमान है।"}},
- "src": [{"name": "C4S Courses, 13 Oct 2026", "nameHi": "C4S Courses, 13 अक्टूबर 2026", "url": "https://c4scourses.in/banking-finance/world-bank-indias-poverty-rate-to-fall-to-12-1-by-2028/"}]
+ "mcq": {"a": 0,
+  "en": {"q": "The World Bank's October 2026 Poverty and Equity Brief projects India's poverty rate ($4.20 a day) to fall to what level by 2028?", "o": ["12.1%", "2.6%", "14.2%", "27.1%"], "e": "The brief projects the $4.20-a-day poverty rate to fall from 14.2% in 2026 to 12.1% by 2028."},
+  "hi": {"q": "विश्व बैंक की अक्टूबर 2026 की पॉवर्टी एंड इक्विटी ब्रीफ़ के अनुसार 2028 तक भारत में ग़रीबी दर ($4.20 प्रतिदिन) घटकर कितनी रह जाएगी?", "o": ["12.1%", "2.6%", "14.2%", "27.1%"], "e": "ब्रीफ़ के अनुसार $4.20 प्रतिदिन वाली ग़रीबी दर 2026 के 14.2% से घटकर 2028 तक 12.1% हो जाएगी।"}},
+ "src": [{"name": "Business Standard, 12 Oct 2026", "nameHi": "बिज़नेस स्टैंडर्ड, 12 अक्टूबर 2026", "url": "https://www.business-standard.com/economy/news/india-s-poverty-rate-seen-falling-to-12-1-by-2028-says-world-bank-126101201321_1.html"}, {"name": "C4S Courses, 13 Oct 2026", "nameHi": "C4S Courses, 13 अक्टूबर 2026", "url": "https://c4scourses.in/banking-finance/world-bank-indias-poverty-rate-to-fall-to-12-1-by-2028/"}]
 },
 {
  "cat": "scheme",

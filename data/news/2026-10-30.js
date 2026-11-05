@@ -157,7 +157,7 @@ RRB.newsLoaded({
    "cat": "sports",
    "en": {
     "title": "'Stars Align' unveiled as slogan of LA28 Olympics and Paralympics",
-    "summary": "The International Olympic Committee and the LA28 Organising Committee unveiled 'Stars Align' as the official slogan of the 2028 Los Angeles Olympic and Paralympic Games. The Olympics will be held from 14 to 30 July 2028 and the Paralympics from 15 to 27 August 2028. Los Angeles will host the Summer Olympics for the third time, after 1932 and 1984, and the Paralympics for the first time.",
+    "summary": "The International Olympic Committee and the LA28 Organising Committee unveiled 'Stars Align' as the official slogan of the 2028 Los Angeles Olympic and Paralympic Games on 28 October 2026. The Olympics will be held from 14 to 30 July 2028 and the Paralympics from 15 to 27 August 2028. Los Angeles will host the Summer Olympics for the third time, after 1932 and 1984, and the Paralympics for the first time.",
     "facts": [
      "London and Paris are the other cities to have hosted the Summer Olympics three times.",
      "The Olympic motto is 'Faster, Higher, Stronger – Together'."
@@ -165,7 +165,7 @@ RRB.newsLoaded({
    },
    "hi": {
     "title": "LA28 ओलंपिक और पैरालंपिक का नारा 'स्टार्स अलाइन' जारी",
-    "summary": "अंतरराष्ट्रीय ओलंपिक समिति और LA28 आयोजन समिति ने 2028 लॉस एंजेलिस ओलंपिक और पैरालंपिक खेलों का आधिकारिक नारा 'स्टार्स अलाइन' जारी किया। ओलंपिक 14 से 30 जुलाई 2028 और पैरालंपिक 15 से 27 अगस्त 2028 तक होंगे। लॉस एंजेलिस 1932 और 1984 के बाद तीसरी बार ग्रीष्मकालीन ओलंपिक और पहली बार पैरालंपिक की मेज़बानी करेगा।",
+    "summary": "अंतरराष्ट्रीय ओलंपिक समिति और LA28 आयोजन समिति ने 2028 लॉस एंजेलिस ओलंपिक और पैरालंपिक खेलों का आधिकारिक नारा 'स्टार्स अलाइन' 28 अक्टूबर 2026 को जारी किया। ओलंपिक 14 से 30 जुलाई 2028 और पैरालंपिक 15 से 27 अगस्त 2028 तक होंगे। लॉस एंजेलिस 1932 और 1984 के बाद तीसरी बार ग्रीष्मकालीन ओलंपिक और पहली बार पैरालंपिक की मेज़बानी करेगा।",
     "facts": [
      "लंदन और पेरिस ही ऐसे दूसरे शहर हैं जिन्होंने तीन बार ग्रीष्मकालीन ओलंपिक की मेज़बानी की है।",
      "ओलंपिक का आदर्श वाक्य है 'Faster, Higher, Stronger – Together'।"
@@ -195,6 +195,11 @@ RRB.newsLoaded({
     }
    },
    "src": [
+    {
+     "name": "LA28 Newsroom, 28 Oct 2026",
+     "nameHi": "LA28 न्यूज़रूम, 28 अक्टूबर 2026",
+     "url": "https://la28.org/en/newsroom/la28-unveils-the-official-slogan-of-the-2028-olympic-and-paralympic-games-stars-align.html"
+    },
     {
      "name": "AffairsCloud, 30 Oct 2026",
      "nameHi": "अफ़ेयर्सक्लाउड, 30 अक्टूबर 2026",

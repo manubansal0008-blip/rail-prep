@@ -10,9 +10,9 @@ RRB.newsLoaded({
   "summary": "19 अगस्त 2026 को विश्व मानवीय दिवस मनाया गया, ताकि संघर्ष और आपदाओं में फंसे लोगों की मदद करने वाले राहतकर्मियों को सम्मान दिया जाए और उनके सामने बढ़ते ख़तरों पर ध्यान दिलाया जाए। इसी दिन विश्व फ़ोटोग्राफ़ी दिवस भी मनाया जाता है, जो फ़ोटोग्राफ़ी को रचनात्मकता, संवाद और इतिहास दर्ज करने के माध्यम के रूप में सराहता है।",
   "facts": ["संयुक्त राष्ट्र महासभा ने 2008 में 19 अगस्त को विश्व मानवीय दिवस घोषित किया; यह 19 अगस्त 2003 को बगदाद के कैनाल होटल स्थित UN कार्यालय पर हुए बम हमले की याद दिलाता है, जिसमें UN दूत सर्जियो विएरा डी मेलो समेत 22 लोग मारे गए थे।", "विश्व फ़ोटोग्राफ़ी दिवस 19 अगस्त 1839 की याद में है, जब फ़्रांस सरकार ने डैगेरोटाइप फ़ोटो तकनीक को दुनिया के लिए मुफ़्त उपहार घोषित किया था।"]},
  "mcq": {"a": 0,
-  "en": {"q": "World Humanitarian Day on 19 August recalls a 2003 attack on the UN office in which city?", "o": ["Baghdad", "Kabul", "Beirut", "Damascus"], "e": "The 19 August 2003 Canal Hotel bombing in Baghdad killed 22 people, including Sergio Vieira de Mello."},
-  "hi": {"q": "19 अगस्त का विश्व मानवीय दिवस 2003 में किस शहर में UN कार्यालय पर हुए हमले की याद दिलाता है?", "o": ["बगदाद", "काबुल", "बेरूत", "दमिश्क"], "e": "19 अगस्त 2003 को बगदाद के कैनाल होटल पर हुए बम हमले में सर्जियो विएरा डी मेलो समेत 22 लोग मारे गए थे।"}},
- "src": [{"name": "Vajiram & Ravi – Important Days in August 2026", "nameHi": "वाजीराम एंड रवि – अगस्त 2026 के महत्वपूर्ण दिवस", "url": "https://vajiramandravi.com/current-affairs/important-days-in-august-2026/"}]
+  "en": {"q": "Along with World Humanitarian Day, which other day was observed on 19 August 2026?", "o": ["World Photography Day", "World Mosquito Day", "World Tourism Day", "World Literacy Day"], "e": "19 August 2026 was observed as both World Humanitarian Day and World Photography Day. World Mosquito Day falls on 20 August."},
+  "hi": {"q": "19 अगस्त 2026 को विश्व मानवीय दिवस के साथ और कौन-सा दिवस मनाया गया?", "o": ["विश्व फ़ोटोग्राफ़ी दिवस", "विश्व मच्छर दिवस", "विश्व पर्यटन दिवस", "विश्व साक्षरता दिवस"], "e": "19 अगस्त 2026 को विश्व मानवीय दिवस और विश्व फ़ोटोग्राफ़ी दिवस दोनों मनाए गए। विश्व मच्छर दिवस 20 अगस्त को होता है।"}},
+ "src": [{"name": "United Nations – World Humanitarian Day", "nameHi": "संयुक्त राष्ट्र – विश्व मानवीय दिवस", "url": "https://www.un.org/en/observances/humanitarian-day"}, {"name": "Vajiram & Ravi – Important Days in August 2026", "nameHi": "वाजीराम एंड रवि – अगस्त 2026 के महत्वपूर्ण दिवस", "url": "https://vajiramandravi.com/current-affairs/important-days-in-august-2026/"}]
 },
 {
  "cat": "states",

@@ -43,15 +43,15 @@ RRB.newsLoaded({
 {
  "cat": "states",
  "en": {"title": "Maharashtra signs MoU with Germany's state of Hesse",
-  "summary": "Maharashtra Chief Minister Devendra Fadnavis and Hesse Minister-President Boris Rhein signed an MoU at Sahyadri Guest House in Mumbai. The agreement covers investment, industry, innovation, employment and skill development. A Joint Working Group will be set up within 90 days to finalise how it will be implemented.",
+  "summary": "Maharashtra Chief Minister Devendra Fadnavis and Hesse Minister-President Boris Rhein signed an MoU at Sahyadri Guest House in Mumbai on 22 August 2026. The agreement covers investment, industry, innovation, employment and skill development. Fadnavis said Hesse would be Maharashtra's gateway to Germany and Europe.",
   "facts": ["Hesse is one of Germany's 16 states; its capital is Wiesbaden and its largest city is Frankfurt.", "Mumbai is the capital of Maharashtra; the state was formed on 1 May 1960."]},
  "hi": {"title": "महाराष्ट्र ने जर्मनी के हेस्से राज्य के साथ समझौता किया",
-  "summary": "महाराष्ट्र के मुख्यमंत्री देवेंद्र फडणवीस और हेस्से के मिनिस्टर-प्रेसिडेंट बोरिस राइन ने मुंबई के सह्याद्रि अतिथि गृह में समझौता ज्ञापन (MoU) पर हस्ताक्षर किए। इसमें निवेश, उद्योग, नवाचार, रोज़गार और कौशल विकास शामिल हैं। इसे लागू करने का ढांचा तय करने के लिए 90 दिन के भीतर एक संयुक्त कार्य समूह बनाया जाएगा।",
+  "summary": "महाराष्ट्र के मुख्यमंत्री देवेंद्र फडणवीस और हेस्से के मिनिस्टर-प्रेसिडेंट बोरिस राइन ने 22 अगस्त 2026 को मुंबई के सह्याद्रि अतिथि गृह में समझौता ज्ञापन (MoU) पर हस्ताक्षर किए। इसमें निवेश, उद्योग, नवाचार, रोज़गार और कौशल विकास शामिल हैं। फडणवीस ने कहा कि हेस्से महाराष्ट्र के लिए जर्मनी और यूरोप का दरवाज़ा बनेगा।",
   "facts": ["हेस्से जर्मनी के 16 राज्यों में से एक है; इसकी राजधानी वीसबाडेन और सबसे बड़ा शहर फ़्रैंकफ़र्ट है।", "मुंबई महाराष्ट्र की राजधानी है; राज्य का गठन 1 मई 1960 को हुआ था।"]},
  "mcq": {"a": 3,
   "en": {"q": "Maharashtra signed an MoU on investment, industry and skills in August 2026 with which German state?", "o": ["Bavaria", "Saxony", "Baden-Württemberg", "Hesse"], "e": "CM Devendra Fadnavis and Hesse Minister-President Boris Rhein signed the MoU in Mumbai."},
   "hi": {"q": "अगस्त 2026 में महाराष्ट्र ने निवेश, उद्योग और कौशल पर जर्मनी के किस राज्य के साथ समझौता किया?", "o": ["बवेरिया", "सैक्सनी", "बाडेन-वुर्टेमबर्ग", "हेस्से"], "e": "मुख्यमंत्री देवेंद्र फडणवीस और हेस्से के मिनिस्टर-प्रेसिडेंट बोरिस राइन ने मुंबई में समझौते पर हस्ताक्षर किए।"}},
- "src": [{"name": "AffairsCloud, 25 Aug 2026", "nameHi": "अफ़ेयर्सक्लाउड, 25 अगस्त 2026", "url": "https://affairscloud.com/current-affairs-25-august-2026/"}, {"name": "Anuj Jindal Current Affairs, 25 Aug 2026", "nameHi": "अनुज जिंदल करंट अफ़ेयर्स, 25 अगस्त 2026", "url": "https://currentaffairs.anujjindal.in/25th-august-2026/"}]
+ "src": [{"name": "All India Radio News, 22 Aug 2026", "nameHi": "आकाशवाणी समाचार, 22 अगस्त 2026", "url": "https://newsonair.gov.in/maharashtra-german-state-of-hesse-sign-mou-to-strengthen-cooperation-in-investment-industry/"}, {"name": "AffairsCloud, 25 Aug 2026", "nameHi": "अफ़ेयर्सक्लाउड, 25 अगस्त 2026", "url": "https://affairscloud.com/current-affairs-25-august-2026/"}, {"name": "Anuj Jindal Current Affairs, 25 Aug 2026", "nameHi": "अनुज जिंदल करंट अफ़ेयर्स, 25 अगस्त 2026", "url": "https://currentaffairs.anujjindal.in/25th-august-2026/"}]
 },
 {
  "cat": "science",

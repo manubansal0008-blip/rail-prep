@@ -4,15 +4,15 @@ RRB.newsLoaded({
 {
  "cat": "railways",
  "en": {"title": "Railways sanction ₹736 crore safety works including Kavach 4.0 in Lucknow Division",
-  "summary": "Indian Railways has approved four safety and capacity works worth about ₹736.23 crore, as reported on 19 September 2026. They include Kavach 4.0 on 607.7 route km of Lucknow Division of North Eastern Railway (₹252 crore), electronic interlocking at seven stations of Solapur Division of Central Railway (₹209 crore) and upgrading traction from 1×25 kV to 2×25 kV on the 73 route km Savalyapuram–Guntur section of South Coast Railway (₹142 crore). A road over bridge replacing Level Crossing No. 53 on the Udhna–Ukai Songadh line of Western Railway (₹133.23 crore) will be shared equally by the Railways and the state.",
+  "summary": "Indian Railways approved four safety and capacity works worth about ₹736.23 crore on 19 September 2026. They include Kavach 4.0 on 607.7 route km of Lucknow Division of North Eastern Railway (₹252 crore), electronic interlocking at seven stations of Solapur Division of Central Railway (₹209 crore) and upgrading traction from 1×25 kV to 2×25 kV on the 73 route km Savalyapuram–Guntur section of South Coast Railway (₹142 crore). A road over bridge at Level Crossing No. 53 on the Udhna–Ukai Songadh line of Western Railway (₹133.23 crore) will be shared equally with the state.",
   "facts": ["Kavach is India's indigenous Automatic Train Protection system, developed by RDSO (Research Designs and Standards Organisation), Lucknow.", "North Eastern Railway is headquartered at Gorakhpur, Central Railway at Mumbai CSMT and South Coast Railway at Visakhapatnam."]},
  "hi": {"title": "रेलवे ने लखनऊ मंडल में कवच 4.0 समेत ₹736 करोड़ के सुरक्षा कार्यों को मंज़ूरी दी",
-  "summary": "19 सितंबर 2026 की ख़बर के अनुसार भारतीय रेलवे ने करीब ₹736.23 करोड़ के चार सुरक्षा और क्षमता बढ़ाने वाले कार्यों को मंज़ूरी दी है। इनमें पूर्वोत्तर रेलवे के लखनऊ मंडल के 607.7 रूट किमी पर कवच 4.0 (₹252 करोड़), मध्य रेलवे के सोलापुर मंडल के सात स्टेशनों पर इलेक्ट्रॉनिक इंटरलॉकिंग (₹209 करोड़) और दक्षिण तट रेलवे के 73 रूट किमी लंबे सावल्यापुरम–गुंटूर खंड पर ट्रैक्शन को 1×25 kV से 2×25 kV करना (₹142 करोड़) शामिल है। पश्चिम रेलवे की उधना–उकाई सोनगढ़ लाइन पर लेवल क्रॉसिंग नंबर 53 की जगह बनने वाले रोड ओवर ब्रिज (₹133.23 करोड़) का ख़र्च रेलवे और राज्य बराबर उठाएंगे।",
+  "summary": "भारतीय रेलवे ने 19 सितंबर 2026 को करीब ₹736.23 करोड़ के चार सुरक्षा और क्षमता बढ़ाने वाले कार्यों को मंज़ूरी दी है। इनमें पूर्वोत्तर रेलवे के लखनऊ मंडल के 607.7 रूट किमी पर कवच 4.0 (₹252 करोड़), मध्य रेलवे के सोलापुर मंडल के सात स्टेशनों पर इलेक्ट्रॉनिक इंटरलॉकिंग (₹209 करोड़) और दक्षिण तट रेलवे के 73 रूट किमी लंबे सावल्यापुरम–गुंटूर खंड पर ट्रैक्शन को 1×25 kV से 2×25 kV करना (₹142 करोड़) शामिल है। पश्चिम रेलवे की उधना–उकाई सोनगढ़ लाइन पर लेवल क्रॉसिंग नंबर 53 की जगह बनने वाले रोड ओवर ब्रिज (₹133.23 करोड़) का ख़र्च रेलवे और राज्य बराबर उठाएंगे।",
   "facts": ["कवच भारत की स्वदेशी स्वचालित ट्रेन सुरक्षा (ATP) प्रणाली है, जिसे लखनऊ स्थित RDSO (अनुसंधान अभिकल्प और मानक संगठन) ने विकसित किया है।", "पूर्वोत्तर रेलवे का मुख्यालय गोरखपुर, मध्य रेलवे का मुंबई CSMT और दक्षिण तट रेलवे का विशाखापत्तनम में है।"]},
  "mcq": {"a": 1,
   "en": {"q": "Kavach 4.0 sanctioned in September 2026 will cover 607.7 route km of which railway division?", "o": ["Varanasi Division", "Lucknow Division", "Izzatnagar Division", "Solapur Division"], "e": "Kavach 4.0 worth ₹252 crore is for 607.7 route km of Lucknow Division of North Eastern Railway; Solapur Division gets electronic interlocking."},
   "hi": {"q": "सितंबर 2026 में मंज़ूर कवच 4.0 किस रेल मंडल के 607.7 रूट किमी पर लगेगा?", "o": ["वाराणसी मंडल", "लखनऊ मंडल", "इज़्ज़तनगर मंडल", "सोलापुर मंडल"], "e": "₹252 करोड़ का कवच 4.0 पूर्वोत्तर रेलवे के लखनऊ मंडल के 607.7 रूट किमी के लिए है; सोलापुर मंडल में इलेक्ट्रॉनिक इंटरलॉकिंग होगी।"}},
- "src": [{"name": "Blitz India Media, India News September 2026 (19 Sep)", "nameHi": "ब्लिट्ज़ इंडिया मीडिया, सितंबर 2026 समाचार (19 सितंबर)", "url": "https://blitzindiamedia.com/news/india-news-september-2026/"}]
+ "src": [{"name": "PIB, 19 Sep 2026", "nameHi": "PIB, 19 सितंबर 2026", "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2312393"}, {"name": "Blitz India Media, India News September 2026 (19 Sep)", "nameHi": "ब्लिट्ज़ इंडिया मीडिया, सितंबर 2026 समाचार (19 सितंबर)", "url": "https://blitzindiamedia.com/news/india-news-september-2026/"}]
 },
 {
  "cat": "economy",
@@ -43,15 +43,15 @@ RRB.newsLoaded({
 {
  "cat": "sports",
  "en": {"title": "Women's Premier League 2027 to be held from 14 January to 7 February",
-  "summary": "The 2027 season of the Women's Premier League (WPL) has been scheduled from 14 January to 7 February 2027, as reported on 18 September 2026. The WPL is the women's T20 franchise league run by the Board of Control for Cricket in India (BCCI).",
+  "summary": "The Board of Control for Cricket in India (BCCI) announced on 16 September 2026 that the 2027 season of the Women's Premier League (WPL), its women's T20 franchise league, will be held from 14 January to 7 February 2027.",
   "facts": ["The WPL began in 2023; Mumbai Indians won the first edition, beating Delhi Capitals in the final.", "The BCCI was founded in 1928 and is headquartered in Mumbai."]},
  "hi": {"title": "महिला प्रीमियर लीग 2027 14 जनवरी से 7 फ़रवरी तक होगी",
-  "summary": "18 सितंबर 2026 की ख़बर के अनुसार महिला प्रीमियर लीग (WPL) का 2027 सीज़न 14 जनवरी से 7 फ़रवरी 2027 तक होगा। WPL भारतीय क्रिकेट कंट्रोल बोर्ड (BCCI) की महिला T20 फ़्रेंचाइज़ी लीग है।",
+  "summary": "भारतीय क्रिकेट कंट्रोल बोर्ड (BCCI) ने 16 सितंबर 2026 को घोषणा की कि उसकी महिला T20 फ़्रेंचाइज़ी लीग, महिला प्रीमियर लीग (WPL), का 2027 सीज़न 14 जनवरी से 7 फ़रवरी 2027 तक होगा।",
   "facts": ["WPL की शुरुआत 2023 में हुई थी; पहले संस्करण का ख़िताब मुंबई इंडियंस ने फ़ाइनल में दिल्ली कैपिटल्स को हराकर जीता था।", "BCCI की स्थापना 1928 में हुई थी और इसका मुख्यालय मुंबई में है।"]},
  "mcq": {"a": 2,
-  "en": {"q": "Which team won the first edition of the Women's Premier League (WPL) in 2023?", "o": ["Delhi Capitals", "Royal Challengers Bangalore", "Mumbai Indians", "Gujarat Giants"], "e": "Mumbai Indians won WPL 2023 by beating Delhi Capitals; the 2027 season is scheduled from 14 January to 7 February 2027."},
-  "hi": {"q": "2023 में महिला प्रीमियर लीग (WPL) का पहला ख़िताब किस टीम ने जीता था?", "o": ["दिल्ली कैपिटल्स", "रॉयल चैलेंजर्स बैंगलोर", "मुंबई इंडियंस", "गुजरात जायंट्स"], "e": "मुंबई इंडियंस ने दिल्ली कैपिटल्स को हराकर WPL 2023 जीता था; 2027 सीज़न 14 जनवरी से 7 फ़रवरी 2027 तक होगा।"}},
- "src": [{"name": "Target Defence Academy current affairs, 18 Sep 2026", "nameHi": "टारगेट डिफेंस एकेडमी करेंट अफेयर्स, 18 सितंबर 2026", "url": "https://www.thetargetclasses.com/?p=25911"}]
+  "en": {"q": "As announced by the BCCI in September 2026, the 2027 Women's Premier League will be held from 14 January to which date?", "o": ["31 January 2027", "28 February 2027", "7 February 2027", "15 March 2027"], "e": "The BCCI announced on 16 September 2026 that WPL 2027 will run from 14 January to 7 February 2027."},
+  "hi": {"q": "सितंबर 2026 में BCCI की घोषणा के अनुसार महिला प्रीमियर लीग 2027, 14 जनवरी से किस तारीख तक होगी?", "o": ["31 जनवरी 2027", "28 फ़रवरी 2027", "7 फ़रवरी 2027", "15 मार्च 2027"], "e": "BCCI ने 16 सितंबर 2026 को बताया कि WPL 2027, 14 जनवरी से 7 फ़रवरी 2027 तक चलेगी।"}},
+ "src": [{"name": "ESPNcricinfo (ESPN), 16 Sep 2026", "nameHi": "ESPNcricinfo (ESPN), 16 सितंबर 2026", "url": "https://www.espn.com/cricket/story/_/id/49956374/wpl-2027-played-january-14-february-7"}, {"name": "Target Defence Academy current affairs, 18 Sep 2026", "nameHi": "टारगेट डिफेंस एकेडमी करेंट अफेयर्स, 18 सितंबर 2026", "url": "https://www.thetargetclasses.com/?p=25911"}]
 },
 {
  "cat": "science",
