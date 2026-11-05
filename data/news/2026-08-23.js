@@ -1,0 +1,70 @@
+RRB.newsLoaded({
+"date": "2026-08-23",
+"items": [
+{
+ "cat": "days",
+ "en": {"title": "India celebrates third National Space Day; main event at SAC Ahmedabad",
+  "summary": "India celebrated its third National Space Day on 23 August 2026, marking the anniversary of the Chandrayaan-3 landing on the Moon on 23 August 2023. The national event was hosted by ISRO's Space Applications Centre (SAC) in Ahmedabad on the theme 'Towards Viksit Bharat: Innovating, Collaborating and Aspiring to Global Space Leadership'. ISRO Chairman Dr V. Narayanan said work on the Bharatiya Antariksh Station is under way, with its first module approved and a target of 2035.",
+  "facts": ["Chandrayaan-3's Vikram lander touched down near the Moon's south pole at the site named Shiv Shakti Point; India became the fourth country to soft-land on the Moon and the first near its south pole.", "Chandrayaan-3 was launched on 14 July 2023 by LVM3 from Satish Dhawan Space Centre, Sriharikota; National Space Day was first celebrated in 2024."]},
+ "hi": {"title": "भारत ने तीसरा राष्ट्रीय अंतरिक्ष दिवस मनाया; मुख्य कार्यक्रम SAC अहमदाबाद में",
+  "summary": "भारत ने 23 अगस्त 2026 को तीसरा राष्ट्रीय अंतरिक्ष दिवस मनाया; यह 23 अगस्त 2023 को चंद्रयान-3 के चांद पर उतरने की वर्षगांठ है। राष्ट्रीय कार्यक्रम की मेज़बानी इसरो के अंतरिक्ष उपयोग केंद्र (SAC), अहमदाबाद ने की, जिसकी थीम 'Towards Viksit Bharat: Innovating, Collaborating and Aspiring to Global Space Leadership' थी। इसरो अध्यक्ष डॉ. वी. नारायणन ने बताया कि भारतीय अंतरिक्ष स्टेशन पर काम चल रहा है, इसके पहले मॉड्यूल को मंज़ूरी मिल चुकी है और लक्ष्य 2035 है।",
+  "facts": ["चंद्रयान-3 का विक्रम लैंडर चांद के दक्षिणी ध्रुव के पास 'शिव शक्ति पॉइंट' नाम की जगह पर उतरा; भारत चांद पर सॉफ़्ट लैंडिंग करने वाला चौथा और दक्षिणी ध्रुव के पास उतरने वाला पहला देश बना।", "चंद्रयान-3 को 14 जुलाई 2023 को सतीश धवन अंतरिक्ष केंद्र, श्रीहरिकोटा से LVM3 द्वारा प्रक्षेपित किया गया था; राष्ट्रीय अंतरिक्ष दिवस पहली बार 2024 में मनाया गया।"]},
+ "mcq": {"a": 1,
+  "en": {"q": "Which ISRO centre hosted the national event of the third National Space Day on 23 August 2026?", "o": ["ISRO Headquarters, Bengaluru", "Space Applications Centre, Ahmedabad", "Satish Dhawan Space Centre, Sriharikota", "Vikram Sarabhai Space Centre, Thiruvananthapuram"], "e": "The Space Applications Centre (SAC), Ahmedabad, hosted the national event of National Space Day 2026."},
+  "hi": {"q": "23 अगस्त 2026 को तीसरे राष्ट्रीय अंतरिक्ष दिवस के राष्ट्रीय कार्यक्रम की मेज़बानी इसरो के किस केंद्र ने की?", "o": ["इसरो मुख्यालय, बेंगलुरु", "अंतरिक्ष उपयोग केंद्र, अहमदाबाद", "सतीश धवन अंतरिक्ष केंद्र, श्रीहरिकोटा", "विक्रम साराभाई अंतरिक्ष केंद्र, तिरुवनंतपुरम"], "e": "राष्ट्रीय अंतरिक्ष दिवस 2026 के राष्ट्रीय कार्यक्रम की मेज़बानी अंतरिक्ष उपयोग केंद्र (SAC), अहमदाबाद ने की।"}},
+ "src": [{"name": "ISRO (National Space Day 2026)", "nameHi": "इसरो (राष्ट्रीय अंतरिक्ष दिवस 2026)", "url": "https://www.isro.gov.in/ISRO_EN/NSPD2026/aboutNSpD.html"}, {"name": "GKToday, 23 Aug 2026", "nameHi": "जीके टुडे, 23 अगस्त 2026", "url": "https://www.gktoday.in/third-national-space-day-celebrated/"}]
+},
+{
+ "cat": "sports",
+ "en": {"title": "BWF World Championships end in New Delhi; Alex Lanier and An Se-young win singles titles",
+  "summary": "The 30th BWF World Championships ended at the Indira Gandhi Arena in New Delhi on 23 August 2026. France's Alex Lanier beat Japan's Kodai Naraoka to become the first French player to win a world singles title, while South Korea's An Se-young beat Japan's Akane Yamaguchi for her second world title. India's medal came from Treesa Jolly and Gayatri Gopichand, who won bronze in women's doubles, India's first medal in the category since 2011.",
+  "facts": ["This was the second time India hosted the BWF World Championships, after Hyderabad in 2009.", "P.V. Sindhu is the only Indian to win the women's singles world title (Basel, 2019)."]},
+ "hi": {"title": "नई दिल्ली में BWF विश्व चैंपियनशिप संपन्न; एलेक्स लानियर और आन से-यंग ने एकल ख़िताब जीते",
+  "summary": "30वीं BWF विश्व चैंपियनशिप 23 अगस्त 2026 को नई दिल्ली के इंदिरा गांधी एरीना में संपन्न हुई। फ़्रांस के एलेक्स लानियर ने जापान के कोदाई नाराओका को हराकर विश्व एकल ख़िताब जीतने वाले पहले फ़्रांसीसी खिलाड़ी बनने का गौरव पाया, जबकि दक्षिण कोरिया की आन से-यंग ने जापान की अकाने यामागुची को हराकर दूसरा विश्व ख़िताब जीता। भारत को ट्रीसा जॉली और गायत्री गोपीचंद ने महिला युगल में कांस्य दिलाया – 2011 के बाद इस वर्ग में भारत का पहला पदक।",
+  "facts": ["भारत ने दूसरी बार BWF विश्व चैंपियनशिप की मेज़बानी की; इससे पहले 2009 में हैदराबाद में यह हुई थी।", "पी.वी. सिंधु महिला एकल विश्व ख़िताब जीतने वाली एकमात्र भारतीय हैं (बासेल, 2019)।"]},
+ "mcq": {"a": 3,
+  "en": {"q": "Who became the first French player to win a BWF World Championships singles title, at New Delhi on 23 August 2026?", "o": ["Kodai Naraoka", "Viktor Axelsen", "Christo Popov", "Alex Lanier"], "e": "Alex Lanier beat Japan's Kodai Naraoka in the men's singles final."},
+  "hi": {"q": "23 अगस्त 2026 को नई दिल्ली में BWF विश्व चैंपियनशिप का एकल ख़िताब जीतने वाले पहले फ़्रांसीसी खिलाड़ी कौन बने?", "o": ["कोदाई नाराओका", "विक्टर एक्सेलसन", "क्रिस्टो पोपोव", "एलेक्स लानियर"], "e": "एलेक्स लानियर ने पुरुष एकल फ़ाइनल में जापान के कोदाई नाराओका को हराया।"}},
+ "src": [{"name": "AffairsCloud, 25 Aug 2026", "nameHi": "अफ़ेयर्सक्लाउड, 25 अगस्त 2026", "url": "https://affairscloud.com/current-affairs-25-august-2026/"}, {"name": "All India Radio News (women's doubles bronze)", "nameHi": "आकाशवाणी समाचार (महिला युगल कांस्य)", "url": "https://newsonair.gov.in/treesa-jolly-gayatri-gopichand-clinch-bronze-at-bwf-world-championships/"}]
+},
+{
+ "cat": "defence",
+ "en": {"title": "Cochin Shipyard delivers anti-submarine shallow water craft 'Mangrol' to the Navy",
+  "summary": "Cochin Shipyard Limited (CSL) delivered Mangrol, the third of eight Anti-Submarine Warfare Shallow Water Craft (ASW SWC) it is building, to the Indian Navy at Kochi, as reported on 23 August 2026. The about 78-metre vessel can reach 25 knots, has a range of 1,800 nautical miles and carries lightweight torpedoes, indigenous anti-submarine rockets and shallow-water sonar. It has more than 80% indigenous content.",
+  "facts": ["The Navy ordered 16 ASW Shallow Water Craft in all: eight from Cochin Shipyard and eight from Garden Reach Shipbuilders and Engineers (GRSE), Kolkata.", "Cochin Shipyard built India's first indigenous aircraft carrier INS Vikrant, commissioned on 2 September 2022."]},
+ "hi": {"title": "कोचीन शिपयार्ड ने पनडुब्बी-रोधी उथले पानी का पोत 'मंगरोल' नौसेना को सौंपा",
+  "summary": "23 अगस्त 2026 को आई ख़बर के अनुसार कोचीन शिपयार्ड लिमिटेड (CSL) ने कोच्चि में भारतीय नौसेना को मंगरोल सौंपा; यह उसके द्वारा बनाए जा रहे आठ पनडुब्बी-रोधी युद्ध उथले जल पोतों (ASW SWC) में तीसरा है। लगभग 78 मीटर लंबा यह पोत 25 नॉट की रफ़्तार पकड़ सकता है, 1,800 नॉटिकल मील तक जा सकता है और इसमें हल्के टॉरपीडो, स्वदेशी पनडुब्बी-रोधी रॉकेट और उथले पानी का सोनार लगे हैं। इसमें 80% से ज़्यादा स्वदेशी सामग्री है।",
+  "facts": ["नौसेना ने कुल 16 ASW उथले जल पोतों का ऑर्डर दिया है: आठ कोचीन शिपयार्ड से और आठ गार्डन रीच शिपबिल्डर्स एंड इंजीनियर्स (GRSE), कोलकाता से।", "कोचीन शिपयार्ड ने भारत का पहला स्वदेशी विमानवाहक पोत INS विक्रांत बनाया, जो 2 सितंबर 2022 को कमीशन हुआ।"]},
+ "mcq": {"a": 1,
+  "en": {"q": "Which shipyard delivered 'Mangrol', the third of its eight ASW Shallow Water Craft, to the Indian Navy in August 2026?", "o": ["Mazagon Dock Shipbuilders", "Cochin Shipyard Limited", "Goa Shipyard Limited", "Hindustan Shipyard Limited"], "e": "Cochin Shipyard Limited delivered Mangrol at Kochi; it has over 80% indigenous content."},
+  "hi": {"q": "अगस्त 2026 में किस शिपयार्ड ने अपने आठ ASW उथले जल पोतों में तीसरा 'मंगरोल' भारतीय नौसेना को सौंपा?", "o": ["मझगांव डॉक शिपबिल्डर्स", "कोचीन शिपयार्ड लिमिटेड", "गोवा शिपयार्ड लिमिटेड", "हिंदुस्तान शिपयार्ड लिमिटेड"], "e": "कोचीन शिपयार्ड लिमिटेड ने कोच्चि में मंगरोल सौंपा; इसमें 80% से ज़्यादा स्वदेशी सामग्री है।"}},
+ "src": [{"name": "AffairsCloud, 23-24 Aug 2026", "nameHi": "अफ़ेयर्सक्लाउड, 23-24 अगस्त 2026", "url": "https://affairscloud.com/current-affairs-23-24-august-2026/"}, {"name": "Insights IAS, 24 Aug 2026", "nameHi": "इनसाइट्स IAS, 24 अगस्त 2026", "url": "https://www.insightsonindia.com/2026/08/24/upsc-current-affairs-24-august-2026/"}]
+},
+{
+ "cat": "states",
+ "en": {"title": "Himachal Pradesh signs MoU with ISB to tap ₹22,600 crore forest economy",
+  "summary": "The Himachal Pradesh Forest Department signed a five-year MoU with the Bharti Institute of Public Policy of the Indian School of Business (ISB-BIPP) to develop the state's forest economy, in the presence of Chief Minister Sukhvinder Singh Sukhu. The untapped potential is estimated at ₹22,600 crore, led by amla (₹8,700 crore), pine needles (₹5,500 crore), wild mangoes (₹4,800 crore), sal seeds (₹2,400 crore) and rhododendron flowers (₹1,200 crore). The model, already built into the working plan of the Palampur Forest Division, will be extended statewide.",
+  "facts": ["Himachal Pradesh became a full state on 25 January 1971; its capital is Shimla.", "The Indian School of Business has campuses in Hyderabad and Mohali."]},
+ "hi": {"title": "हिमाचल प्रदेश ने ₹22,600 करोड़ की वन अर्थव्यवस्था के लिए ISB के साथ समझौता किया",
+  "summary": "हिमाचल प्रदेश वन विभाग ने मुख्यमंत्री सुखविंदर सिंह सुक्खू की मौजूदगी में राज्य की वन अर्थव्यवस्था विकसित करने के लिए इंडियन स्कूल ऑफ़ बिज़नेस के भारती इंस्टीट्यूट ऑफ़ पब्लिक पॉलिसी (ISB-BIPP) के साथ पांच साल का समझौता ज्ञापन किया। इसकी अनछुई क्षमता ₹22,600 करोड़ आंकी गई है, जिसमें आंवला (₹8,700 करोड़), चीड़ की पत्तियां (₹5,500 करोड़), जंगली आम (₹4,800 करोड़), साल के बीज (₹2,400 करोड़) और बुरांस के फूल (₹1,200 करोड़) प्रमुख हैं। पालमपुर वन मंडल की कार्य योजना में शामिल यह मॉडल अब पूरे राज्य में लागू होगा।",
+  "facts": ["हिमाचल प्रदेश 25 जनवरी 1971 को पूर्ण राज्य बना; इसकी राजधानी शिमला है।", "इंडियन स्कूल ऑफ़ बिज़नेस के परिसर हैदराबाद और मोहाली में हैं।"]},
+ "mcq": {"a": 0,
+  "en": {"q": "Himachal Pradesh's MoU with ISB-BIPP aims to unlock a forest economy estimated at how much?", "o": ["₹22,600 crore", "₹8,700 crore", "₹12,000 crore", "₹50,000 crore"], "e": "The untapped forest economy is estimated at ₹22,600 crore; amla alone accounts for ₹8,700 crore."},
+  "hi": {"q": "ISB-BIPP के साथ हिमाचल प्रदेश के समझौते का लक्ष्य कितनी अनुमानित वन अर्थव्यवस्था को खोलना है?", "o": ["₹22,600 करोड़", "₹8,700 करोड़", "₹12,000 करोड़", "₹50,000 करोड़"], "e": "अनछुई वन अर्थव्यवस्था ₹22,600 करोड़ आंकी गई है; अकेले आंवले का हिस्सा ₹8,700 करोड़ है।"}},
+ "src": [{"name": "AffairsCloud, 23-24 Aug 2026", "nameHi": "अफ़ेयर्सक्लाउड, 23-24 अगस्त 2026", "url": "https://affairscloud.com/current-affairs-23-24-august-2026/"}, {"name": "The Target Classes, 23 Aug 2026", "nameHi": "द टारगेट क्लासेज़, 23 अगस्त 2026", "url": "https://www.thetargetclasses.com/gk/current-affairs-23-august-2026/"}]
+},
+{
+ "cat": "economy",
+ "en": {"title": "DGFT eases rupee invoicing rules for exporters under Foreign Trade Policy",
+  "summary": "The Directorate General of Foreign Trade (DGFT) amended the Foreign Trade Policy 2023 to align it with the RBI's FEMA (Manner of Receipt and Payment) Regulations, 2023. Export contracts with countries outside the Asian Clearing Union can now be invoiced in any foreign currency or in Indian rupees. Rupee payments for exports to countries other than Nepal and Bhutan will now qualify for FTP benefits and count towards export obligations, and exports financed through EXIM Bank or Government of India lines of credit can also be invoiced in rupees.",
+  "facts": ["The DGFT works under the Ministry of Commerce and Industry; the Foreign Trade Policy 2023 came into force on 1 April 2023 and has no fixed end date.", "The Asian Clearing Union (ACU), set up in 1974, has its headquarters in Tehran, Iran."]},
+ "hi": {"title": "DGFT ने विदेश व्यापार नीति के तहत निर्यातकों के लिए रुपये में बिलिंग के नियम आसान किए",
+  "summary": "विदेश व्यापार महानिदेशालय (DGFT) ने विदेश व्यापार नीति (FTP) 2023 में संशोधन कर उसे RBI के FEMA (प्राप्ति और भुगतान का तरीका) विनियम, 2023 के अनुरूप कर दिया है। अब एशियाई क्लियरिंग यूनियन से बाहर के देशों के साथ निर्यात अनुबंधों का बिल किसी भी विदेशी मुद्रा या भारतीय रुपये में बनाया जा सकता है। नेपाल और भूटान को छोड़कर अन्य देशों को निर्यात का भुगतान रुपये में मिलने पर भी FTP के लाभ मिलेंगे और यह निर्यात दायित्व में गिना जाएगा; EXIM बैंक या भारत सरकार की ऋण-सुविधा (लाइन ऑफ़ क्रेडिट) से होने वाले निर्यात का बिल भी रुपये में बन सकेगा।",
+  "facts": ["DGFT वाणिज्य एवं उद्योग मंत्रालय के तहत काम करता है; विदेश व्यापार नीति 2023, 1 अप्रैल 2023 से लागू हुई और इसकी कोई तय समाप्ति तारीख़ नहीं है।", "एशियाई क्लियरिंग यूनियन (ACU) 1974 में बनी और इसका मुख्यालय तेहरान (ईरान) में है।"]},
+ "mcq": {"a": 2,
+  "en": {"q": "Which body amended the Foreign Trade Policy 2023 in August 2026 to ease rupee invoicing for exports?", "o": ["Reserve Bank of India", "EXIM Bank", "Directorate General of Foreign Trade", "Central Board of Indirect Taxes and Customs"], "e": "The DGFT, under the Ministry of Commerce and Industry, aligned the FTP with RBI's FEMA regulations."},
+  "hi": {"q": "अगस्त 2026 में निर्यात के लिए रुपये में बिलिंग आसान करने के लिए विदेश व्यापार नीति 2023 में किसने संशोधन किया?", "o": ["भारतीय रिज़र्व बैंक", "EXIM बैंक", "विदेश व्यापार महानिदेशालय", "केंद्रीय अप्रत्यक्ष कर और सीमा शुल्क बोर्ड"], "e": "वाणिज्य एवं उद्योग मंत्रालय के तहत DGFT ने FTP को RBI के FEMA विनियमों के अनुरूप किया।"}},
+ "src": [{"name": "AffairsCloud, 23-24 Aug 2026", "nameHi": "अफ़ेयर्सक्लाउड, 23-24 अगस्त 2026", "url": "https://affairscloud.com/current-affairs-23-24-august-2026/"}]
+}
+]
+});
