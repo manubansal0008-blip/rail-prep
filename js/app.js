@@ -50,7 +50,9 @@ window.RRB = window.RRB || {};
     more: '<circle cx="6" cy="12" r="1.6" fill="currentColor"/><circle cx="12" cy="12" r="1.6" fill="currentColor"/><circle cx="18" cy="12" r="1.6" fill="currentColor"/>'
   };
   var TABS = [["index.html", "home", "tab.home"], ["practice.html", "practice", "tab.practice"], ["mock.html", "mocks", "tab.mocks"], ["news.html", "news", "tab.news"]];
-  var BOOK = "books/Rail-Prep-RRB-NTPC-UG-2026-Hindi.pdf"; // free NTPC UG book (same file as RRB.BOOKS.ntpc in data/exams.js)
+  // free book per exam (same files as RRB.BOOKS in data/exams.js, which only index.html loads)
+  var BOOKS = { ntpc: "books/Rail-Prep-RRB-NTPC-UG-2026-Hindi.pdf", gd: "books/Rail-Prep-RRB-Group-D-2026-Hindi.pdf" };
+  function bookUrl() { return BOOKS[RRB.getExam()] || BOOKS.ntpc; }
   var MORE = [["monthly.html", "nav.monthly", "🗓"], ["notes.html", "nav.notes", "📘"], ["papers.html", "nav.papers", "🗂"], ["progress.html", "nav.progress", "📈"]];
   function svg(k) { return '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICO[k] + "</svg>"; }
   function tabbar(R, here) {
@@ -66,12 +68,12 @@ window.RRB = window.RRB || {};
     s.className = "tb-sheet"; s.id = "tbSheet"; s.hidden = true;
     s.innerHTML = '<div class="tb-panel" role="dialog" aria-modal="true" aria-labelledby="tbH"><div class="tb-grab" aria-hidden="true"></div><h2 id="tbH" data-i18n="tab.more">' + RRB.t("tab.more") + "</h2>" +
       MORE.map(function (m) { return '<a href="' + R + m[0] + '"' + (m[0] === here ? ' aria-current="page"' : "") + '><span class="tb-ico" aria-hidden="true">' + m[2] + '</span><span data-i18n="' + m[1] + '">' + RRB.t(m[1]) + "</span></a>"; }).join("") +
-      (BOOK ? '<a href="' + R + BOOK + '" target="_blank" rel="noopener" download><span class="tb-ico" aria-hidden="true">📕</span><span data-i18n="card.book">' + RRB.t("card.book") + "</span></a>" : "") +
+      '<a id="tbBook" href="' + R + bookUrl() + '" target="_blank" rel="noopener" download><span class="tb-ico" aria-hidden="true">📕</span><span data-i18n="card.book">' + RRB.t("card.book") + "</span></a>" +
       "</div>";
     document.body.append(s, t);
     document.documentElement.classList.add("has-tabbar");
     var mb = t.querySelector("#tbMore");
-    function show(o) { s.hidden = !o; mb.setAttribute("aria-expanded", o); document.documentElement.classList.toggle("tb-open", o); if (o) { var a = s.querySelector("a"); if (a) a.focus({ preventScroll: true }); } }
+    function show(o) { if (o) s.querySelector("#tbBook").href = R + bookUrl(); s.hidden = !o; mb.setAttribute("aria-expanded", o); document.documentElement.classList.toggle("tb-open", o); if (o) { var a = s.querySelector("a"); if (a) a.focus({ preventScroll: true }); } }
     mb.onclick = function () { show(s.hidden); };
     s.onclick = function (e) { if (e.target === s) show(false); };
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !s.hidden) { show(false); mb.focus(); } });
@@ -138,7 +140,7 @@ window.RRB = window.RRB || {};
 })();
 
 // Cache-busting version for files loaded on demand. Keep in step with the ?v= on <script>/<link> tags in the HTML pages.
-RRB.VER = "20261105a";
+RRB.VER = "20261105b";
 // Load one paper/practice-set data file on demand. Calls cb(data).
 RRB.loadTest = function (id, cb, err) {
   var meta = (RRB.INDEX || []).filter(function (p) { return p.id === id; })[0];

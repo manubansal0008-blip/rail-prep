@@ -55,7 +55,7 @@
     var book = RRB.BOOKS && RRB.BOOKS[x];
     var cardsEl = document.getElementById("cards");
     cardsEl.innerHTML = [
-      book ? [book.url, "📕", t("card.book"), t("card.bookP", { p: book.pages, mb: book.mb }), t("card.bookBtn")] : null,
+      book ? [book.url, "📕", t("card.book"), t(book.p || "card.bookP", { p: book.pages, mb: book.mb }), t("card.bookBtn")] : null,
       ["papers.html", "🗂", t("card.papers"), t("card.papersP", { x: E.short, n: papers.length, q: qn.toLocaleString(RRB.locale()) })],
       ["mock.html", "⏱", t("card.mocks"), t("card.mocksP", { x: E.short, n: mocks.length, q: mq.toLocaleString(RRB.locale()) })],
       ["practice.html", "🎯", t("card.practice"), t("card.practiceP", { s: RRB.qScope() })],
