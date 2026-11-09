@@ -7,6 +7,13 @@ window.RRB = window.RRB || {};
   var KEY = "rrb.lang";
   var S = {
     en: {
+      "nav.dpp": "DPP", "card.dpp": "Daily Practice Problems (DPPs)", "dpp.doctitle": "Daily Practice Problems (DPPs) for RRB NTPC & Group D | रोज़ के 5 प्रैक्टिस प्रश्न | Rail Prep", "dpp.h1": "Daily Practice Problems (DPPs)", "dpp.h": "Daily Practice Problems (DPPs)",
+      "dpp.intro": "5 new practice questions every day in the pattern of previous RRB NTPC and Group D papers: Maths, Reasoning, General Science and General Knowledge. Pick an answer to see if it is right, with an explanation.",
+      "dpp.note": "These are Rail Prep's own practice questions written in the pattern of previous RRB papers (marked \"Rail Prep practice (PYQ pattern)\"). They are not real RRB past-paper questions. For real past papers with the official answer key see <a href=\"papers.html\">Past Papers</a>.",
+      "dpp.sub.maths": "Maths", "dpp.sub.reasoning": "Reasoning", "dpp.sub.science": "General Science", "dpp.sub.gk": "Static GK", "dpp.sub.polity": "Polity", "dpp.sub.history": "History", "dpp.sub.geography": "Geography", "dpp.sub.economy": "Economy", "dpp.sub.railway": "Railways", "dpp.sub.computer": "Computer",
+      "dpp.opts": "Options for question {n}", "dpp.wrong": "Not right. Correct answer: ({k}) {o}", "dpp.expl": "Explanation:", "dpp.trick": "Shortcut:", "dpp.score": "Score: {r} / {n}", "dpp.left": "{k} question(s) left", "dpp.allDone": "All done! Come back tomorrow for new DPPs.", "dpp.again": "Try again",
+      "dpp.loading": "Loading questions…", "dpp.err": "Could not load the questions. Check your internet and try again.", "dpp.none": "No DPP added yet.", "dpp.archH": "All DPP days", "dpp.open": "Open now", "dpp.static": "Open →", "dpp.allStatic": "All days as simple pages (easy to print or share) →", "dpp.print": "Simple page · print →",
+      "dpp.homeP": "5 exam-style questions for today, one from each subject, with explanations.", "dpp.homeNew": "{n} questions · about 5 minutes", "dpp.homeDone": "{d} of {n} done · {r} right", "dpp.start": "Start today's DPP →", "dpp.continue": "Continue →", "dpp.review": "See answers →", "dpp.all": "All days →",
       "site.title": "Rail Prep", "nav.home": "Home", "nav.notes": "Notes", "nav.papers": "Past Papers", "nav.mocks": "Mock Tests", "nav.progress": "Progress",
       "aria.menu": "Menu", "aria.theme": "Toggle dark mode", "aria.lang": "Language",
       "foot.disc": "Rail Prep is an effort to give you a real exam-like feel and practice in solving papers. It has no link with RRB or Indian Railways. Please check exam dates on your RRB's official website.",
@@ -134,6 +141,13 @@ window.RRB = window.RRB || {};
       "chat.fail": "Could not get an answer right now. Please try again.", "chat.net": "Couldn't reach the doubt chat. Check your internet connection and try again."
     },
     hi: {
+      "nav.dpp": "DPP", "card.dpp": "Daily Practice Problems (DPPs)", "dpp.doctitle": "Daily Practice Problems (DPPs) for RRB NTPC & Group D | रोज़ के 5 प्रैक्टिस प्रश्न | Rail Prep", "dpp.h1": "Daily Practice Problems (DPPs)", "dpp.h": "Daily Practice Problems (DPPs)",
+      "dpp.intro": "हर दिन 5 नए प्रैक्टिस प्रश्न, RRB NTPC और ग्रुप डी के पिछले पेपरों के पैटर्न पर: गणित, रीज़निंग, सामान्य विज्ञान और सामान्य ज्ञान। उत्तर चुनें, तुरंत पता चलेगा कि सही है या नहीं, व्याख्या के साथ।",
+      "dpp.note": "ये Rail Prep के अपने प्रैक्टिस प्रश्न हैं, जो RRB के पिछले पेपरों के पैटर्न पर बनाए गए हैं (इन पर \"Rail Prep practice (PYQ pattern)\" लिखा है)। ये RRB के असली पिछले पेपर के प्रश्न नहीं हैं। असली पिछले पेपर और आधिकारिक उत्तर कुंजी के लिए <a href=\"papers.html\">पिछले प्रश्न पत्र</a> देखें।",
+      "dpp.sub.maths": "गणित", "dpp.sub.reasoning": "रीज़निंग", "dpp.sub.science": "सामान्य विज्ञान", "dpp.sub.gk": "स्टैटिक GK", "dpp.sub.polity": "राजनीति और संविधान", "dpp.sub.history": "इतिहास", "dpp.sub.geography": "भूगोल", "dpp.sub.economy": "अर्थव्यवस्था", "dpp.sub.railway": "रेलवे", "dpp.sub.computer": "कंप्यूटर",
+      "dpp.opts": "प्रश्न {n} के विकल्प", "dpp.wrong": "सही नहीं। सही उत्तर: ({k}) {o}", "dpp.expl": "व्याख्या:", "dpp.trick": "शॉर्टकट ट्रिक:", "dpp.score": "स्कोर: {r} / {n}", "dpp.left": "{k} प्रश्न बाक़ी", "dpp.allDone": "सब हो गए! नए DPP के लिए कल फिर आएँ।", "dpp.again": "फिर से करें",
+      "dpp.loading": "प्रश्न लोड हो रहे हैं…", "dpp.err": "प्रश्न लोड नहीं हो सके। इंटरनेट देखकर फिर कोशिश करें।", "dpp.none": "अभी कोई DPP नहीं जोड़ा गया।", "dpp.archH": "सभी दिनों के DPP", "dpp.open": "अभी खुला है", "dpp.static": "खोलें →", "dpp.allStatic": "सभी दिन सादे पेज के रूप में (प्रिंट या शेयर के लिए आसान) →", "dpp.print": "सादा पेज · प्रिंट →",
+      "dpp.homeP": "आज के 5 परीक्षा जैसे प्रश्न, हर विषय से एक, व्याख्या के साथ।", "dpp.homeNew": "{n} प्रश्न · लगभग 5 मिनट", "dpp.homeDone": "{n} में से {d} किए · {r} सही", "dpp.start": "आज का DPP शुरू करें →", "dpp.continue": "आगे करें →", "dpp.review": "उत्तर देखें →", "dpp.all": "सभी दिन →",
       "site.title": "Rail Prep", "nav.home": "होम", "nav.notes": "नोट्स", "nav.papers": "पिछले प्रश्न पत्र", "nav.mocks": "मॉक टेस्ट", "nav.progress": "प्रोग्रेस",
       "aria.menu": "मेन्यू", "aria.theme": "डार्क मोड बदलें", "aria.lang": "भाषा",
       "foot.disc": "Rail Prep एक प्रयास है, जिसमें आपको परीक्षा जैसा माहौल और पेपर हल करने का अनुभव मिलता है। इसका RRB या भारतीय रेलवे से कोई संबंध नहीं है। परीक्षा की तारीखें अपनी RRB की वेबसाइट पर ज़रूर देख लें।",

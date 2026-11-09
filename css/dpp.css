@@ -1,0 +1,35 @@
+/* Daily Practice Problems (DPPs): dpp.html, dpp/*.html and the home card */
+.dpp-dayhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.dpp-dayhead h2.sec{margin-bottom:8px}
+.dpp-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,520px),1fr));gap:14px;align-items:start;margin-top:12px}
+.dpp-q{min-width:0;scroll-margin-top:80px}
+.dpp-top{display:flex;align-items:center;gap:6px 10px;flex-wrap:wrap}
+.dpp-top .nw-n{margin-left:auto;font-size:var(--fs-xs)}
+.dpp-topic{font-size:var(--fs-sm)}
+.dpp-lbl{margin:8px 0 6px}
+.dpp-lbl .tag{margin-left:0;white-space:normal}
+.dpp-q .qtext{margin:6px 0 10px;font-size:var(--fs-md);line-height:1.45}
+.dpp-q .opts{display:grid;gap:8px}
+.dpp-q .opt{padding:9px 12px}
+.dpp-trick{border-left:3px solid var(--accent)}
+.dpp-score{display:flex;justify-content:space-between;align-items:center;gap:10px 16px;flex-wrap:wrap;margin-top:6px;padding:14px 16px}
+.dpp-score>div{display:grid;gap:2px}
+.dpp-score .muted{font-size:var(--fs-sm)}
+.dpp-arch{margin-top:10px}
+.dpp-arch a[aria-current="true"]{font-weight:700}
+.dpp-st{font-size:var(--fs-sm)}
+.dpp-st a,.dpp-note a{color:var(--accent)}
+.dpp-note{margin:10px 0 0;font-size:var(--fs-sm);padding:10px 12px;border-radius:10px;background:var(--surface-2)}
+/* home card */
+.dpp-home{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;margin-top:12px}
+.dpp-home-txt{flex:1 1 300px;min-width:0}
+.dpp-home-p{margin:0 0 8px}
+.dpp-chips{display:flex;flex-wrap:wrap;gap:6px}
+.dpp-chips .tag{margin-left:0}
+.dpp-home-s{margin:8px 0 0;font-size:var(--fs-sm)}
+/* static day pages */
+.st-dpp .dpp-q .st-opts{margin:6px 0 8px;padding-left:22px}
+.st-dpp .dpp-q .st-opts li{margin:3px 0}
+@media (min-width:760px){.dpp-q .opts{grid-template-columns:1fr 1fr}}
+.dpp-lbl .tag.new{background:color-mix(in srgb,#1971c2 16%,transparent);color:#1971c2;font-weight:700}
+[data-theme="dark"] .dpp-lbl .tag.new{color:#74c0fc}

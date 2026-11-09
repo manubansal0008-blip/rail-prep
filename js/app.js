@@ -9,7 +9,7 @@ window.RRB = window.RRB || {};
   RRB.getExam = function () { return localStorage.getItem(KEY_EXAM) || "ntpc"; };
   RRB.setExam = function (x) { localStorage.setItem(KEY_EXAM, x); };
 
-  var PAGES = [["index.html", "nav.home"], ["notes.html", "nav.notes"], ["news.html", "nav.news"], ["papers.html", "nav.papers"], ["mock.html", "nav.mocks"], ["practice.html", "nav.practice"], ["progress.html", "nav.progress"]];
+  var PAGES = [["index.html", "nav.home"], ["notes.html", "nav.notes"], ["news.html", "nav.news"], ["dpp.html", "nav.dpp"], ["papers.html", "nav.papers"], ["mock.html", "nav.mocks"], ["practice.html", "nav.practice"], ["progress.html", "nav.progress"]];
 
   function header() {
     // Static pages in a sub-folder (notes/, news/) set data-root="../" and data-nav="<page>.html" on <html>.
@@ -53,7 +53,7 @@ window.RRB = window.RRB || {};
   // free book per exam (same files as RRB.BOOKS in data/exams.js, which only index.html loads)
   var BOOKS = { ntpc: "books/Rail-Prep-RRB-NTPC-UG-2026-Hindi.pdf", gd: "books/Rail-Prep-RRB-Group-D-2026-Hindi.pdf" };
   function bookUrl() { return BOOKS[RRB.getExam()] || BOOKS.ntpc; }
-  var MORE = [["monthly.html", "nav.monthly", "🗓"], ["notes.html", "nav.notes", "📘"], ["papers.html", "nav.papers", "🗂"], ["progress.html", "nav.progress", "📈"]];
+  var MORE = [["dpp.html", "card.dpp", "📝"], ["monthly.html", "nav.monthly", "🗓"], ["notes.html", "nav.notes", "📘"], ["papers.html", "nav.papers", "🗂"], ["progress.html", "nav.progress", "📈"]];
   function svg(k) { return '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICO[k] + "</svg>"; }
   function tabbar(R, here) {
     if (here === "test.html") return;
@@ -140,7 +140,7 @@ window.RRB = window.RRB || {};
 })();
 
 // Cache-busting version for files loaded on demand. Keep in step with the ?v= on <script>/<link> tags in the HTML pages.
-RRB.VER = "20261105b";
+RRB.VER = "20261109a";
 // Load one paper/practice-set data file on demand. Calls cb(data).
 RRB.loadTest = function (id, cb, err) {
   var meta = (RRB.INDEX || []).filter(function (p) { return p.id === id; })[0];
