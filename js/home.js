@@ -63,7 +63,7 @@
       (RRB.NOTES_READY || []).length ? ["notes.html", "📘", t("card.notes"), t("card.notesP", { n: RRB.NOTES_READY.length })] : [null, "📘", t("card.notes"), t("card.notesP", { n: 0 })]
     ].filter(Boolean).map(function (c) {
       if (c[4]) return '<a class="card fade book-card" href="' + c[0] + '" target="_blank" rel="noopener" download><div class="ico" aria-hidden="true">' + c[1] + "</div><h3>" + c[2] +
-        ' <span class="tag ok">' + t("card.free") + '</span></h3><p>' + c[3] + '</p><span class="more">' + c[4] + "</span></a>";
+        '</h3><p>' + c[3] + '</p><span class="more">' + c[4] + "</span></a>";
       if (!c[0]) return '<div class="card fade soon" aria-disabled="true"><div class="ico" aria-hidden="true">' + c[1] + "</div><h3>" + c[2] +
         ' <span class="tag warn">' + t("tag.soon") + '</span></h3><p>' + c[3] + '</p><span class="more muted">' + t("card.na") + "</span></div>";
       return '<a class="card fade" href="' + c[0] + '"><div class="ico" aria-hidden="true">' + c[1] + "</div><h3>" + c[2] +
