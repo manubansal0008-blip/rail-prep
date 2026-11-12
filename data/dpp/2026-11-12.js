@@ -1,0 +1,80 @@
+RRB.dppLoaded({
+"date": "2026-11-12",
+"items": [
+{
+ "subject": "maths",
+ "topic": {"en": "Time and distance (trains)", "hi": "समय और दूरी (रेलगाड़ी)"},
+ "exams": ["ntpc", "gd"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 0,
+ "en": {"q": "A train 240 m long crosses an electric pole in 12 seconds. What is the speed of the train in km/h?",
+  "o": ["72 km/h", "60 km/h", "80 km/h", "20 km/h"],
+  "e": "To cross a pole, the train covers only its own length. Speed = 240 ÷ 12 = 20 m/s. In km/h: 20 × 18/5 = 72 km/h. 20 km/h is the m/s value without converting; 60 and 80 km/h come from wrong conversion.",
+  "trick": "m/s → km/h: multiply by 18/5 (= 3.6). 20 × 3.6 = 72."},
+ "hi": {"q": "240 मीटर लंबी एक रेलगाड़ी एक बिजली के खंभे को 12 सेकंड में पार करती है। रेलगाड़ी की चाल किमी/घंटा में कितनी है?",
+  "o": ["72 किमी/घंटा", "60 किमी/घंटा", "80 किमी/घंटा", "20 किमी/घंटा"],
+  "e": "खंभा पार करने में रेलगाड़ी केवल अपनी लंबाई जितनी दूरी तय करती है। चाल = 240 ÷ 12 = 20 मीटर/सेकंड। किमी/घंटा में: 20 × 18/5 = 72 किमी/घंटा। 20 किमी/घंटा वह उत्तर है जिसमें मात्रक बदला ही नहीं गया; 60 और 80 गलत बदलाव से आते हैं।",
+  "trick": "मीटर/सेकंड को किमी/घंटा में बदलने के लिए 18/5 (= 3.6) से गुणा करें: 20 × 3.6 = 72।"}
+},
+{
+ "subject": "reasoning",
+ "topic": {"en": "Blood relation", "hi": "रक्त संबंध"},
+ "exams": ["ntpc", "gd"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 3,
+ "en": {"q": "Pointing to a man, Neha says, \"He is the son of my father's father's only son.\" How is the man related to Neha?",
+  "o": ["Cousin", "Uncle", "Father", "Brother"],
+  "e": "Neha's father's father = her grandfather. His only son = Neha's father. The son of Neha's father = Neha's brother. He cannot be an uncle or cousin because the grandfather has only one son.",
+  "trick": "Solve from the inside out: father's father → grandfather; his only son → father; father's son → brother."},
+ "hi": {"q": "एक आदमी की ओर इशारा करते हुए नेहा कहती है, \"यह मेरे पिता के पिता के इकलौते बेटे का बेटा है।\" वह आदमी नेहा का क्या लगता है?",
+  "o": ["चचेरा भाई", "चाचा", "पिता", "भाई"],
+  "e": "नेहा के पिता के पिता = उसके दादा। दादा का इकलौता बेटा = नेहा के पिता। नेहा के पिता का बेटा = नेहा का भाई। दादा का एक ही बेटा है, इसलिए वह चाचा या चचेरा भाई नहीं हो सकता।",
+  "trick": "अंदर से बाहर की ओर हल करें: पिता के पिता → दादा; उनका इकलौता बेटा → पिता; पिता का बेटा → भाई।"}
+},
+{
+ "subject": "science",
+ "topic": {"en": "Physics: light (power of a lens)", "hi": "भौतिकी: प्रकाश (लेंस की क्षमता)"},
+ "exams": ["ntpc", "gd"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 1,
+ "en": {"q": "What is the power of a convex lens of focal length 50 cm?",
+  "o": ["+0.5 D", "+2 D", "+50 D", "−2 D"],
+  "e": "Power P = 1/f, with f in metres. f = 50 cm = 0.5 m, so P = 1/0.5 = +2 dioptre (D). A convex lens has a positive focal length, so the power is positive (−2 D would be a concave lens). +0.5 D uses f without taking the reciprocal and +50 D forgets to change cm into m.",
+  "trick": "With f in cm: P = 100/f = 100/50 = +2 D."},
+ "hi": {"q": "50 सेमी फ़ोकस दूरी वाले उत्तल लेंस की क्षमता कितनी है?",
+  "o": ["+0.5 D", "+2 D", "+50 D", "−2 D"],
+  "e": "क्षमता P = 1/f, जहाँ f मीटर में हो। f = 50 सेमी = 0.5 मीटर, इसलिए P = 1/0.5 = +2 डायोप्टर (D)। उत्तल लेंस की फ़ोकस दूरी धनात्मक होती है, इसलिए क्षमता भी धनात्मक है (−2 D अवतल लेंस की होगी)। +0.5 D में व्युत्क्रम नहीं लिया गया और +50 D में सेमी को मीटर में नहीं बदला गया।",
+  "trick": "f सेमी में हो तो: P = 100/f = 100/50 = +2 D।"}
+},
+{
+ "subject": "gk",
+ "topic": {"en": "Important days: sports", "hi": "महत्वपूर्ण दिवस: खेल"},
+ "exams": ["ntpc", "gd"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 2,
+ "en": {"q": "India's National Sports Day is celebrated on 29 August every year on the birth anniversary of which sportsperson?",
+  "o": ["Milkha Singh", "P.T. Usha", "Major Dhyan Chand", "Kapil Dev"],
+  "e": "National Sports Day (29 August) marks the birth anniversary of hockey legend Major Dhyan Chand, born on 29 August 1905. India's highest sports award, the Major Dhyan Chand Khel Ratna, is also named after him.",
+  "trick": "29 August = Dhyan Chand = hockey = Khel Ratna."},
+ "hi": {"q": "भारत में हर साल 29 अगस्त को राष्ट्रीय खेल दिवस किस खिलाड़ी की जयंती पर मनाया जाता है?",
+  "o": ["मिल्खा सिंह", "पी.टी. उषा", "मेजर ध्यानचंद", "कपिल देव"],
+  "e": "राष्ट्रीय खेल दिवस (29 अगस्त) हॉकी के जादूगर मेजर ध्यानचंद की जयंती है, जिनका जन्म 29 अगस्त 1905 को हुआ था। भारत का सबसे बड़ा खेल पुरस्कार 'मेजर ध्यानचंद खेल रत्न' भी उन्हीं के नाम पर है।",
+  "trick": "29 अगस्त = ध्यानचंद = हॉकी = खेल रत्न।"}
+},
+{
+ "subject": "polity",
+ "topic": {"en": "Fundamental Rights", "hi": "मौलिक अधिकार"},
+ "exams": ["ntpc", "gd"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 0,
+ "en": {"q": "Which Article of the Indian Constitution abolishes untouchability and forbids its practice in any form?",
+  "o": ["Article 17", "Article 14", "Article 21", "Article 19"],
+  "e": "Article 17 (Right to Equality, Part III) abolishes untouchability. Article 14 gives equality before law, Article 19 protects six freedoms such as speech, and Article 21 protects life and personal liberty.",
+  "trick": "Right to Equality = Articles 14 to 18: 14 equality before law, 15 no discrimination, 16 equal job chances, 17 untouchability ends, 18 titles abolished."},
+ "hi": {"q": "भारतीय संविधान का कौन-सा अनुच्छेद अस्पृश्यता (छुआछूत) का अंत करता है और किसी भी रूप में इसके पालन पर रोक लगाता है?",
+  "o": ["अनुच्छेद 17", "अनुच्छेद 14", "अनुच्छेद 21", "अनुच्छेद 19"],
+  "e": "अनुच्छेद 17 (समानता का अधिकार, भाग III) अस्पृश्यता का अंत करता है। अनुच्छेद 14 कानून के सामने समानता देता है, अनुच्छेद 19 बोलने जैसी छह स्वतंत्रताएँ देता है और अनुच्छेद 21 जीवन और व्यक्तिगत स्वतंत्रता की रक्षा करता है।",
+  "trick": "समानता का अधिकार = अनुच्छेद 14 से 18: 14 कानून के सामने समानता, 15 भेदभाव नहीं, 16 नौकरी में समान अवसर, 17 छुआछूत का अंत, 18 उपाधियों का अंत।"}
+}
+]
+});
