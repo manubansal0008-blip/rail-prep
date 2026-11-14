@@ -1,0 +1,80 @@
+RRB.dppLoaded({
+"date": "2026-11-14",
+"items": [
+{
+ "subject": "maths",
+ "topic": {"en": "Ages (ratio)", "hi": "आयु (अनुपात)"},
+ "exams": ["ntpc", "gd"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 1,
+ "en": {"q": "The ratio of the present ages of A and B is 5 : 3. After 6 years, the ratio of their ages will be 7 : 5. What is A's present age?",
+  "o": ["12 years", "15 years", "18 years", "21 years"],
+  "e": "Let the ages be 5x and 3x. Then (5x + 6) : (3x + 6) = 7 : 5 → 25x + 30 = 21x + 42 → 4x = 12 → x = 3. So A = 15 years and B = 9 years. Check: after 6 years, 21 : 15 = 7 : 5 ✓. With 12, 18 or 21 for A, the second ratio does not come out as 7 : 5.",
+  "trick": "The age difference never changes. In 5 : 3 the difference is 2 parts and in 7 : 5 it is also 2 parts, so the parts are the same size. A goes from 5 parts to 7 parts: 2 parts = 6 years → 1 part = 3 → A = 5 × 3 = 15."},
+ "hi": {"q": "A और B की वर्तमान आयु का अनुपात 5 : 3 है। 6 वर्ष बाद उनकी आयु का अनुपात 7 : 5 हो जाएगा। A की वर्तमान आयु कितनी है?",
+  "o": ["12 वर्ष", "15 वर्ष", "18 वर्ष", "21 वर्ष"],
+  "e": "माना आयु 5x और 3x है। तब (5x + 6) : (3x + 6) = 7 : 5 → 25x + 30 = 21x + 42 → 4x = 12 → x = 3। इसलिए A = 15 वर्ष और B = 9 वर्ष। जाँच: 6 वर्ष बाद 21 : 15 = 7 : 5 ✓। A के लिए 12, 18 या 21 लेने पर दूसरा अनुपात 7 : 5 नहीं बनता।",
+  "trick": "आयु का अंतर कभी नहीं बदलता। 5 : 3 में अंतर 2 भाग है और 7 : 5 में भी 2 भाग, इसलिए दोनों में एक भाग बराबर है। A के 5 भाग से 7 भाग हुए: 2 भाग = 6 वर्ष → 1 भाग = 3 → A = 5 × 3 = 15।"}
+},
+{
+ "subject": "reasoning",
+ "topic": {"en": "Syllogism", "hi": "न्याय निगमन (सिलोजिज़्म)"},
+ "exams": ["ntpc", "gd"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 3,
+ "en": {"q": "Statements: All pens are books. Some books are tables. Conclusions: I. Some pens are tables. II. Some tables are books. Which conclusion(s) follow?",
+  "o": ["Only conclusion I follows", "Neither I nor II follows", "Both I and II follow", "Only conclusion II follows"],
+  "e": "II follows: 'Some books are tables' can be turned around as 'Some tables are books'. I does not follow: the tables that are books may be books that are not pens, so pens and tables need not meet (it is only possible, not certain). So only II follows.",
+  "trick": "'Some A are B' always gives 'Some B are A'. Two groups linked only through the middle term (books) with a 'some' statement give no definite conclusion between them."},
+ "hi": {"q": "कथन: सभी पेन किताबें हैं। कुछ किताबें मेज़ हैं। निष्कर्ष: I. कुछ पेन मेज़ हैं। II. कुछ मेज़ किताबें हैं। कौन-सा/से निष्कर्ष निकलता/निकलते है/हैं?",
+  "o": ["केवल निष्कर्ष I निकलता है", "न तो I और न ही II निकलता है", "I और II दोनों निकलते हैं", "केवल निष्कर्ष II निकलता है"],
+  "e": "II निकलता है: 'कुछ किताबें मेज़ हैं' को उलटकर 'कुछ मेज़ किताबें हैं' कहा जा सकता है। I नहीं निकलता: जो किताबें मेज़ हैं, वे ऐसी किताबें भी हो सकती हैं जो पेन नहीं हैं, इसलिए पेन और मेज़ का मिलना पक्का नहीं (सिर्फ़ संभव है)। इसलिए केवल II निकलता है।",
+  "trick": "'कुछ A, B हैं' से हमेशा 'कुछ B, A हैं' निकलता है। अगर दो समूह केवल मध्य पद (किताबें) से 'कुछ' वाले कथन द्वारा जुड़े हों, तो उनके बीच कोई पक्का निष्कर्ष नहीं निकलता।"}
+},
+{
+ "subject": "science",
+ "topic": {"en": "Biology: human blood", "hi": "जीव विज्ञान: मानव रक्त"},
+ "exams": ["ntpc", "gd"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 2,
+ "en": {"q": "Which component of human blood helps in the clotting of blood at a wound?",
+  "o": ["Red blood cells (RBCs)", "White blood cells (WBCs)", "Platelets", "Haemoglobin"],
+  "e": "Platelets (thrombocytes) gather at a cut and help form a clot that stops bleeding. RBCs carry oxygen (using haemoglobin, the red pigment inside them), and WBCs fight infection.",
+  "trick": "Remember: RBC = oxygen, WBC = defence (soldiers), Platelets = clotting (plug the leak)."},
+ "hi": {"q": "मानव रक्त का कौन-सा घटक चोट लगने पर रक्त का थक्का (क्लॉटिंग) बनाने में मदद करता है?",
+  "o": ["लाल रक्त कणिकाएँ (RBC)", "श्वेत रक्त कणिकाएँ (WBC)", "प्लेटलेट्स (बिंबाणु)", "हीमोग्लोबिन"],
+  "e": "प्लेटलेट्स (बिंबाणु) कटी हुई जगह पर इकट्ठा होकर थक्का बनाने में मदद करते हैं, जिससे खून बहना रुकता है। लाल रक्त कणिकाएँ ऑक्सीजन ले जाती हैं (उनके अंदर का लाल वर्णक हीमोग्लोबिन इसमें मदद करता है) और श्वेत रक्त कणिकाएँ संक्रमण से लड़ती हैं।",
+  "trick": "याद रखें: RBC = ऑक्सीजन, WBC = रक्षा (सिपाही), प्लेटलेट्स = थक्का (रिसाव बंद)।"}
+},
+{
+ "subject": "computer",
+ "topic": {"en": "Computer basics: MS Word shortcut keys", "hi": "कंप्यूटर: MS Word शॉर्टकट कुंजियाँ"},
+ "exams": ["ntpc"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 0,
+ "en": {"q": "In MS Word, which shortcut key is used to undo the last action?",
+  "o": ["Ctrl + Z", "Ctrl + Y", "Ctrl + X", "Ctrl + U"],
+  "e": "Ctrl + Z undoes the last action. Ctrl + Y redoes (repeats) an action, Ctrl + X cuts the selected text, and Ctrl + U underlines it.",
+  "trick": "Learn them in pairs: Ctrl + Z = Undo, Ctrl + Y = Redo. Bottom-row keys: Ctrl + X = Cut (X looks like scissors), Ctrl + C = Copy, Ctrl + V = Paste. U = Underline."},
+ "hi": {"q": "MS Word में पिछली क्रिया को पूर्ववत (Undo) करने के लिए कौन-सी शॉर्टकट कुंजी इस्तेमाल होती है?",
+  "o": ["Ctrl + Z", "Ctrl + Y", "Ctrl + X", "Ctrl + U"],
+  "e": "Ctrl + Z पिछली क्रिया को पूर्ववत (Undo) करता है। Ctrl + Y क्रिया को फिर से करता है (Redo), Ctrl + X चुने हुए टेक्स्ट को काटता है (Cut) और Ctrl + U उसे रेखांकित करता है (Underline)।",
+  "trick": "जोड़ी में याद करें: Ctrl + Z = Undo (पूर्ववत), Ctrl + Y = Redo (फिर से)। नीचे की पंक्ति: Ctrl + X = Cut (X कैंची जैसा दिखता है), Ctrl + C = Copy, Ctrl + V = Paste। U = Underline (रेखांकन)।"}
+},
+{
+ "subject": "economy",
+ "topic": {"en": "Indian economy: GST", "hi": "भारतीय अर्थव्यवस्था: GST"},
+ "exams": ["ntpc", "gd"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 1,
+ "en": {"q": "From which date was the Goods and Services Tax (GST) implemented across India?",
+  "o": ["1 April 2017", "1 July 2017", "1 January 2018", "8 November 2016"],
+  "e": "GST came into force across India on 1 July 2017, after the Constitution (101st Amendment) Act, 2016. It replaced many indirect taxes such as excise duty, service tax and VAT. 8 November 2016 is the date of demonetisation of old ₹500 and ₹1,000 notes; 1 April is only the start of the financial year.",
+  "trick": "GST launch = midnight of 30 June–1 July 2017 at a special session in Parliament's Central Hall. GST Day is observed on 1 July."},
+ "hi": {"q": "वस्तु एवं सेवा कर (GST) पूरे भारत में किस तारीख़ से लागू हुआ?",
+  "o": ["1 अप्रैल 2017", "1 जुलाई 2017", "1 जनवरी 2018", "8 नवंबर 2016"],
+  "e": "संविधान (101वाँ संशोधन) अधिनियम, 2016 के बाद GST 1 जुलाई 2017 से पूरे भारत में लागू हुआ। इसने उत्पाद शुल्क, सेवा कर और VAT जैसे कई अप्रत्यक्ष करों की जगह ली। 8 नवंबर 2016 पुराने ₹500 और ₹1,000 के नोटों की नोटबंदी की तारीख़ है; 1 अप्रैल सिर्फ़ वित्त वर्ष की शुरुआत है।",
+  "trick": "GST की शुरुआत = 30 जून–1 जुलाई 2017 की आधी रात, संसद के सेंट्रल हॉल में विशेष सत्र में। 1 जुलाई को GST दिवस मनाया जाता है।"}
+}
+]
+});
