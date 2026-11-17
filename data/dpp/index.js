@@ -1,5 +1,6 @@
 // Days that have a DPP file (data/dpp/YYYY-MM-DD.js), newest first. Daily job: tools/build_dpp.py adds the new day here.
 RRB.DPP_DAYS = [
+"2026-11-17",
 "2026-11-16",
 "2026-11-15",
 "2026-11-14",
