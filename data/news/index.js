@@ -1,5 +1,6 @@
 // Days that have a news file (data/news/YYYY-MM-DD.js), newest first. Daily job: add the new day as the FIRST line below.
 RRB.NEWS_DAYS = [
+"2026-11-21",
 "2026-11-20",
 "2026-11-19",
 "2026-11-18",
