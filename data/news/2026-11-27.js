@@ -76,7 +76,7 @@ RRB.newsLoaded({
    "cat": "science",
    "en": {
     "title": "Astronomers confirm Elias 2-24 b, a Jupiter-sized planet less than a million years old — the youngest known",
-    "summary": "Astronomers have confirmed a Jupiter-sized planet named Elias 2-24 b that is less than one million years old, making it the youngest planet known so far. It was observed with the coronagraph of the W. M. Keck Observatory in Hawaii. The planet is roughly as massive as Jupiter and orbits a star about 450 light-years from Earth.",
+    "summary": "As reported on 26 November 2026, astronomers have confirmed a Jupiter-sized planet named Elias 2-24 b that is less than one million years old, making it the youngest planet known so far. It was observed with the coronagraph of the W. M. Keck Observatory in Hawaii. The planet is roughly as massive as Jupiter and orbits a star about 450 light-years from Earth.",
     "facts": [
      "A light-year is a unit of distance — the distance light travels in one year (about 9.46 trillion km)",
      "Jupiter is the largest planet of our Solar System"
@@ -84,7 +84,7 @@ RRB.newsLoaded({
    },
    "hi": {
     "title": "खगोलविदों ने 10 लाख वर्ष से कम आयु वाले बृहस्पति जैसे ग्रह Elias 2-24 b की पुष्टि की — अब तक का सबसे युवा ज्ञात ग्रह",
-    "summary": "खगोलविदों ने बृहस्पति के आकार के ग्रह Elias 2-24 b की पुष्टि की है, जिसकी आयु दस लाख (एक मिलियन) वर्ष से भी कम है; यह अब तक ज्ञात सबसे युवा ग्रह है। इसे हवाई (अमेरिका) स्थित डब्ल्यू. एम. केक वेधशाला के कोरोनाग्राफ से देखा गया। यह ग्रह लगभग बृहस्पति जितना भारी है और पृथ्वी से करीब 450 प्रकाश-वर्ष दूर एक तारे की परिक्रमा करता है।",
+    "summary": "26 नवंबर 2026 की ख़बर के अनुसार, खगोलविदों ने बृहस्पति के आकार के ग्रह Elias 2-24 b की पुष्टि की है, जिसकी आयु दस लाख (एक मिलियन) वर्ष से भी कम है; यह अब तक ज्ञात सबसे युवा ग्रह है। इसे हवाई (अमेरिका) स्थित डब्ल्यू. एम. केक वेधशाला के कोरोनाग्राफ से देखा गया। यह ग्रह लगभग बृहस्पति जितना भारी है और पृथ्वी से करीब 450 प्रकाश-वर्ष दूर एक तारे की परिक्रमा करता है।",
     "facts": [
      "प्रकाश-वर्ष दूरी का मात्रक है — प्रकाश द्वारा एक वर्ष में तय की गई दूरी (लगभग 9.46 लाख करोड़ किमी)",
      "बृहस्पति हमारे सौरमंडल का सबसे बड़ा ग्रह है"
