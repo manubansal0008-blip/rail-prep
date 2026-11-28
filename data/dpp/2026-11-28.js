@@ -1,0 +1,80 @@
+RRB.dppLoaded({
+"date": "2026-11-28",
+"items": [
+{
+ "subject": "maths",
+ "topic": {"en": "Ratio and proportion (combining ratios)", "hi": "अनुपात और समानुपात (अनुपात जोड़ना)"},
+ "exams": ["ntpc", "gd"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 3,
+ "en": {"q": "If A : B = 2 : 3 and B : C = 4 : 5, then what is A : B : C?",
+  "o": ["2 : 3 : 5", "6 : 12 : 15", "8 : 10 : 15", "8 : 12 : 15"],
+  "e": "Make the common term B equal. In A : B = 2 : 3, B is 3; in B : C = 4 : 5, B is 4. LCM of 3 and 4 = 12. A : B = 2 : 3 = 8 : 12 (× 4) and B : C = 4 : 5 = 12 : 15 (× 3). So A : B : C = 8 : 12 : 15.",
+  "trick": "A : B : C = (2 × 4) : (3 × 4) : (3 × 5) = 8 : 12 : 15 — multiply across: A = 2×4, B = 3×4, C = 3×5."},
+ "hi": {"q": "यदि A : B = 2 : 3 और B : C = 4 : 5 है, तो A : B : C क्या है?",
+  "o": ["2 : 3 : 5", "6 : 12 : 15", "8 : 10 : 15", "8 : 12 : 15"],
+  "e": "साझा पद B को बराबर करें। A : B = 2 : 3 में B = 3 है; B : C = 4 : 5 में B = 4 है। 3 और 4 का LCM = 12। A : B = 2 : 3 = 8 : 12 (× 4) और B : C = 4 : 5 = 12 : 15 (× 3)। इसलिए A : B : C = 8 : 12 : 15।",
+  "trick": "A : B : C = (2 × 4) : (3 × 4) : (3 × 5) = 8 : 12 : 15 — तिरछा गुणा करें: A = 2×4, B = 3×4, C = 3×5।"}
+},
+{
+ "subject": "reasoning",
+ "topic": {"en": "Odd one out (words)", "hi": "विषम शब्द चुनना (Odd one out)"},
+ "exams": ["ntpc", "gd"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 1,
+ "en": {"q": "Three of the following four words are alike in a certain way and one is different. Select the odd one out.",
+  "o": ["Metre", "Thermometer", "Kilogram", "Second"],
+  "e": "Metre (length), Kilogram (mass) and Second (time) are SI units. A thermometer is an instrument for measuring temperature, not a unit, so it is the odd one out.",
+  "trick": "Ask 'unit or instrument?' — three are units, one is a device."},
+ "hi": {"q": "निम्नलिखित चार शब्दों में से तीन किसी प्रकार एक जैसे हैं और एक अलग है। विषम शब्द चुनिए।",
+  "o": ["मीटर", "थर्मामीटर", "किलोग्राम", "सेकंड"],
+  "e": "मीटर (लंबाई), किलोग्राम (द्रव्यमान) और सेकंड (समय) SI मात्रक हैं। थर्मामीटर तापमान मापने का उपकरण है, मात्रक नहीं — इसलिए यह विषम है।",
+  "trick": "पूछें 'मात्रक है या उपकरण?' — तीन मात्रक हैं, एक उपकरण।"}
+},
+{
+ "subject": "science",
+ "topic": {"en": "Physics: commercial unit of electrical energy (kWh)", "hi": "भौतिकी: विद्युत ऊर्जा का व्यावसायिक मात्रक (kWh)"},
+ "exams": ["ntpc", "gd"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 2,
+ "en": {"q": "1 kilowatt-hour (kWh), the commercial unit of electrical energy, is equal to how many joules?",
+  "o": ["3.6 × 10³ J", "3.6 × 10⁵ J", "3.6 × 10⁶ J", "3.6 × 10⁹ J"],
+  "e": "1 kWh = 1000 W × 3600 s = 3,600,000 J = 3.6 × 10⁶ J. 1 kWh is the '1 unit' shown on an electricity bill.",
+  "trick": "kilo (1000) × hour (3600 s) = 36 followed by five zeros = 3.6 × 10⁶."},
+ "hi": {"q": "विद्युत ऊर्जा का व्यावसायिक मात्रक 1 किलोवाट-घंटा (kWh) कितने जूल के बराबर होता है?",
+  "o": ["3.6 × 10³ J", "3.6 × 10⁵ J", "3.6 × 10⁶ J", "3.6 × 10⁹ J"],
+  "e": "1 kWh = 1000 W × 3600 s = 36,00,000 J = 3.6 × 10⁶ J। बिजली के बिल में लिखी '1 यूनिट' = 1 kWh होती है।",
+  "trick": "किलो (1000) × घंटा (3600 सेकंड) = 36 के बाद पाँच शून्य = 3.6 × 10⁶।"}
+},
+{
+ "subject": "computer",
+ "topic": {"en": "Internet basics: full forms (URL)", "hi": "इंटरनेट की मूल बातें: पूरा नाम (URL)"},
+ "exams": ["ntpc"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 0,
+ "en": {"q": "What is the full form of URL, the address of a web page on the Internet?",
+  "o": ["Uniform Resource Locator", "Universal Resource Link", "Uniform Reference Locator", "Universal Routing Locator"],
+  "e": "URL stands for Uniform Resource Locator — the web address typed in a browser, e.g. https://www.indianrail.gov.in.",
+  "trick": "U-R-L = Uniform – Resource – Locator: it 'locates' a 'resource'."},
+ "hi": {"q": "इंटरनेट पर किसी वेब पेज के पते URL का पूरा नाम क्या है?",
+  "o": ["Uniform Resource Locator", "Universal Resource Link", "Uniform Reference Locator", "Universal Routing Locator"],
+  "e": "URL का पूरा नाम Uniform Resource Locator है — ब्राउज़र में टाइप किया जाने वाला वेब पता, जैसे https://www.indianrail.gov.in।",
+  "trick": "U-R-L = Uniform – Resource – Locator: यह किसी 'resource' को 'locate' करता (खोजता) है।"}
+},
+{
+ "subject": "economy",
+ "topic": {"en": "Union Budget: Annual Financial Statement", "hi": "केंद्रीय बजट: वार्षिक वित्तीय विवरण"},
+ "exams": ["ntpc", "gd"],
+ "label": "Rail Prep practice (PYQ pattern)",
+ "a": 1,
+ "en": {"q": "The Union Budget is called the 'Annual Financial Statement' in the Constitution of India. Which Article deals with it?",
+  "o": ["Article 110", "Article 112", "Article 265", "Article 280"],
+  "e": "Article 112 requires the President to have the Annual Financial Statement (the Budget) laid before both Houses of Parliament every year. Article 110 defines a Money Bill, Article 265 says no tax can be collected without the authority of law, and Article 280 deals with the Finance Commission.",
+  "trick": "Budget = 112; Money Bill = 110; Finance Commission = 280."},
+ "hi": {"q": "भारत के संविधान में केंद्रीय बजट को 'वार्षिक वित्तीय विवरण' कहा गया है। इसका उल्लेख किस अनुच्छेद में है?",
+  "o": ["अनुच्छेद 110", "अनुच्छेद 112", "अनुच्छेद 265", "अनुच्छेद 280"],
+  "e": "अनुच्छेद 112 के अनुसार राष्ट्रपति हर वर्ष संसद के दोनों सदनों के सामने वार्षिक वित्तीय विवरण (बजट) रखवाते हैं। अनुच्छेद 110 धन विधेयक की परिभाषा देता है, अनुच्छेद 265 कहता है कि कानून के अधिकार के बिना कोई कर नहीं लिया जा सकता, और अनुच्छेद 280 वित्त आयोग से संबंधित है।",
+  "trick": "बजट = 112; धन विधेयक = 110; वित्त आयोग = 280।"}
+}
+]
+});
